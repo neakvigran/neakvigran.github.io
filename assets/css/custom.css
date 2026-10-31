@@ -190,3 +190,12 @@
   font-weight: 700;
   font-style: italic;
 }
+
+/* ==========================================
+   WRITEUPS — MAIN ARTICLE TITLE
+   ========================================== */
+
+article.px-1 > header > h1[data-toc-skip] {
+  color: #38bdf8 !important;
+  font-weight: 700 !important;
+}
