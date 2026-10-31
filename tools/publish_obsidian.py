@@ -5,6 +5,7 @@ import datetime as dt
 import json
 import re
 import shutil
+import hashlib
 import yaml
 import sys
 from pathlib import Path
@@ -186,6 +187,27 @@ def convert(source, slug, known_posts):
     return body, images, unresolved
 
 
+def sha256_bytes(data):
+    """Return the SHA-256 digest of bytes."""
+    return hashlib.sha256(data).hexdigest()
+
+
+def sha256_file(path):
+    """Return the SHA-256 digest of a file."""
+    return sha256_bytes(path.read_bytes())
+
+
+def calculate_fingerprints(source, post, images, image_dir):
+    """Calculate fingerprints for source, post, and images."""
+    return {
+        "source_sha256": sha256_file(source),
+        "post_sha256": sha256_file(post),
+        "image_sha256": {
+            name: sha256_file(image_dir / name)
+            for name in sorted(images)
+        },
+    }
+
 def execute(args):
     source = source_path(args.note)
     rel = source.relative_to(VAULT).as_posix()
@@ -290,8 +312,24 @@ def execute(args):
         shutil.copy2(IMAGE_DIR / name, dest_dir / name)
     post.parent.mkdir(parents=True, exist_ok=True)
     post.write_text(text, encoding='utf-8')
-    manifest[rel] = dict(slug=slug, published=published, post=post_rel,
-                         categories=category, tags=tags, images=sorted(new_images))
+
+    # Record the exact generated files for later deployment checks.
+    fingerprints = calculate_fingerprints(
+        source,
+        post,
+        new_images,
+        dest_dir
+    )
+
+    manifest[rel] = dict(
+        slug=slug,
+        published=published,
+        post=post_rel,
+        categories=category,
+        tags=tags,
+        images=sorted(new_images),
+        **fingerprints
+    )
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     MANIFEST.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
     if old_images-new_images:
