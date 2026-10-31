@@ -9,22 +9,35 @@ MANIFEST="$REPO/tools/.obsidian-published.json"
 usage() {
   cat <<'HELP'
 Usage:
-  publish-writeup "Platform/Category/Note.md" [--write] [--tags TAGS]
-  publish-writeup --batch "note1.md" "note2.md" ... [--write]
-  publish-writeup --folder "Platform/Category" [--write]
+  publish-writeup "Platform/Category/Note.md" [options]
+  publish-writeup --batch "note1.md" "note2.md" ... [options]
+  publish-writeup --folder "Platform/Category" [options]
+
 Options:
-  --write              Generate/update local files (default: preview)
-  --tags TAGS          Override tags for all selected notes
-  --platform NAME      Override platform for all selected notes
-  --category NAME      Override category for all selected notes
-  --recursive          With --folder, include subfolders
+  --write              Generate/update local files only
+  --deploy             Preview, confirm, validate, commit and push
+  --tags TAGS          Override tags for selected notes
+  --platform NAME      Override platform
+  --category NAME      Override category
+  --recursive          Include subfolders with --folder
   -h, --help           Show this help
-Environment: OBSIDIAN_VAULT, CHIRPY_REPO
+
+Default: preview only.
+
+Environment:
+  OBSIDIAN_VAULT
+  CHIRPY_REPO
 HELP
+}
+
+die() {
+  echo "Error: $*" >&2
+  exit 1
 }
 
 MODE=single
 WRITE=false
+DEPLOY=false
 RECURSIVE=false
 FOLDER=""
 OVERRIDE_PLATFORM=""
@@ -35,122 +48,452 @@ NOTES=()
 while (($#)); do
   case "$1" in
     --batch)
-      [[ "$MODE" == single && ${#NOTES[@]} -eq 0 ]] || { echo 'Error: choose one mode.' >&2; exit 2; }
-      MODE=batch; shift ;;
+      [[ "$MODE" == single && ${#NOTES[@]} -eq 0 ]] ||
+        die "Choose only one publishing mode."
+      MODE=batch
+      shift
+      ;;
     --folder)
-      [[ "$MODE" == single && ${#NOTES[@]} -eq 0 && $# -ge 2 ]] || { echo 'Error: --folder requires a directory and cannot be combined with --batch.' >&2; exit 2; }
-      MODE=folder; FOLDER="$2"; shift 2 ;;
-    --write) WRITE=true; shift ;;
-    --recursive) RECURSIVE=true; shift ;;
+      [[ "$MODE" == single && ${#NOTES[@]} -eq 0 && $# -ge 2 ]] ||
+        die "--folder requires a directory."
+      MODE=folder
+      FOLDER="$2"
+      shift 2
+      ;;
+    --write)
+      WRITE=true
+      shift
+      ;;
+    --deploy)
+      DEPLOY=true
+      shift
+      ;;
+    --recursive)
+      RECURSIVE=true
+      shift
+      ;;
     --platform|--category|--tags)
-      (($# >= 2)) || { echo "Error: $1 requires a value." >&2; exit 2; }
+      (($# >= 2)) || die "$1 requires a value."
       case "$1" in
         --platform) OVERRIDE_PLATFORM="$2" ;;
         --category) OVERRIDE_CATEGORY="$2" ;;
         --tags) OVERRIDE_TAGS="$2" ;;
       esac
-      shift 2 ;;
-    -h|--help) usage; exit 0 ;;
-    --*) echo "Unknown option: $1" >&2; usage; exit 2 ;;
-    *) [[ "$MODE" != folder ]] || { echo 'Error: unexpected note after --folder.' >&2; exit 2; }
-       NOTES+=("$1"); shift ;;
+      shift 2
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    --*)
+      die "Unknown option: $1"
+      ;;
+    *)
+      [[ "$MODE" != folder ]] ||
+        die "Unexpected note after --folder."
+      NOTES+=("$1")
+      shift
+      ;;
   esac
 done
 
-[[ -f "$PUBLISHER" ]] || { echo "Publisher missing: $PUBLISHER" >&2; exit 1; }
-[[ -d "$VAULT" ]] || { echo "Vault missing: $VAULT" >&2; exit 1; }
-if [[ "$MODE" == single && ${#NOTES[@]} -ne 1 ]] || [[ "$MODE" == batch && ${#NOTES[@]} -eq 0 ]]; then
-  usage; exit 2
+if [[ "$DEPLOY" == true && "$WRITE" == true ]]; then
+  die "--deploy and --write cannot be combined."
 fi
+
 if [[ "$RECURSIVE" == true && "$MODE" != folder ]]; then
-  echo 'Error: --recursive is only valid with --folder.' >&2; exit 2
+  die "--recursive requires --folder."
 fi
+
+[[ -d "$VAULT" ]] || die "Vault not found: $VAULT"
+[[ -d "$REPO" ]] || die "Repository not found: $REPO"
+[[ -f "$PUBLISHER" ]] || die "Publisher missing: $PUBLISHER"
 
 VAULT="$(realpath "$VAULT")"
 REPO="$(realpath "$REPO")"
 
 if [[ "$MODE" == folder ]]; then
-  if [[ "$FOLDER" == /* ]]; then DIR="$FOLDER"; else DIR="$VAULT/$FOLDER"; fi
-  [[ -d "$DIR" ]] || { echo "Folder not found: $DIR" >&2; exit 1; }
-  DIR="$(realpath "$DIR")"
-  case "$DIR/" in "$VAULT/"*) ;; *) echo 'Error: folder must be inside vault.' >&2; exit 1;; esac
-  case "$DIR/" in "$REPO/"*) echo 'Error: website repository cannot be used as source.' >&2; exit 1;; esac
-  if [[ "$RECURSIVE" == true ]]; then
-    mapfile -d '' -t NOTES < <(find "$DIR" -type f -name '*.md' -print0 | sort -z)
+  if [[ "$FOLDER" == /* ]]; then
+    DIR="$FOLDER"
   else
-    mapfile -d '' -t NOTES < <(find "$DIR" -maxdepth 1 -type f -name '*.md' -print0 | sort -z)
+    DIR="$VAULT/$FOLDER"
+  fi
+
+  [[ -d "$DIR" ]] || die "Folder not found: $DIR"
+  DIR="$(realpath "$DIR")"
+
+  case "$DIR/" in
+    "$VAULT/"*) ;;
+    *) die "Folder must be inside the vault." ;;
+  esac
+
+  case "$DIR/" in
+    "$REPO/"*) die "Cannot publish repository files." ;;
+  esac
+
+  if [[ "$RECURSIVE" == true ]]; then
+    mapfile -d '' -t NOTES < <(
+      find "$DIR" -type f -name '*.md' -print0 | sort -z
+    )
+  else
+    mapfile -d '' -t NOTES < <(
+      find "$DIR" -maxdepth 1 -type f -name '*.md' -print0 | sort -z
+    )
   fi
 fi
 
-if ((${#NOTES[@]} == 0)); then echo 'No Markdown notes found.'; exit 0; fi
+if [[ "$MODE" == single && ${#NOTES[@]} -ne 1 ]] ||
+   [[ "$MODE" == batch && ${#NOTES[@]} -eq 0 ]]; then
+  usage
+  exit 2
+fi
 
-# Resolve and validate every note before any write. Deduplicate repeated paths.
+if ((${#NOTES[@]} == 0)); then
+  echo "No Markdown notes found."
+  exit 0
+fi
+
 RESOLVED=()
 declare -A SEEN=()
+
 for note in "${NOTES[@]}"; do
-  if [[ "$note" == /* ]]; then source="$note"; else source="$VAULT/$note"; fi
-  [[ -f "$source" ]] || { echo "Note not found: $source" >&2; exit 1; }
+  if [[ "$note" == /* ]]; then
+    source="$note"
+  else
+    source="$VAULT/$note"
+  fi
+
+  [[ -f "$source" ]] || die "Note not found: $source"
   source="$(realpath "$source")"
-  case "$source" in "$VAULT/"*) ;; *) echo "Outside vault: $source" >&2; exit 1;; esac
-  case "$source" in "$REPO/"*) echo "Cannot publish website source: $source" >&2; exit 1;; esac
-  [[ "$source" == *.md ]] || { echo "Not Markdown: $source" >&2; exit 1; }
-  if [[ -z "${SEEN[$source]+x}" ]]; then RESOLVED+=("$source"); SEEN[$source]=1; fi
+
+  case "$source" in
+    "$VAULT/"*) ;;
+    *) die "Note is outside the vault: $source" ;;
+  esac
+
+  case "$source" in
+    "$REPO/"*) die "Cannot publish repository source files." ;;
+  esac
+
+  [[ "$source" == *.md ]] || die "Not a Markdown note: $source"
+
+  if [[ -z "${SEEN[$source]+x}" ]]; then
+    RESOLVED+=("$source")
+    SEEN[$source]=1
+  fi
 done
 
-# Read manifest with Python, reject malformed manifest and detect existing post collisions.
 PLAN="$(mktemp)"
 trap 'rm -f "$PLAN"' EXIT
-python3 - "$VAULT" "$REPO" "$MANIFEST" "${RESOLVED[@]}" > "$PLAN" <<'PY'
-import json,sys,pathlib,re
-vault,repo,manifest=map(pathlib.Path,sys.argv[1:4]); sources=list(map(pathlib.Path,sys.argv[4:]))
+
+python3 - "$VAULT" "$REPO" "$MANIFEST" \
+  "${RESOLVED[@]}" > "$PLAN" <<'PY'
+import json
+import pathlib
+import re
+import sys
+
+vault, repo, manifest = map(pathlib.Path, sys.argv[1:4])
+sources = list(map(pathlib.Path, sys.argv[4:]))
+
 try:
-    records=json.loads(manifest.read_text(encoding='utf-8')) if manifest.exists() else {}
-    if not isinstance(records,dict): raise ValueError('manifest must be a JSON object')
-except (ValueError,OSError) as e:
-    sys.exit(f'Invalid manifest: {e}')
-planned={}
+    records = (
+        json.loads(manifest.read_text(encoding="utf-8"))
+        if manifest.exists()
+        else {}
+    )
+    if not isinstance(records, dict):
+        raise ValueError("Manifest must be an object")
+except (ValueError, OSError) as exc:
+    sys.exit(f"Invalid manifest: {exc}")
+
+planned = {}
+
 for source in sources:
-    key=source.relative_to(vault).as_posix()
-    entry=records.get(key)
-    if entry is not None and not isinstance(entry,dict): sys.exit(f'Invalid manifest record for {key}')
-    mode='update' if entry is not None else 'publish'
-    slug=re.sub(r'[^a-z0-9]+','-',source.stem.lower()).strip('-')
-    if not slug: sys.exit(f'Invalid slug for {key}')
-    # Guard against same-slug image directory collisions across notes.
-    if slug in planned and planned[slug]!=key:
-        sys.exit(f'Slug collision: {planned[slug]} and {key}')
-    planned[slug]=key
-    if mode=='publish':
-        existing=list((repo/'_posts').glob(f'*-{slug}.md'))
-        if existing: sys.exit(f'Existing post for {key}: {existing[0]} (migrate it before publishing)')
-    print(mode+'\t'+str(source))
+    key = source.relative_to(vault).as_posix()
+    entry = records.get(key)
+
+    if entry is not None and not isinstance(entry, dict):
+        sys.exit(f"Invalid manifest record: {key}")
+
+    operation = "update" if entry is not None else "publish"
+    slug = (
+        entry["slug"]
+        if entry is not None
+        else re.sub(r"[^a-z0-9]+", "-", source.stem.lower()).strip("-")
+    )
+
+    if not slug:
+        sys.exit(f"Invalid slug: {key}")
+
+    if slug in planned and planned[slug] != key:
+        sys.exit(f"Slug collision: {key} and {planned[slug]}")
+
+    planned[slug] = key
+
+    if operation == "publish":
+        matches = list((repo / "_posts").glob(f"*-{slug}.md"))
+        if matches:
+            sys.exit(f"Post already exists: {matches[0]}")
+
+    print(operation + "\t" + str(source))
 PY
 
 TOTAL=${#RESOLVED[@]}
-echo "Mode: $MODE | Notes: $TOTAL | $([[ "$WRITE" == true ]] && echo WRITE || echo PREVIEW)"
-echo '--------------------------------------------------'
-FAILED=0
-SUCCEEDED=0
-while IFS=$'\t' read -r operation source; do
-  rel="${source#"$VAULT"/}"
-  platform="${rel%%/*}"
-  remainder="${rel#*/}"
-  if [[ "$remainder" == */* ]]; then category="${remainder%%/*}"; else category=General; fi
-  [[ -z "$OVERRIDE_PLATFORM" ]] || platform="$OVERRIDE_PLATFORM"
-  [[ -z "$OVERRIDE_CATEGORY" ]] || category="$OVERRIDE_CATEGORY"
-  args=("$operation" "$source" --platform "$platform" --category "$category")
-  [[ -z "$OVERRIDE_TAGS" ]] || args+=(--tags "$OVERRIDE_TAGS")
-  [[ "$WRITE" == false ]] || args+=(--write)
-  printf '\n[%s] %s\n' "$operation" "$rel"
-  if (cd "$REPO" && python3 "$PUBLISHER" "${args[@]}"); then
-    ((SUCCEEDED+=1))
-  else
-    ((FAILED+=1))
-    echo "FAILED: $rel" >&2
+
+run_publisher() {
+  local write_mode="$1"
+  local failed=0
+  local succeeded=0
+  local operation source rel platform category remainder
+  local -a args
+
+  while IFS=$'\t' read -r operation source; do
+    rel="${source#"$VAULT"/}"
+    platform="${rel%%/*}"
+    remainder="${rel#*/}"
+
+    if [[ "$remainder" == */* ]]; then
+      category="${remainder%%/*}"
+    else
+      category="General"
+    fi
+
+    [[ -z "$OVERRIDE_PLATFORM" ]] ||
+      platform="$OVERRIDE_PLATFORM"
+
+    [[ -z "$OVERRIDE_CATEGORY" ]] ||
+      category="$OVERRIDE_CATEGORY"
+
+    args=(
+      "$operation"
+      "$source"
+      --platform "$platform"
+      --category "$category"
+    )
+
+    [[ -z "$OVERRIDE_TAGS" ]] ||
+      args+=(--tags "$OVERRIDE_TAGS")
+
+    [[ "$write_mode" == false ]] ||
+      args+=(--write)
+
+    printf '\n[%s] %s\n' "$operation" "$rel"
+
+    if (cd "$REPO" && python3 "$PUBLISHER" "${args[@]}"); then
+      ((succeeded+=1))
+    else
+      ((failed+=1))
+      echo "FAILED: $rel" >&2
+    fi
+  done < "$PLAN"
+
+  printf '\nSummary: %d succeeded, %d failed, %d total\n' \
+    "$succeeded" "$failed" "$TOTAL"
+
+  ((failed == 0))
+}
+
+if [[ "$DEPLOY" == false ]]; then
+  echo "Mode: $MODE | Notes: $TOTAL | $(
+    [[ "$WRITE" == true ]] && echo WRITE || echo PREVIEW
+  )"
+  echo "--------------------------------------------------"
+
+  run_publisher "$WRITE"
+
+  if [[ "$WRITE" == true ]]; then
+    echo "Local files only. Nothing committed or pushed."
   fi
-done < "$PLAN"
-printf '\nSummary: %d succeeded, %d failed, %d total\n' "$SUCCEEDED" "$FAILED" "$TOTAL"
-if [[ "$WRITE" == true ]]; then
-  echo 'Local files only. Review git diff/status and content before committing or pushing.'
+
+  exit 0
 fi
-((FAILED==0))
+
+# =========================================
+# DEPLOY MODE
+# =========================================
+
+command -v git >/dev/null || die "Git is not installed."
+command -v bundle >/dev/null || die "Bundler is not installed."
+
+cd "$REPO"
+
+[[ "$(git branch --show-current)" == main ]] ||
+  die "Deployment requires the main branch."
+
+git remote get-url origin >/dev/null ||
+  die "Git remote origin is missing."
+
+# Refuse unrelated tracked or untracked changes.
+# Ignored files such as _site/ are excluded.
+[[ -z "$(git status --porcelain --untracked-files=all)" ]] ||
+  die "Working tree is not clean. Commit, move, or ignore unrelated files first."
+
+echo "Checking GitHub synchronization..."
+
+git fetch origin main
+
+LOCAL_HEAD="$(git rev-parse HEAD)"
+REMOTE_HEAD="$(git rev-parse refs/remotes/origin/main)"
+
+[[ "$LOCAL_HEAD" == "$REMOTE_HEAD" ]] ||
+  die "Local main differs from origin/main. Synchronize before deployment."
+
+echo
+echo "========================================"
+echo " WRITEUPS DEPLOYMENT PREVIEW"
+echo "========================================"
+echo "Mode: $MODE"
+echo "Notes: $TOTAL"
+echo
+
+run_publisher false ||
+  die "Preview failed. Deployment cancelled."
+
+echo
+echo "Before publishing, confirm that:"
+echo "- All selected rooms permit public walkthroughs."
+echo "- Screenshots contain no unintended private information."
+echo "- Commands, links, and metadata have been reviewed."
+echo "- You intend to publish all $TOTAL selected notes."
+echo
+
+read -r -p "Continue with local generation? [y/N]: " answer
+
+[[ "$answer" == y || "$answer" == Y ]] || {
+  echo "Deployment cancelled."
+  exit 0
+}
+
+echo
+echo "Generating posts and screenshots..."
+
+run_publisher true ||
+  die "Generation failed. Review local changes before retrying."
+
+echo
+echo "Building generated website..."
+
+bundle exec jekyll build ||
+  die "Jekyll build failed."
+
+# Identify generated post paths and image directories
+# using the updated manifest.
+mapfile -d '' -t GENERATED < <(
+  python3 - "$VAULT" "$MANIFEST" \
+    "${RESOLVED[@]}" <<'PY'
+import json
+import pathlib
+import sys
+
+vault = pathlib.Path(sys.argv[1])
+manifest_path = pathlib.Path(sys.argv[2])
+sources = list(map(pathlib.Path, sys.argv[3:]))
+
+manifest = json.loads(
+    manifest_path.read_text(encoding="utf-8")
+)
+
+paths = set()
+
+for source in sources:
+    key = source.relative_to(vault).as_posix()
+    entry = manifest[key]
+
+    paths.add(entry["post"])
+    paths.add("assets/img/obsidian/" + entry["slug"])
+
+for path in sorted(paths):
+    sys.stdout.buffer.write(path.encode() + b"\0")
+PY
+)
+
+git add -- "${GENERATED[@]}"
+git add -- tools/.obsidian-published.json
+
+# Verify that only selected posts, registered images,
+# and the publishing manifest are staged.
+python3 - "$VAULT" "$MANIFEST" "${RESOLVED[@]}" <<'PYVALIDATE'
+import json
+import pathlib
+import subprocess
+import sys
+
+vault = pathlib.Path(sys.argv[1])
+manifest_path = pathlib.Path(sys.argv[2])
+sources = [pathlib.Path(p) for p in sys.argv[3:]]
+
+manifest = json.loads(
+    manifest_path.read_text(encoding="utf-8")
+)
+
+allowed = {"tools/.obsidian-published.json"}
+
+for source in sources:
+    key = source.relative_to(vault).as_posix()
+    entry = manifest[key]
+
+    allowed.add(entry["post"])
+    allowed.update(
+        f"assets/img/obsidian/{entry['slug']}/{name}"
+        for name in entry["images"]
+    )
+
+staged = subprocess.check_output(
+    ["git", "diff", "--cached", "--name-only", "-z"]
+).decode("utf-8").split("\0")
+
+unexpected = [
+    name for name in staged
+    if name and name not in allowed
+]
+
+if unexpected:
+    sys.exit(
+        "Unexpected staged files:\n"
+        + "\n".join(unexpected)
+    )
+
+print("PASS: Only selected writeup files are staged.")
+PYVALIDATE
+
+echo
+echo "Staged changes:"
+git diff --cached --stat
+
+# Allow Markdown's intentional trailing spaces, but
+# still reject other Git whitespace errors.
+git -c core.whitespace=-blank-at-eol,-blank-at-eof \
+  diff --cached --check ||
+  die "Staged changes failed validation."
+
+if git diff --cached --quiet; then
+  echo "No changes to publish."
+  exit 0
+fi
+
+echo
+read -r -p "Commit and push these changes to GitHub? [y/N]: " answer
+
+[[ "$answer" == y || "$answer" == Y ]] || {
+  echo "Changes generated locally but not committed or pushed."
+  exit 0
+}
+
+git commit -m "Publish $TOTAL cybersecurity writeup(s)"
+
+# Recheck the remote before pushing.
+git fetch origin main
+
+[[ "$(git rev-parse HEAD^)" == \
+   "$(git rev-parse refs/remotes/origin/main)" ]] ||
+  die "Remote changed during deployment. Commit retained locally; push cancelled."
+
+git push origin main
+
+echo
+echo "========================================"
+echo " Deployment push completed"
+echo "========================================"
+echo "Check GitHub Actions for the Pages build."
+echo "Website: https://neakvigran.github.io"
