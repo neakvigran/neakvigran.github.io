@@ -201,11 +201,11 @@ article.px-1 > header > h1[data-toc-skip] {
 }
 
 /* ==========================================
-   WRITEUPS — DESKTOP 125% SCALING TEST
+   WRITEUPS — DESKTOP SCALING (110%)
    ========================================== */
 
 @media (min-width: 1200px) {
   body {
-    zoom: 1.25;
+    zoom: 1.10;
   }
 }
