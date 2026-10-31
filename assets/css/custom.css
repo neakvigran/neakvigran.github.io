@@ -1,7 +1,14 @@
 
-/* WRITEUPS — CUSTOM STYLING */
+/* =========================================
+   WRITEUPS — CUSTOM STYLING
+   Jekyll Chirpy 7.6
+   ========================================= */
 
-/* Sidebar */
+
+/* =========================================
+   1. SIDEBAR
+   ========================================= */
+
 #sidebar {
   background: #101827 !important;
   border-right: 1px solid #26364d;
@@ -19,7 +26,11 @@
   border: 2px solid #3b82f6;
 }
 
-/* Navigation */
+
+/* =========================================
+   2. SIDEBAR NAVIGATION
+   ========================================= */
+
 #sidebar .nav-link:hover {
   color: #93c5fd;
 }
@@ -28,11 +39,18 @@
   color: #60a5fa;
 }
 
-/* Homepage cards */
+
+/* =========================================
+   3. HOMEPAGE ARTICLE CARDS
+   ========================================= */
+
 #post-list .card {
   border: 1px solid #293548;
   border-radius: 12px;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 #post-list .card:hover {
@@ -40,31 +58,109 @@
   transform: translateY(-3px);
 }
 
-/* Article headings */
-.content h1,
+
+/* =========================================
+   4. MARKDOWN HEADINGS
+   ========================================= */
+
+/* H1 — Major sections */
+.content h1 {
+  color: #38bdf8;
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  border-left: 4px solid #38bdf8;
+  padding-left: 14px;
+
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+/* H2 — Subsections */
 .content h2 {
-  border-left: 3px solid #3b82f6;
-  padding-left: 12px;
-}
-
-/* Inline commands */
-.content :not(pre) > code {
   color: #93c5fd;
-  background: rgba(59, 130, 246, 0.12);
-  padding: 0.15em 0.4em;
-  border-radius: 5px;
+  font-size: 1.45rem;
+  font-weight: 650;
+
+  border-left: 3px solid #60a5fa;
+  padding-left: 12px;
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* Screenshots */
+/* H3 — Smaller sections */
+.content h3 {
+  color: #a5b4fc;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+
+/* =========================================
+   5. INLINE CODE
+   ========================================= */
+
+/*
+   Only style inline commands within paragraphs
+   and list items.
+
+   Do not style fenced code blocks.
+*/
+
+.content p > code,
+.content li > code {
+  color: #93c5fd;
+  background-color: rgba(59, 130, 246, 0.10);
+
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+
+/* =========================================
+   6. FENCED CODE BLOCKS
+   ========================================= */
+
+/*
+   Use Chirpy's original code-block styling.
+
+   No custom rules for:
+   - .highlight
+   - pre
+   - .rouge-code
+   - .rouge-gutter
+   - .code-header
+
+   This preserves native terminal styling,
+   syntax highlighting, spacing and copy buttons.
+*/
+
+
+/* =========================================
+   7. SCREENSHOTS
+   ========================================= */
+
 .content img {
-  border-radius: 8px;
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
 }
+
+
+/* =========================================
+   8. ACCESSIBILITY
+   ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   #post-list .card {
     transition: none;
+  }
+
+  #post-list .card:hover {
     transform: none;
   }
 }
