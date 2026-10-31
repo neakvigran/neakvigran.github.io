@@ -164,3 +164,29 @@
     transform: none;
   }
 }
+
+
+/* =========================================
+   MARKDOWN TEXT EMPHASIS
+   ========================================= */
+
+/* Bold text — Lavender */
+.content strong,
+.content b {
+  color: #c4b5fd;
+  font-weight: 700;
+}
+
+/* Italic text — Light yellow */
+.content em,
+.content i:not([class]) {
+  color: #fde68a;
+}
+
+/* Bold + Italic combined */
+.content strong em,
+.content em strong {
+  color: #ddd6fe;
+  font-weight: 700;
+  font-style: italic;
+}
