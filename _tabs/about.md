@@ -4,8 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# About Me
-
 Hello! I'm **Nutavut Eakvigran**, a third-year Information and Communication Technology (ICT) student at **Mahidol University**, Thailand.
 
 I'm passionate about **cybersecurity**, particularly penetration testing, offensive security, and cloud security.
