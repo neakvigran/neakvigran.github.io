@@ -209,3 +209,20 @@ article.px-1 > header > h1[data-toc-skip] {
     zoom: 1.10;
   }
 }
+
+/* ==========================================
+   WRITEUPS — SIDEBAR ALIGNMENT
+   ========================================== */
+
+@media (min-width: 1200px) {
+
+  /* Shift profile avatar, title, and subtitle */
+  #sidebar .profile-wrapper {
+    transform: translateX(-12px);
+  }
+
+  /* Shift navigation menu */
+  #sidebar .nav {
+    transform: translateX(-12px);
+  }
+}
