@@ -100,7 +100,7 @@ def frontmatter(title, published, category, tags, description=None):
 
 def read_obsidian_metadata(content):
     """Read YAML front matter from an Obsidian note."""
-    content = content.lstrip("\ufeff")
+    content = content.lstrip("\ufeff\r\n")
 
     if not content.startswith("---\n"):
         return {}
@@ -149,11 +149,18 @@ def read_obsidian_metadata(content):
 
 
 def extract_body(s):
-    # Existing Obsidian YAML metadata is not copied into Chirpy front matter.
-    if s.startswith('---\n'):
-        m = re.match(r'\A---\n.*?\n---\s*\n', s, re.S)
-        if m:
-            return s[m.end():]
+    """Remove Obsidian YAML front matter from article content."""
+    s = s.lstrip("\ufeff\r\n")
+
+    match = re.match(
+        r"\A---\r?\n.*?\r?\n---(?:\r?\n|$)",
+        s,
+        re.DOTALL
+    )
+
+    if match:
+        return s[match.end():].lstrip("\r\n")
+
     return s
 
 
