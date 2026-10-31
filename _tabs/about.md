@@ -51,7 +51,7 @@ A Python-based network reconnaissance and service change detection tool.
 
 A network access control list (ACL) analysis and validation tool designed to identify configuration issues and verify security requirements.
 
-[View on GitHub](https://github.com/neakvigran/LabScope](https://github.com/neakvigran/ACLAutoGuard.git)
+[View on GitHub](https://github.com/neakvigran/ACLAutoGuard)
 
 ## Career Goals
 
