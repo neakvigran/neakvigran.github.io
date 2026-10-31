@@ -5,6 +5,7 @@ import datetime as dt
 import json
 import re
 import shutil
+import yaml
 import sys
 from pathlib import Path
 from urllib.parse import quote
@@ -45,13 +46,105 @@ def load_manifest():
     return obj
 
 
-def frontmatter(title, published, category, tags):
-    # JSON strings are valid YAML scalars; quote user-provided values safely.
-    return ('---\n' + f'title: {json.dumps(title, ensure_ascii=False)}\n'
-            + f'date: {published}\n'
-            + f'categories: {json.dumps(category, ensure_ascii=False)}\n'
-            + f'tags: {json.dumps(tags, ensure_ascii=False)}\n'
-            + 'toc: true\ncomments: false\n---\n\n')
+
+def read_existing_description(post_path):
+    """Read the description from an existing Chirpy post."""
+    if not post_path.is_file():
+        return None
+
+    content = post_path.read_text(encoding="utf-8")
+
+    if not content.startswith("---\n"):
+        return None
+
+    match = re.match(
+        r"\A---\r?\n(.*?)\r?\n---(?:\r?\n|$)",
+        content,
+        re.DOTALL
+    )
+
+    if not match:
+        return None
+
+    for line in match.group(1).splitlines():
+        if line.startswith("description:"):
+            value = line.split(":", 1)[1].strip()
+
+            try:
+                return json.loads(value)
+            except json.JSONDecodeError:
+                return value.strip("'\"")
+
+    return None
+
+def frontmatter(title, published, category, tags, description=None):
+    """Generate Chirpy-compatible YAML front matter."""
+    result = (
+        "---\n"
+        + f"title: {json.dumps(title, ensure_ascii=False)}\n"
+        + f"date: {published}\n"
+        + f"categories: {json.dumps(category, ensure_ascii=False)}\n"
+        + f"tags: {json.dumps(tags, ensure_ascii=False)}\n"
+    )
+
+    if description:
+        result += (
+            "description: "
+            + json.dumps(description, ensure_ascii=False)
+            + "\n"
+        )
+
+    result += "toc: true\ncomments: false\n---\n\n"
+    return result
+
+def read_obsidian_metadata(content):
+    """Read YAML front matter from an Obsidian note."""
+    content = content.lstrip("\ufeff")
+
+    if not content.startswith("---\n"):
+        return {}
+
+    match = re.match(
+        r"\A---\r?\n(.*?)\r?\n---(?:\r?\n|$)",
+        content,
+        re.DOTALL
+    )
+
+    if not match:
+        return {}
+
+    metadata = yaml.safe_load(match.group(1))
+
+    if metadata is None:
+        return {}
+
+    if not isinstance(metadata, dict):
+        raise ValueError(
+            "Obsidian front matter must be a YAML mapping."
+        )
+
+    description = metadata.get("description")
+    tags = metadata.get("tags")
+
+    if description is not None and not isinstance(description, str):
+        raise ValueError("Description must be a string.")
+
+    if tags is not None:
+        if isinstance(tags, str):
+            tags = [tags]
+        elif not isinstance(tags, list):
+            raise ValueError("Tags must be a list or string.")
+
+        if not all(isinstance(tag, str) for tag in tags):
+            raise ValueError("Every tag must be a string.")
+
+        metadata["tags"] = [
+            slugify(tag.lstrip("#"))
+            for tag in tags
+            if tag.strip()
+        ]
+
+    return metadata
 
 
 def extract_body(s):
@@ -107,9 +200,38 @@ def execute(args):
         raise ValueError('Cannot create slug from note name')
     if not existing and any(v.get('slug') == slug for v in manifest.values()):
         raise ValueError('Slug already belongs to another source note')
-    category = existing['categories'] if existing else [args.platform, args.category]
-    tags = existing['tags'] if existing else [slugify(x.strip()) for x in args.tags.split(',') if x.strip()]
-    published = existing['published'] if existing else dt.datetime.now().astimezone().strftime('%Y-%m-%d %H:%M:%S %z')
+    
+    # Read metadata from the original Obsidian note.
+    source_content = source.read_text(encoding="utf-8")
+    metadata = read_obsidian_metadata(source_content)
+
+    # Preserve categories and publication dates.
+    category = (
+        existing["categories"]
+        if existing
+        else [args.platform, args.category]
+    )
+
+    published = (
+        existing["published"]
+        if existing
+        else dt.datetime.now().astimezone().strftime(
+            "%Y-%m-%d %H:%M:%S %z"
+        )
+    )
+
+    # Obsidian tags take priority over existing tags.
+    if "tags" in metadata:
+        tags = metadata["tags"]
+    elif existing:
+        tags = existing["tags"]
+    else:
+        tags = [
+            slugify(tag.strip())
+            for tag in args.tags.split(",")
+            if tag.strip()
+        ]
+
     date_prefix = published[:10]
     post_rel = existing['post'] if existing else f'_posts/{date_prefix}-{slug}.md'
     post = REPO / post_rel
@@ -121,7 +243,11 @@ def execute(args):
         raise ValueError(f'Expected post missing: {post}')
     known = {v['slug']: v['slug'] for v in manifest.values()}
     known[slug] = slug
-    body, images, unresolved = convert(source.read_text(encoding='utf-8'), slug, known)
+    body, images, unresolved = convert(
+    source_content,
+    slug,
+    known
+    )
     for name in images:
         if not (IMAGE_DIR / name).is_file():
             raise ValueError(f'Missing image: {name}')
@@ -132,7 +258,23 @@ def execute(args):
         dest = dest_dir / name
         if dest.exists() and name not in old_images:
             raise ValueError(f'Unmanaged image already exists: {dest}')
-    text = frontmatter(source.stem, published, category, tags) + body
+    
+    # Obsidian description takes priority.
+    if "description" in metadata:
+        description = metadata["description"]
+    elif args.command == "update":
+        description = read_existing_description(post)
+    else:
+        description = None
+
+    text = frontmatter(
+        source.stem,
+        published,
+        category,
+        tags,
+        description
+    ) + body
+
     print(f'Mode: {args.command} ({"WRITE" if args.write else "PREVIEW"})')
     print(f'Source: {source}\nPost: {post}\nImages: {len(images)}; new: {len(new_images-old_images)}; removed: {len(old_images-new_images)}')
     print(f'Categories: {category}; tags: {tags}')

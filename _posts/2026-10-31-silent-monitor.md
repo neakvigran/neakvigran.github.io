@@ -3,6 +3,7 @@ title: "Silent Monitor"
 date: 2026-10-31 18:17:37 +0700
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme", "web-security"]
+description: "Enumerate a running internal service, exploit a vulnerable web application, pivot through the system, and crack your way to root."
 toc: true
 comments: false
 ---
@@ -66,7 +67,7 @@ I put username `' OR 1==1--` and randomly put password, let's see if it work or 
 
 ![image-1143](/assets/img/obsidian/silent-monitor/image-1143.png)
 
-It worked! Now we login as `netops` user
+It worked! Now we login as `netops` user 
 
 ![image-1145](/assets/img/obsidian/silent-monitor/image-1145.png)
 
@@ -89,7 +90,7 @@ I use Burp suite Repeater to send command injection with the request
 
 ![image-1148](/assets/img/obsidian/silent-monitor/image-1148.png)
 
-It worked! So, let's play around and find some thing interesting.
+It worked! So, let's play around and find some thing interesting. 
 
 ![image-1150](/assets/img/obsidian/silent-monitor/image-1150.png)
 
