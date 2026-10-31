@@ -1,0 +1,37 @@
+#compdef publish-writeup
+
+# Use Zsh's filename completion for escaping, quoting and directory traversal.
+local vault=${OBSIDIAN_VAULT:-$HOME/Obsidian Vault}
+local repo=${CHIRPY_REPO:-$vault/neakvigran.github.io}
+local context state state_descr line
+typeset -A opt_args
+
+_arguments -s \
+  '(--deploy)--write[Generate local files]' \
+  '(--write)--deploy[Preview, confirm, validate and deploy]' \
+  '(--folder)--batch[Select multiple Markdown notes]' \
+  '(--batch)--folder[Select a vault directory]:directory:->directories' \
+  '--recursive[Include subfolders in folder mode]' \
+  '--tags[Override tags]:tags:' \
+  '--platform[Override platform]:platform:' \
+  '--category[Override category]:category:' \
+  '(-h --help)'{-h,--help}'[Show help]' \
+  '*:Markdown note:->notes'
+
+case $state in
+  directories|notes)
+    [[ -d $vault ]] || return 1
+    # The publisher rejects repository files. Hide that directory when it is
+    # encountered while browsing the vault (also honor a custom CHIRPY_REPO).
+    local -a excluded
+    excluded=( "${repo:A}" "${repo:A}/" )
+    if [[ ${repo:A} == ${vault:A}/* ]]; then
+      excluded+=( "${${repo:A}#${vault:A}/}" "${${repo:A}#${vault:A}/}/" )
+    fi
+    if [[ $state == directories ]]; then
+      _path_files -W vault -/ -F excluded
+    elif (( ! ${+opt_args[--folder]} )); then
+      _path_files -W vault -g '*.md' -g '*(-/)' -F excluded
+    fi
+    ;;
+esac
