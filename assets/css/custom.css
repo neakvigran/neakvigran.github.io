@@ -199,3 +199,13 @@ article.px-1 > header > h1[data-toc-skip] {
   color: #38bdf8 !important;
   font-weight: 700 !important;
 }
+
+/* ==========================================
+   WRITEUPS — DESKTOP 125% SCALING TEST
+   ========================================== */
+
+@media (min-width: 1200px) {
+  body {
+    zoom: 1.25;
+  }
+}
