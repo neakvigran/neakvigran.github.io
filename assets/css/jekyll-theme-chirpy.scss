@@ -1,0 +1,175 @@
+---
+---
+
+@import "main";
+
+/* =========================================
+   WRITEUPS — SIDEBAR CUSTOMIZATION
+   ========================================= */
+
+/* Sidebar background */
+#sidebar {
+  background: #101827 !important;
+  border-right: 1px solid #26364d;
+}
+
+/* Website title */
+#sidebar .site-title {
+  color: #f1f5f9 !important;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Subtitle */
+#sidebar .site-subtitle {
+  color: #94a3b8 !important;
+}
+
+/* Navigation links */
+#sidebar .nav-link {
+  border-radius: 8px;
+  transition: background-color 0.2s ease,
+              color 0.2s ease;
+}
+
+/* Hover effect */
+#sidebar .nav-link:hover {
+  background: rgba(59, 130, 246, 0.12);
+  color: #93c5fd !important;
+}
+
+/* Active navigation item */
+#sidebar .nav-item.active .nav-link,
+#sidebar .nav-link.active {
+  background: rgba(59, 130, 246, 0.16);
+  color: #60a5fa !important;
+}
+
+/* Avatar */
+#sidebar #avatar {
+  border: 2px solid #3b82f6 !important;
+  transition: border-color 0.2s ease;
+}
+
+#sidebar #avatar:hover {
+  border-color: #93c5fd !important;
+}
+
+/* =========================================
+   WRITEUPS — HOMEPAGE ARTICLE CARDS
+   ========================================= */
+
+/* Article cards */
+#post-list .card {
+  border: 1px solid #293548;
+  border-radius: 12px;
+  overflow: hidden;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Hover effect */
+#post-list .card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  transform: translateY(-3px);
+}
+
+/* Article titles */
+#post-list .card .card-title {
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+#post-list .card:hover .card-title {
+  color: #60a5fa;
+}
+
+/* Article preview */
+#post-list .card .card-text {
+  line-height: 1.7;
+}
+
+/* Article metadata */
+#post-list .card .post-meta {
+  font-size: 0.85rem;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  #post-list .card {
+    transition: none;
+  }
+
+  #post-list .card:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================
+   WRITEUPS — ARTICLE READABILITY
+   ========================================= */
+
+/* Article text */
+#post-wrapper .content {
+  line-height: 1.85;
+}
+
+/* Section headings */
+#post-wrapper .content h1,
+#post-wrapper .content h2,
+#post-wrapper .content h3 {
+  font-weight: 650;
+  letter-spacing: -0.3px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Blue accent for major sections */
+#post-wrapper .content h1,
+#post-wrapper .content h2 {
+  border-left: 3px solid #3b82f6;
+  padding-left: 12px;
+}
+
+/* Inline commands */
+#post-wrapper .content :not(pre) > code {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.12);
+  padding: 0.15em 0.4em;
+  border-radius: 5px;
+}
+
+/* Terminal and code blocks */
+#post-wrapper .content .highlight,
+#post-wrapper .content div[class^="language-"] {
+  border-radius: 10px;
+}
+
+/* Screenshots */
+#post-wrapper .content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Screenshot spacing */
+#post-wrapper .content p > img {
+  margin: 1rem 0;
+}
+
+/* Article links */
+#post-wrapper .content a {
+  text-underline-offset: 3px;
+}
+
+/* Temporary heading selector test */
+.content h1,
+.content h2,
+.content h3 {
+  border-left: 4px solid #3b82f6 !important;
+  padding-left: 16px !important;
+}
