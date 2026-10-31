@@ -3,6 +3,7 @@ title: "Operation Promotion"
 date: 2026-10-31 18:17:37 +0700
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
+description: "One engagement stands between you and your next title."
 toc: true
 comments: false
 ---
@@ -25,8 +26,8 @@ Allow two to three minutes for all services to start.
 
 # Reconnaissance
 
-Of course, first thing is scanning
-`rustscan -a 10.48.142.220 --top -- -sV -sC`
+Of course, first thing is scanning 
+`rustscan -a 10.48.142.220 --top -- -sV -sC` 
 
 ![image-1165](/assets/img/obsidian/operation-promotion/image-1165.png)
 
@@ -114,7 +115,7 @@ now connect to jford using this credential and `cat user.txt` to get the flag
 
 ![image-1187](/assets/img/obsidian/operation-promotion/image-1187.png)
 
-and we found
+and we found 
 
 ![image-1188](/assets/img/obsidian/operation-promotion/image-1188.png)
 
@@ -122,7 +123,7 @@ then I check with `GTFOBins`
 
 ![image-1189](/assets/img/obsidian/operation-promotion/image-1189.png)
 
-use this command
+use this command 
 
 `sudo /usr/bin/find . -exec /bin/sh \; -quit`
 

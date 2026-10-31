@@ -3,6 +3,7 @@ title: "Interceptor"
 date: 2026-10-31 18:17:37 +0700
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
+description: "Use Burp or interception knowledge to modify the traffic and pwn the machine."
 toc: true
 comments: false
 ---
@@ -152,7 +153,7 @@ Password is `MediaHub2026`
 
 ![image-1302](/assets/img/obsidian/interceptor/image-1302.png)
 
-After login it ask for OTP sent to the email. I inspect this page script and we can see that if we success it will redirect to `dashboard.php`
+After login it ask for OTP sent to the email. I inspect this page script and we can see that if we success it will redirect to `dashboard.php` 
 
 ```html
 <script>
@@ -213,7 +214,7 @@ Now, it said redirecting... so I change path to `/dashboard.php` and now we are 
 
 Inside we can use upload and Import feed. This might be vuln.
 
-But it seem like picture upload is filter only picture, so let's focus on import feed features
+But it seem like picture upload is filter only picture, so let's focus on import feed features 
 
 ![image-1307](/assets/img/obsidian/interceptor/image-1307.png)
 
@@ -237,7 +238,7 @@ this might mean we have to put file path instead of command.
 
 ![image-1313](/assets/img/obsidian/interceptor/image-1313.png)
 
-I try `http://127.1 ; file:///etc/passwd` and now it work this mean we can fetch file directly via this injection
+I try `http://127.1 ; file:///etc/passwd` and now it work this mean we can fetch file directly via this injection 
 
 since question asked for `/var/www/user.txt`
 

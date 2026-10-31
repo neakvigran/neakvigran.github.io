@@ -3,6 +3,7 @@ title: "Checkmate"
 date: 2026-10-31 18:17:37 +0700
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
+description: "Exploit weak password practices across Marco’s internal systems to achieve full compromise."
 toc: true
 comments: false
 ---
@@ -28,7 +29,7 @@ comments: false
 
 1. Navigate to `firewall.thm:5001`.![image-1071](/assets/img/obsidian/checkmate/image-1071.png)
 2. Hint: kept default credentials
-3. So, let try brute force username:admin using hydra tool.
+3. So, let try brute force username:admin using hydra tool. 
 ```bash
  hydra -l admin \                                
   -P /usr/share/seclists/Passwords/Default-Credentials/default-passwords.txt \
@@ -101,7 +102,7 @@ comments: false
 5. Now, we got new wordlists contain in marco.txt
 6. Use this wordlist to perform SSH service brute force using hydra.
 7. Command:`hydra -l marco -P marco.txt ssh://<TARGET IP ADDRESS>
-`
+` 
 ![image-1089](/assets/img/obsidian/checkmate/image-1089.png)
 
 *DONE!!*

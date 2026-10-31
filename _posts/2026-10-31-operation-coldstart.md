@@ -3,6 +3,7 @@ title: "Operation Coldstart"
 date: 2026-10-31 18:17:37 +0700
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
+description: "Wake up the staging server everyone left behind."
 toc: true
 comments: false
 ---
@@ -171,7 +172,7 @@ Now, let enumerate the website.
 
 ![image-1210](/assets/img/obsidian/operation-coldstart/image-1210.png)
 
-Since we already know website source code. I will try to put
+Since we already know website source code. I will try to put 
 http://kestrel.thm which resolve to `127.0.0.1`
 
 ![image-1213](/assets/img/obsidian/operation-coldstart/image-1213.png)
@@ -199,7 +200,7 @@ I continue enumerate the targets to find vuln for **privilege escalation** and I
 
 `* * * * * root cd /opt/backups && tar czf /var/backups/uploads.tgz *
 `
-This seem to vuln with **wildcard injection attack** or **argument injection**
+This seem to vuln with **wildcard injection attack** or **argument injection** 
 
 When root's cron runs `tar czf out.tgz *` in a directory you can write to, the shell expands `*` to whatever filenames exist there. So files named `--checkpoint=1` and `--checkpoint-action=exec=sh shell.sh` get passed to tar as actual command-line flags. Tar's `--checkpoint-action=exec=` runs a shell command at each checkpoint, so it executes `shell.sh` as `root`.
 
@@ -223,3 +224,5 @@ and we will find flag at `/root/flag.txt`
 *DONE !!!*
 
 ---
+
+

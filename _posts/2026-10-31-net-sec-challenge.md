@@ -3,6 +3,7 @@ title: "Net Sec Challenge"
 date: 2026-10-31 18:17:37 +0700
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
+description: "Practice the skills you have learned in the Network Security module."
 toc: true
 comments: false
 ---
@@ -26,7 +27,7 @@ Let's use `nmap` to scan for port opening
 
 ![image-1224](/assets/img/obsidian/net-sec-challenge/image-1224.png)
 
-**Ans**
+**Ans** 
 	 Port number 8081
 
 2. *There is an open port outside the common 1000 ports; it is above 10,100. What is it?*
@@ -34,7 +35,7 @@ Let's use `nmap` to scan for port opening
 ![image-1225](/assets/img/obsidian/net-sec-challenge/image-1225.png)
 
 
-**Ans**
+**Ans** 
 	Port number 10121
 
 3. *How many TCP ports are open?*
@@ -45,7 +46,7 @@ Let's use `nmap` to scan for port opening
 
 ![image-1226](/assets/img/obsidian/net-sec-challenge/image-1226.png)
 
-5. *What is the flag hidden in the SSH server header?*
+5. *What is the flag hidden in the SSH server header?*    
 
 ![image-1227](/assets/img/obsidian/net-sec-challenge/image-1227.png)
 
@@ -58,7 +59,7 @@ Since, previously **port 10121** show unknown service, so I assume that this por
 **Ans** `vsftpd 3.0.5`
 
 
-7. *We learned two usernames using social engineering: **eddie** and **quinn**. What is the flag hidden in one of these two account files and accessible via FTP?*
+7. *We learned two usernames using social engineering: **eddie** and **quinn**. What is the flag hidden in one of these two account files and accessible via FTP?* 
 
 Seem like we need to brute force to find passwords for these two account using hydra tool
 
