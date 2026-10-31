@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+VAULT="$HOME/Obsidian Vault"
+REPO="$VAULT/neakvigran.github.io"
+PUBLISHER="$REPO/tools/publish_obsidian.py"
+MANIFEST="$REPO/tools/.obsidian-published.json"
+
+if [[ $# -eq 0 ]]; then
+    echo "Usage: publish-writeup <note.md> [--write] [--platform NAME] [--category NAME] [--tags TAGS]"
+    exit 1
+fi
+
+NOTE="$1"
+shift
+
+if [[ "$NOTE" = /* ]]; then
+    SOURCE="$NOTE"
+else
+    SOURCE="$VAULT/$NOTE"
+fi
+
+if [[ ! -f "$SOURCE" ]]; then
+    echo "Error: Note not found: $SOURCE"
+    exit 1
+fi
+
+if [[ ! -f "$PUBLISHER" ]]; then
+    echo "Error: Publishing script not found: $PUBLISHER"
+    exit 1
+fi
+
+# Check the manifest to determine whether the note
+# has already been published.
+MODE=$(python3 - "$VAULT" "$SOURCE" "$MANIFEST" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+vault = Path(sys.argv[1]).resolve()
+source = Path(sys.argv[2]).resolve()
+manifest = Path(sys.argv[3])
+
+try:
+    key = source.relative_to(vault).as_posix()
+except ValueError:
+    print("ERROR")
+    sys.exit(0)
+
+if not manifest.exists():
+    print("publish")
+    sys.exit(0)
+
+try:
+    records = json.loads(manifest.read_text(encoding="utf-8"))
+except (OSError, ValueError) as exc:
+    print(f"Manifest error: {exc}", file=sys.stderr)
+    sys.exit(1)
+
+print("update" if key in records else "publish")
+PY
+)
+
+if [[ "$MODE" == "ERROR" ]]; then
+    echo "Error: Note must be inside your Obsidian vault."
+    exit 1
+fi
+
+echo "===================================="
+echo " Obsidian -> Chirpy Publisher"
+echo "===================================="
+echo "Note: $SOURCE"
+echo "Mode: $MODE"
+echo
+
+# Detect platform and category from the vault-relative path.
+RELATIVE="${SOURCE#"$VAULT"/}"
+
+PLATFORM="${RELATIVE%%/*}"
+REMAINDER="${RELATIVE#*/}"
+
+if [[ "$REMAINDER" == */* ]]; then
+    CATEGORY="${REMAINDER%%/*}"
+else
+    CATEGORY="General"
+fi
+
+echo "Platform: $PLATFORM"
+echo "Category: $CATEGORY"
+echo
+
+cd "$REPO"
+
+python3 "$PUBLISHER" "$MODE" "$SOURCE" \
+    --platform "$PLATFORM" \
+    --category "$CATEGORY" \
+    "$@"
