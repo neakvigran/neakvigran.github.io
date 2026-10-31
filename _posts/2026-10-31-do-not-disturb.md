@@ -3,6 +3,7 @@ title: "Do Not Disturb"
 date: 2026-10-31 20:49:22 +0700
 categories: ["TryHackMe", "Holiday Challenge"]
 tags: ["tryhackme"]
+description: "Sign's on the door. Room's active. You have access you were never given, and so does he."
 toc: true
 comments: false
 ---

@@ -3,6 +3,7 @@ title: "Complimentary"
 date: 2026-10-31 20:49:22 +0700
 categories: ["TryHackMe", "Holiday Challenge"]
 tags: ["tryhackme"]
+description: "Install the free app and it hands your phone a set of cloud keys, the same set it hands everyone. They're read-only, but read-only of every guest's contacts, location, and passwords, not just Lambo's. She gave consent. Technically."
 toc: true
 comments: false
 ---

@@ -3,6 +3,7 @@ title: "Towel on the Sunbed"
 date: 2026-10-31 20:49:22 +0700
 categories: ["TryHackMe", "Holiday Challenge"]
 tags: ["tryhackme"]
+description: "Ponzi set his towel down for one 24-hour reward claim. He came back to find the sunbed had been \"claimed\" three times over while he wasn't looking."
 toc: true
 comments: false
 ---
