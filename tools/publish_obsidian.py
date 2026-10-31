@@ -226,11 +226,11 @@ def execute(args):
     elif existing:
         tags = existing["tags"]
     else:
-        tags = [
-            slugify(tag.strip())
-            for tag in args.tags.split(",")
-            if tag.strip()
-        ]
+        tags = (
+            [slugify(tag.strip()) for tag in args.tags.split(",") if tag.strip()]
+            if args.tags is not None
+            else [slugify(args.platform)]
+        )
 
     date_prefix = published[:10]
     post_rel = existing['post'] if existing else f'_posts/{date_prefix}-{slug}.md'
@@ -305,7 +305,7 @@ def main():
     p.add_argument('note', help='Vault-relative or absolute path to .md note')
     p.add_argument('--platform', default='TryHackMe')
     p.add_argument('--category', default='Challenge')
-    p.add_argument('--tags', default='tryhackme,web-security')
+    p.add_argument('--tags', default=None)
     p.add_argument('--write', action='store_true', help='Write generated files locally')
     args = p.parse_args()
     if args.command == 'preview' and args.write:

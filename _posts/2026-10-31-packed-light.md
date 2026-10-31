@@ -2,7 +2,7 @@
 title: "Packed Light"
 date: 2026-10-31 20:49:22 +0700
 categories: ["TryHackMe", "Holiday Challenge"]
-tags: ["tryhackme", "web-security"]
+tags: ["tryhackme"]
 toc: true
 comments: false
 ---

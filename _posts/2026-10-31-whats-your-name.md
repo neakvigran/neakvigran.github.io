@@ -2,7 +2,7 @@
 title: "Whats Your Name?"
 date: 2026-10-31 17:47:21 +0700
 categories: ["TryHackMe", "Challenge"]
-tags: ["tryhackme", "xss", "web-security"]
+tags: ["tryhackme"]
 toc: true
 comments: false
 ---

@@ -2,7 +2,7 @@
 title: "Silent Monitor"
 date: 2026-10-31 18:17:37 +0700
 categories: ["TryHackMe", "Challenge"]
-tags: ["tryhackme", "web-security"]
+tags: ["tryhackme"]
 description: "Enumerate a running internal service, exploit a vulnerable web application, pivot through the system, and crack your way to root."
 toc: true
 comments: false

@@ -2,7 +2,7 @@
 title: "Operation Coldstart"
 date: 2026-10-31 18:17:37 +0700
 categories: ["TryHackMe", "Challenge"]
-tags: ["tryhackme", "web-security"]
+tags: ["tryhackme"]
 toc: true
 comments: false
 ---
