@@ -63,4 +63,3 @@ I'm particularly interested in opportunities where I can apply practical cyberse
 
 - [GitHub](https://github.com/neakvigran)
 - [LinkedIn](https://www.linkedin.com/in/nutavut-eakvigran-914695404/)
-- [Cybersecurity Writeups](https://github.com/neakvigran/Write-up)
