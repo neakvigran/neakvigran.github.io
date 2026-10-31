@@ -39,7 +39,39 @@
       "image-1945.png",
       "image-1946.png",
       "image-1947.png"
-    ]
+    ],
+    "source_sha256": "40bdc534b4bbed220b24d1410681e63a10ffcebc9b9a7553b8cb3e28f77f52c2",
+    "post_sha256": "f32238878cd0f46d4b76abe940f9ef797703e8f4ee6ea6eac8c80a5bbc71fdfe",
+    "image_sha256": {
+      "image-1900.png": "312f353a5e13aee5c582b44dd27efd5542f9dfd4d6a5db4b26875503cf347bf4",
+      "image-1901.png": "de6851efb4c9522b2814126b70441ff83d5c209bfbebe4c00e6e95d95947b107",
+      "image-1904.png": "f4f4fbf4342ab542273755cdddb3239695d3097c628bab443b356fdd2331298e",
+      "image-1905.png": "18cb1599138639d7c0f8cc4a24a3de2aa883774df919128eb4b4617df683fe55",
+      "image-1906.png": "28b964299ea86946adee6750ed50eb30fe66c7a9d7a38233414d82cbb530e41a",
+      "image-1911.png": "60f4824a7f24f022d4e385a7ef64aa36ed9bd5ea8b052622417a2a13ce057c1e",
+      "image-1913.png": "61ae1107b28c917ca8dd6640fdbc11a6ee9011b39940147a3f4976bfa50b6353",
+      "image-1914.png": "e19e6b022b30ff85c2a3e654d09e865c3e24f39facbfd282e09c219d34ea5fd2",
+      "image-1918.png": "8448bf93a6500b425fdc73eec4614f5ef9291a4347144108756c6eac1a363b48",
+      "image-1924.png": "965903bc7d157e8a7960d48ae4543ffe37d6575686e8e6e39a34b9d259cafaef",
+      "image-1925.png": "4e1ee9eb0e4a957de09383b87c44dd93bc4fc5e71329ca1c40acdfff41514107",
+      "image-1926.png": "a5233d61874d6276b13af00991da24e0c68a867be8aef5c544727ba276fbc616",
+      "image-1928.png": "40412687b8e0edab556427cadffd01e6b17d313382297e5718d672264da4de2a",
+      "image-1929.png": "608c5bb356529321fedc4b10d0db889c469100ace6d69a72cdcb065d270c13ec",
+      "image-1931.png": "874af84d30e5a3bd543a92e44e534024f86c7e58ae2bbefe0b4c733653601441",
+      "image-1932.png": "e1a19cfcee5fbd2d757290ef78d9b005f77b0eb570e7b4f08f7145c3c7c423c7",
+      "image-1933.png": "95ae4f12f18b28a8db5bdd1e78eb534d08fffad2f66b3fdec148182dd91caa22",
+      "image-1934.png": "ca1ebc8ae0e0f823f94a3dad0b7b74547523901ab3de06f01654d80da9dc9cd0",
+      "image-1935.png": "b4d993c4c97c1d515721e49e490e1cdd603c5615d3d02a501748b2b7afbb1fe1",
+      "image-1936.png": "4606f203156872b512728322a6effc9d57851c78796b51aaae802a83a687d857",
+      "image-1937.png": "3a35eba957b74e412d53b4ec16583f5646a1914a8985e637e3435a9eef46e6e8",
+      "image-1938.png": "22eecc6176279636d46c93d212b63836eec719379818d60162f4202b1315a9b7",
+      "image-1940.png": "db11b87f35adcba2d8105a3eb6c145edb2e425fee567ee924f3ae3f9e0b4f576",
+      "image-1942.png": "a3e32c2995943d559a48e9df8da5cefa294903e7b7c1603859e51fb26d538d1d",
+      "image-1943.png": "c49f6a690511bfa52749971e4a9f4bd6d2eb5bf6251ddee87a14d451d2523e71",
+      "image-1945.png": "f061354560e6278dbfb93c8bd3aeab3bca5b02104425e3d4b3df002847bde97f",
+      "image-1946.png": "eaaf9d81f328c40aa8f431feba8af482b7fd1673bdce81536894b9c26a5638f0",
+      "image-1947.png": "cd928cc8eee78ecb44cd0275e05ad3bcda0682ad74ca297f728627be5efde853"
+    }
   },
   "TryHackMe/Challenge/Checkmate.md": {
     "slug": "checkmate",
@@ -73,7 +105,31 @@
       "image-1086.png",
       "image-1087.png",
       "image-1089.png"
-    ]
+    ],
+    "source_sha256": "cae39bf0386ccb8af1ec812f3d51bc6793cbdab0416f5360a0da4e9089d3628d",
+    "post_sha256": "41647655a4f0bb1ea193c76e50b3ed623e426b7ae0e4d3811c502753bb6e963a",
+    "image_sha256": {
+      "Pasted image 20261028110746.png": "57ac1081f0d168cff4204fd34df60255292da0b4b1fff0c33fadc38e03e00d50",
+      "image-1070.png": "ff286ad9ebef057411d35cb652fa36cb2afa2e3a4a2db1eb53354fce53b2a384",
+      "image-1071.png": "569615fd961b99c1529b0618cda096109a2f0a73aa19e61b66adf591d69205a4",
+      "image-1072.png": "56611a775c9c50f909b57ccac9c5dc2ae825b655e541157601addf64faa866d0",
+      "image-1073.png": "16dd194ddfeb53da2688a87180b25d690bc26eeb525232a44cf9df5a4fab79e2",
+      "image-1074.png": "acea1faee04e970171815096c77bf3ce7a58f0c393127f7568e49ee5fe46146a",
+      "image-1075.png": "ee30f4db7cab849d82a0126965a70d83d76297abd7a1388307d88a4022e6e21c",
+      "image-1076.png": "929527c15bbc6c9ad6d82bd9d10a8418ed573b17e47a2be8eb70a9b6299cbee4",
+      "image-1077.png": "c507ed6889a18edcac1688ba9c42929c3c52d19919395113a32cfb1570162d31",
+      "image-1078.png": "ce7739f7e83abc42644e14d4ebcecc432636ab12b641be1f2d7445e07c52cf26",
+      "image-1079.png": "7fac06f649f2634697447a81ec20ca4319239e79180ec2677c2afad6aeb4d7ae",
+      "image-1080.png": "7ba55c3bae8b7fdaab5b45dce4dba7644cea5c3f83f3cdd1ae79c964fb97b0f8",
+      "image-1081.png": "aff0259be57db0e6eb3d0ac71160bd658941f448ce05281e6b8be286eb65b528",
+      "image-1082.png": "8d74e17fe4d76a8cf830269b461d256b64248f6624db1d6df89069034afebd47",
+      "image-1083.png": "5af00d37b32d5c9dd3f9c0a4311acdee5dedeb8b62caa58f134663e3cfdbb207",
+      "image-1084.png": "e26baa790ba214777f22d0b7b3251f5c117a3c563b02fe58b794145704a05f78",
+      "image-1085.png": "f53282512c287f03dec2091db8df3a7cc592c50e44e5282c47656ce284453fb0",
+      "image-1086.png": "6a7b1f38c2e16f11480137cd5dbb2ec881036f52daab983ac6a20d4ce1715d5a",
+      "image-1087.png": "d924d754e459b301a7cbf6e1507effaf470f637d3b2544e90a1d4f8bf1d1c931",
+      "image-1089.png": "6769e1d7b1695475e823ce414fdd856041c5e884820a6c2f8abb4aed3648486a"
+    }
   },
   "TryHackMe/Challenge/Dead Drop.md": {
     "slug": "dead-drop",
@@ -110,7 +166,34 @@
       "image-1269.png",
       "image-1270.png",
       "image-1271.png"
-    ]
+    ],
+    "source_sha256": "53f4dfed2769d6cbe4dc077cc51d059e900ce834ab9ee88eb1e63a1c454d832a",
+    "post_sha256": "d5d3d81faeddd45b62e21a2e93a46bfcc4c52d23c585acd4abf83e1a4bbbc966",
+    "image_sha256": {
+      "image-1236.png": "cc59df7193f291f7b70382c9f68c9b743a6c3bcc49e76ad13918631f5e6a18d5",
+      "image-1237.png": "dcbe72e7099d22b781183a765fedad5673229f78feda92beac4d6a3f6f10889c",
+      "image-1238.png": "55725f7b389f5390c82965e42c41aa5242d8a91a6f5ea9c4fd6cb8a5eb39d381",
+      "image-1239.png": "380c2ee99ae7866caf316e0e9ca0f8cca5c7e8ea551db576f37aa57fdf0f30bd",
+      "image-1240.png": "7f71ea17cfbcc59a2d4b08bcf1a3bb4af2881aa118cc64d81695d3f21db17fa3",
+      "image-1241.png": "f8dfe85b6bd6aff26e5652b744cc8d2a14df3dc0621dae59a4df23d5c9b66007",
+      "image-1242.png": "989e7ba18a1bc9f6a2553fc4599dbab4e87784e23881a93b17eb76b2be73640b",
+      "image-1243.png": "216d4f8f229fcefee87e510d2b3ebc3119f102c6054d39553d21564bea6613eb",
+      "image-1244.png": "6167c1bd190e62bffe49462e988c07bd31790a36647dab18c4103cfe5583717f",
+      "image-1245.png": "a14ea26fa90ba5ec33c807e40b3139c0f76af76b686dc6570d064c62dcfd1e34",
+      "image-1246.png": "1096d63084ffb94a3be922aa365d95489600c86de1938d099e6052e707efb171",
+      "image-1247.png": "ce7ad93c626782fb1bdc15e7393725002f252c70e5793b536c5a37ee33834472",
+      "image-1248.png": "ee6650e0de7800c81b4d20130971be739e6cc9866cb41fbe7016e64841e53496",
+      "image-1249.png": "185760a19c02ff637ee96eeffbde5931c13e4d1fd15983d324327f45518c2c28",
+      "image-1250.png": "9da0e873214ef21d65f38352f350b5a31acaff6ec9a34332893be8e6e942174a",
+      "image-1251.png": "2df4896f880fe15c4c0d49a7e6514c688ab2f0a04eb679881d31be20e3d7c18e",
+      "image-1254.png": "473c957398328004fc0dd6e7806a88f7abeeaf6ce0afd9fd2a82a92f41b48723",
+      "image-1255.png": "be0f70cebe66b72bd356e5abed7d9a32ddc9e0008ef7b7d37070b6b7dddf5301",
+      "image-1267.png": "1d5e4241de3e0dda00f8d94e955a2494ca2a155db8a2acfa8c89a8bb3ef4b9bd",
+      "image-1268.png": "d1db4d99e70d0b111172edf0c0e8aada329804e40c23476d40997ee9b38adfc9",
+      "image-1269.png": "b2ac35614d46c6e72a1d446a5c0d4d8dc978cfa0d9640535f01095fbb96c9a95",
+      "image-1270.png": "4c8f2b3c9845f6ab51844c60cbd1955eaf43898e88912b0aa453deb7a73460bd",
+      "image-1271.png": "ccdea8023e962fbe450e55b892a75b82c7f6edeb47f04d26d99db0c28832614c"
+    }
   },
   "TryHackMe/Challenge/Forward.md": {
     "slug": "forward",
@@ -145,7 +228,32 @@
       "image-1132.png",
       "image-1133.png",
       "image-1134.png"
-    ]
+    ],
+    "source_sha256": "8f7a8c6043ddaba690ea040015f71aa766b5e27bbe4c834889e3c13ae5e69660",
+    "post_sha256": "a2218ab10b7972f58073dec9937bf1532bf1cf8092a5afd11c8c4361a150e5f7",
+    "image_sha256": {
+      "Pasted image 20261028112214.png": "054458a000f78793d6244a787a7be9e34fce88f3eaad35f8d1a8e24d97ebc3fe",
+      "Pasted image 20261028112236.png": "193f23dea51d364ce31888d0e7e33620009d385c01cf8cc397e333f71b6d2745",
+      "image-1114.png": "3b8886e096ac47b2c7fa86ba03cc01119199175b648818c7b3e7dcf906ada505",
+      "image-1115.png": "65075bd9973b7f931aa944a04cc67cba2da3d4b1c5126b7690ddf20bfde2bd8d",
+      "image-1116.png": "411f62830e9ac1424101cd542f757c6fdc5c75bfd105e437d1692bfcdcb3ab0e",
+      "image-1117.png": "0ee31e41977ecf1f2b45395618a2a483cefd2d4cc266140ed6cbcb0dc8aea4b7",
+      "image-1119.png": "40cf390ce2627e902709221b5c45110029a2282fa07c860825a22f7f4c5ccf84",
+      "image-1121.png": "56373c140f7bcfa98141c74de1679a56051ff0542f89958e877c9f573379af02",
+      "image-1122.png": "87f5f6b577692008bfad1bfa9eeb1cef8df4a3192d6d08743111026f92f241da",
+      "image-1123.png": "2fbf21bfeea7a0cbcaf5f6fe247428111dffb49be1099e4d96a1c7b1df1b661a",
+      "image-1124.png": "b9a2a8a05835a033944a1b0540fa0c3b60bf30342eb85193009612e88c2df9d4",
+      "image-1125.png": "7474592eb26973bcb9655000bb1dac3da50048512c0226b5a2abcf4072893801",
+      "image-1126.png": "e9300657cd66275561bd177d7a547b317a37fe076acd153d977bc964a573559a",
+      "image-1127.png": "a357023b78c7a455548b2bf689216ecefa5b980a9728e5bb941a10e6bdb797be",
+      "image-1128.png": "0b49d445dcedcf2b6725942e9e3c621ee4656cb7ff03a1b8ffddacf68f2049b5",
+      "image-1129.png": "5be2a7cd2507fb1d1a0a47d7bfd52d127eb4632cb82678bc4b1c0883396752ec",
+      "image-1130.png": "a98f85bfc2bcc92850aff68017dd42328214737b5430fba426db45125a909fe0",
+      "image-1131.png": "4f6f65c7f84b151d60e22bb1fa443839dd600d91fa6c35144083ca56848a9a3d",
+      "image-1132.png": "113a92888c31ebd1b10a57473df0174a5d4f145ed8d4ccfc8ccaca481fc20807",
+      "image-1133.png": "8b5276ae32f31edf8b090e10854549d3a3d1d8c4ee12c5f8bd2a03e82a1078c9",
+      "image-1134.png": "1e57865540436592f0c46363ba4e5e32b71dc134bcbbb9086cc45c29f7aaef17"
+    }
   },
   "TryHackMe/Challenge/Hammer.md": {
     "slug": "hammer",
@@ -188,7 +296,40 @@
       "image-1476.png",
       "image-1479.png",
       "image-1480.png"
-    ]
+    ],
+    "source_sha256": "072196dfb6c1637b8be28b1ab381b2ebc8b54e97716d50ad15996a2be903a094",
+    "post_sha256": "380a5a119307ba175762cace007110a9d5e51b7036ad232b48cafc92331f5256",
+    "image_sha256": {
+      "image-1443.png": "a855155c52f7105361fa78a424571ce2ba835b19364ed5e3d2d6eeaaaf51fbad",
+      "image-1445.png": "8daf02e0209f4afa5b4abad59806198ddfa120c22d8ecfba44ba6d0bca5492a9",
+      "image-1446.png": "32c914a1c86f11e73104832d52c400c89b8b438c68aa2bba2e6e4cff21a974b4",
+      "image-1447.png": "fd250b4336704611ef54c13326ef882961a96813226baaef09cb1ab26d68c13f",
+      "image-1448.png": "7ac2b6883dcd509ba7c1e3834064eb8684c155f5b3e4f265ec11a354381f81e7",
+      "image-1449.png": "105143d0af13c47cb29b142106ca62fae78040086c4b6b638075f4cb01cabcd7",
+      "image-1452.png": "541e260d3261ca2f2c775220457e494b8990850c44db23ea24b8b454b6b56ec7",
+      "image-1453.png": "f0725b62b6058c0fdb9f1a7f0efc82754fec5fe212b3ca7c05c5823345728445",
+      "image-1455.png": "7d1ba64dc78b3f863098720ec3f17cd2ba61d12dbfcea57c4f7238532b00bb53",
+      "image-1456.png": "1787210e425893694067c7ebbd1f305eda08bec14bcbff24375e85a32505cc42",
+      "image-1457.png": "330176bae898dc56d6c6b955526bbcd455e96a7a79678a031c3cf3baa7fc0794",
+      "image-1458.png": "e396d19c8f364fd92c7c4ac7cd4d6444a83a2b75c3b29333c98293142ec65f4c",
+      "image-1459.png": "5be05fa0411f59d5386a2e618461eb83dac4e23aaefafffdb9c4fa56c1a12a7d",
+      "image-1460.png": "3e925dcd50888738ef7e5a21cfa260b32384ba132120c1505ccbfb181a4f1f81",
+      "image-1461.png": "d01348eb08018febdb5ab66965b49b6b50ab6d614f0dc715020bc47521e5d606",
+      "image-1463.png": "847428c32244250f064d32d541637b4631085356a883201852b11e9eb7c0179a",
+      "image-1464.png": "0464bc627201bde16fd49fd2e511de9354ef1919ab641ef4dc9d61ecc42b83fa",
+      "image-1465.png": "fef9321834bf6cc08bb94f54fb906fea3c1f5a2e481a84414fdb19b1b281da25",
+      "image-1466.png": "441a9cc2b8205048074fd2734a61afe3a9c7d453b2a0241c5378095145fde55b",
+      "image-1467.png": "4b9b390a6de1fd12688fae62e3725975366679d9fd44ad5d17a2a47fa1ef3e0f",
+      "image-1468.png": "247926d41e1c9af7f87afb1471a798436673a8850d55bf499890aa561b9bd214",
+      "image-1469.png": "708aa6f5ac3bcd273fb1400d0423a8dd200e3033d443107af6ed9e33d85c5e9f",
+      "image-1472.png": "5482118fd19324e170d3465aa98d86a0909d3f2d37597a26cd217852e295e2ea",
+      "image-1473.png": "3ec468a99b95a12d24aa8139408d040bc3fbac68bad4be356bf41c844c1f5fec",
+      "image-1474.png": "52cdd01cc465accfa2014ff95987946a727305b9ee1edc90fc4103d77615b2ce",
+      "image-1475.png": "46740d81cbd27ca82739111aa552b070559e288bdcda8e9f51354161c345673d",
+      "image-1476.png": "d7e26d39f9dca444788270325f49856ea361e5034ccd3a2d57562b94f01e68ba",
+      "image-1479.png": "018950727fb936a36145fea6f99852afe28b725b381ee7d00dc3ad9f70fceb49",
+      "image-1480.png": "20338ae175297fd958f2dbe5d90ace2224c4390d160923fa0f2cd0edb8c60f7a"
+    }
   },
   "TryHackMe/Challenge/Include.md": {
     "slug": "include",
@@ -228,7 +369,37 @@
       "image-1897.png",
       "image-1898.png",
       "image-1899.png"
-    ]
+    ],
+    "source_sha256": "13a6000f18a23aaf8ecb0fc3909c885d56d97f8b57f115f7c73f66662fdfad1e",
+    "post_sha256": "1c5dcbd63683ddaa7ae9172706805fce862259dd64017fbb020e6069fc91d52c",
+    "image_sha256": {
+      "image-1868.png": "6dd91b6017f800641b1e07d10e71d4b7e15146b9266108ed066372cb053c2c18",
+      "image-1869.png": "0484fd3f929ed9149080eb816b09617f37f7ede32f3e20a56ebcaf77f84e7146",
+      "image-1872.png": "202183511bf8e30961ec4ee1521c08cd4e4d2a5fb3b82a3b7d32a360bbcd193a",
+      "image-1873.png": "e8d386aea05c12fb7253e91e30e1361787cc1d963bcc8bb7af62e7cbd26ac9d0",
+      "image-1874.png": "bb7dcb2db93991d0aca2d1c5893ecc18828dbc33f9d1807b6cb3c5ebab13f9ba",
+      "image-1876.png": "b56902a5b5e35643a493baf6df75272fdea27cc950741c0db513a7ce16d3062e",
+      "image-1878.png": "e8f7ad936718acdcc3a4173150ffd9aa2c3d09ee627f5f7dac67b334ae4b4636",
+      "image-1880.png": "d781daa1506569b0561a41e9d01eaaa4e1aa89a0aaffb52fc4e2063d339466a8",
+      "image-1881.png": "7a32e0a588a02ba21bf3b9dabbba9866384364bfbd2c478fc7dd1db5db8ff369",
+      "image-1882.png": "b61a01664d1d690ec262c48ec3e2ac7ad70ffca75922861a55a04a6b2d57422c",
+      "image-1883.png": "a54e014ab6b08d74ada1efde5858d94617edb3a96c5b4272f264554621dfb12c",
+      "image-1885.png": "1640643962828fc956889a8e124d22697219787369935618511cf692dd1c5ba6",
+      "image-1886.png": "f813e16764acaff34883a25f895236b869c5c787f8833db88fdeeb0963cc7c92",
+      "image-1887.png": "f37d5fe6de482858150c57a849d813798e4179297120744e690dcdc2553dc677",
+      "image-1888.png": "3c4d3747883692f3d7e5efd6188ae1d1a64a8375362882acc627f964ddff1504",
+      "image-1889.png": "c180eea1ee644b3de157802d4f79f513c643d11c3dad339e54ef5fe9c8354d7c",
+      "image-1890.png": "f7b34c7315ceeda91c92007d97bc406a2f183b3f252823812a66d4b9e94a1531",
+      "image-1891.png": "2915dc49683958b9478956504841485b1cba517b96dd4915e99323a928a1ad21",
+      "image-1892.png": "f9be7f87df2f0740e3320e535ed70830a0d1f1de38a7d1b2f92262f0f773e320",
+      "image-1893.png": "875c26f0a91387dc6a39fda8598837e77194d539104c9a5e046492465b00420b",
+      "image-1894.png": "e2edcaf4b0fb0e5aaf10167226d1eeca8bb1b33e44d0fbcf42d7f1419eaff399",
+      "image-1895.png": "c87b340ea3e5afebe0c16631c0a2842a154ee2ad180a35195c6b4539352a967d",
+      "image-1896.png": "44d77bfad2b3a14328d29dfbf6422a38b687acb728d90933a11a1081efe845de",
+      "image-1897.png": "ff38c46a35a249e09090929e30a3077eacbbad948a8587149e2a0427b23a5370",
+      "image-1898.png": "9dd820315648996f09862ad3f6786d044c832b33afe0d74d954afa66abcecf4f",
+      "image-1899.png": "027c4329e95af0152a926b7dd4ff58b54c6d72cb37b3a67e7a4a3fd1f72d4f0b"
+    }
   },
   "TryHackMe/Challenge/Interceptor.md": {
     "slug": "interceptor",
@@ -265,7 +436,34 @@
       "image-1312.png",
       "image-1313.png",
       "image-1316.png"
-    ]
+    ],
+    "source_sha256": "fab86d9bd2eda986089633b3d287faa5242a2cb01605bcbb3b6c2d5c02659dbf",
+    "post_sha256": "c5e0837befcab101fe13b899908116d5669cd11229b0c589c22c271034458be6",
+    "image_sha256": {
+      "image-1285.png": "403eebc56cfdda855ebb00ba5d8de1d2af904d3414f8aab909a86004bbbf9d96",
+      "image-1286.png": "730ebf2ca9fc735843b1d1f977c256eb36728df47bd427ebb180b44c897c43ad",
+      "image-1287.png": "70c9ecb10c58772f770f73b1351ffc48cdaccb92e01719b85dd8725448bc9002",
+      "image-1288.png": "1af5082dc9aca6aa790b90767dd804324e9d52b16843f217b9947ff35961db66",
+      "image-1289.png": "308c3c00b21292c6acb9b13863a46009898cbbeffd05fbfe00b3cbb7455de362",
+      "image-1291.png": "369ee051c56829cb028b95b4f5dd20c53d62230b67ba231545e7e37445275ed3",
+      "image-1292.png": "fe46931e5a88c3b2266ff64d2eceacec36dc84bef6d9c263c686d3014530bb73",
+      "image-1295.png": "e340f904942054e942611d7d629fc131591fdf727744aebfab86d4a4de8f7134",
+      "image-1297.png": "1ebbe2b20fe48efdd8ed8b06da73f04b2b3eb42cf61c7ef2f2b4f8e7cb59d549",
+      "image-1299.png": "b04ec7d18c2b452e1d093de0081e7f8d0ff71260d78dace40c36b407578765b8",
+      "image-1300.png": "113e1505570ec4be59caeb1cecb2ff3b4db276cea8c8f93e8d8216b4f831b7b1",
+      "image-1301.png": "1e067bae022f87113f5758ecc25e9c051bd04625de05836340e7c8775f1c6719",
+      "image-1302.png": "440ce22022ef4ae61a8f70467ab12fdfdd67183d5d3656ddf3144c8adbba46fa",
+      "image-1303.png": "e95d8944f867cfe2b1b0d7dca8c31fce97846d7c0742a3a0c1947956aa185f13",
+      "image-1304.png": "5bf4a59072d029ad9ea84bb838a5cbab05092e458c23137fd0058af40e918569",
+      "image-1305.png": "14d067fc1a193048cdfe04a70041fca7e71cbc0c4f88e0b4869bf9b3ce42afe1",
+      "image-1306.png": "fe1fe4ff811223728750c1ff844dcd590dc5b65dc5968e101ed714c8087fba07",
+      "image-1307.png": "c92ba5fba75cc1722b873a4e5b0e79d66b66ea633bb589e9e08c6769faaef55c",
+      "image-1310.png": "da2fdcb070e311a77ef32292839b67a38fbb7203c9f0d87b7309019da980634e",
+      "image-1311.png": "fd274a0aeeb99fa2a9b74344bb37a477f13dda65235510a8461f39479e433504",
+      "image-1312.png": "6d5397aaae680075d9d02b4fd59fba21ddaaa17d94f8ae96fa51659512f90f29",
+      "image-1313.png": "a61d82bc3645626480cb443a7411af33aeed4e067225c17223f5bffb0b52a3bd",
+      "image-1316.png": "611ec454a37130055b2cb6de72c1bf55ed50d15c177238716553d53fc4d5a9c9"
+    }
   },
   "TryHackMe/Challenge/Net Sec Challenge.md": {
     "slug": "net-sec-challenge",
@@ -291,7 +489,23 @@
       "image-1231.png",
       "image-1233.png",
       "image-1234.png"
-    ]
+    ],
+    "source_sha256": "401f82fff0453ce2ad2e7f3abfd32298106bb029f77f11ea0ca86919fa081677",
+    "post_sha256": "0b4321f46fb3f1ef7c0999e69ee2ce28f8c94554fdb5756711a6290d2733a402",
+    "image_sha256": {
+      "image-1222.png": "bd1d30ed11682dec8f8172542ba714cd0976d8e9fbbd7de58110a2feeaa7ed19",
+      "image-1223.png": "0b6478117f7e758ed230eded4c4ac2f32425dee14b15c0c681a56ce4c192f3da",
+      "image-1224.png": "7b85b7b3634546065d3aae0d9bc40e84744651de1b11056d46b1d8cf7afeda5b",
+      "image-1225.png": "5f34f5d9e025e7d2a15a2ddbe92538a97216115d4e8e221d92d21fa80df78d54",
+      "image-1226.png": "a48d0ce31157996b853631fbc76cc3c1ac8d92ee6117ada5a9c635f9a42610c8",
+      "image-1227.png": "1799443b2f490f307bb185711e04e7c3b840bbaa5872826769d0fc54dfbc0132",
+      "image-1228.png": "177dafc70f245775f193fe175e518bd3342dd61739943e2929347c4c3875b3b7",
+      "image-1229.png": "f7e872941ec74cbb8f1dfb4a9dc8103f0f21e8ea0ce4c20c1937b4116dcc8c2c",
+      "image-1230.png": "70feb30171932be9bfcdcad8d32e1f43213d0e8c98e973bdb27010d88c233605",
+      "image-1231.png": "026574f4633ce97997799c71008e5ccfe2500e3088503221a6d6080ab7c51e10",
+      "image-1233.png": "061e2767e2c19a84f8c399337a84a7f805403cc36746ed52a4d770d905c22ccf",
+      "image-1234.png": "12e905d66c83a28b06c3708c5a01a23502f904980572d4883a0c1666484154b3"
+    }
   },
   "TryHackMe/Challenge/Operation Coldstart.md": {
     "slug": "operation-coldstart",
@@ -323,7 +537,29 @@
       "image-1219.png",
       "image-1220.png",
       "image-1221.png"
-    ]
+    ],
+    "source_sha256": "265c9baa7c02feb9a9354e95b9c86d392b8a81bf94197d883d844c28dcf6862b",
+    "post_sha256": "ee043eb927ce0de6d51339f1ffdc4dc0f21076b47a5494f721b0774429389913",
+    "image_sha256": {
+      "image-1202.png": "0ba2a68d6a67927c145e607c9f5ea119fa2f8cb32c51053b6df1d1388abda10e",
+      "image-1203.png": "13a6610e70ff442fa9016b5918308a0a522251ef0cf0fafb7adcbe8565b765be",
+      "image-1204.png": "155e4e15a14430015e8a5e5ff891e5eb95e02a064ed41109797293b2bf057fd3",
+      "image-1205.png": "36c687af062c6fe397c232a4192679f2b72b3a66f3479c223d75b439177591a6",
+      "image-1206.png": "10332657c8a03e58b61b73d65868090fb01bf29b77ea8804756f09b5526f9f38",
+      "image-1207.png": "81c19eb9de7fc56fb51069f7b6ec50e99f69f66480107a32ac1f1c34398559a6",
+      "image-1208.png": "1df6a4242fc55a0a16687774e29c111e0eb2274642a41b1da58ed53034d07dc8",
+      "image-1209.png": "780cc03bd830177ca6f97dbd55fc4fb010a76e520616e866dfce54b76d9a22ee",
+      "image-1210.png": "d1272cfec71557ad4796c4251199b6412939530debe74b2a54eea958f7b24f4e",
+      "image-1213.png": "1ec50b3ed0622bfdaa1340b0610cd80a128340325854f6973c4c6cb8af738f05",
+      "image-1214.png": "98f426885c4442d73001eef6b4eced1c9c0ab8867a36863210abdc16783ade78",
+      "image-1215.png": "904029e7985e6bea162b8766667f8285d020457a34f0e5ab50ac52dbb5d7db3c",
+      "image-1216.png": "dd1dfc2ec28918585bf5b9b675f14c183d722c49a2f6f84a5bd56a312e9d0c81",
+      "image-1217.png": "ce49335c0c70cf912a0efb14d772baaf0ed47b0af4faf3648148f34b6689f768",
+      "image-1218.png": "7905abea923305c8f26208eb6cf8d9abe78fd7bcfa9dd7665f6cdcd27635e7b2",
+      "image-1219.png": "aa8aa0f4b0881297de4f6bc916b7ad0082f75517f7c2f302626a83ea35b9dd01",
+      "image-1220.png": "61cee5f4853e3e0b0ca40635cd8368427e70ae1e3a852c6ed9b484e724b4a6b4",
+      "image-1221.png": "2f109f98a1207ba2af361aebf0496d7e4af472cf9c3a6927238cd57164592fa7"
+    }
   },
   "TryHackMe/Challenge/Operation Promotion.md": {
     "slug": "operation-promotion",
@@ -363,7 +599,37 @@
       "image-1189.png",
       "image-1191.png",
       "image-1192.png"
-    ]
+    ],
+    "source_sha256": "2f3d964c39183d2fb4bf8ca8bacbe5d7eca0a4de84aee1a0330f993c1e14feab",
+    "post_sha256": "83d37456883d6e0cc2516740a213b2ffca13f4cc79700490d395f7763f99bc22",
+    "image_sha256": {
+      "image-1163.png": "679c892988a060b9f384f46762ca348fab810d252d6183beea0e5c48b1745b5a",
+      "image-1164.png": "32bfa81384af9b11c12b39a203c20daa69ad558c1c62fa60db5ac708e7008520",
+      "image-1165.png": "93b63efb2ad87ac814b0de1fb4754142efbc4db17ec9922aab10c03461eaac9f",
+      "image-1166.png": "b5389c75191d2778d2783c781ddc32bcd8eb3ebc6071ecc9e5f0e5fec0fe40a4",
+      "image-1167.png": "928c390ed9277ef3d0aede36b54b934148144469a3d2ee0bfa922d645926ae8b",
+      "image-1168.png": "4b9af3dc9cb698fd5067aa02db4c78f5864099faa4be88258800dc7c7ad2bb71",
+      "image-1169.png": "85ad1d127458d5689c54ba23b001213966a61bf68d697416001d2426b15a5176",
+      "image-1170.png": "c31819447e50953d21d0aa2eefbc4e831de853bf13afdf022cb130d5b6fe8662",
+      "image-1171.png": "53fe3978cd8fac43e261ced6433392b6e7823c8f45a03acaa3d2d497e324ea11",
+      "image-1172.png": "63487300908c7e8e492f317cffe5d41aecd1ed4dc792b3c8a3bbd2ba7186e7d2",
+      "image-1174.png": "8046b2e24cf1e5da046d24cff2534af3f54981e196a244db60f89d4122eca7b8",
+      "image-1175.png": "2ea3fca4a11a546312678ae7f9204a5563182966add398ba4675f6661c0a823a",
+      "image-1176.png": "453c77b861b87dfbf99093562cf6c830f410dc8055d201be9f23f4372f1052a1",
+      "image-1177.png": "906bfac7ecb25dda32a3859258aad177a9243a22583a71895d2117ee4068d11a",
+      "image-1180.png": "9e8f528202644fb878f3050f80b141f9eda79367a2d3d0d4c160e931b9c30a39",
+      "image-1181.png": "ee5ad877b5a56aabaad343082055a4888fd2d458a898e2114a933af203374601",
+      "image-1182.png": "40dd8ef9f5d6c4ef861aecc9f5007b049b855220377838436de0d802e95d6342",
+      "image-1183.png": "5f3b04e235391b0cd7d8079755dd2321d513644b5c6fa3c102556502ef0ae31a",
+      "image-1184.png": "b0e105f399ef06bc774f1c582d7772b877f1114886dc2aa13b6788a40c02f9de",
+      "image-1185.png": "f0f692375ca281382e92219779bfd07549b80d1ddb66c90dcd2dca3187e41ed4",
+      "image-1186.png": "0920620a15ef5082c25f48c00dd2ea20269ef8effe54f5bb8f0cd023f4759b24",
+      "image-1187.png": "7e237962fda38c39bed53ad49aedaf3dbae53c81b03fc65e55308431e99c78df",
+      "image-1188.png": "73000e4d9ef309fdfb606c7f162356a28ad831b79553a3501a1586bb3c01d611",
+      "image-1189.png": "ac376df7addebc9c67240a195af9509e4f51429f149454d425e124dc5008f8f1",
+      "image-1191.png": "c4b5dae67ef263ee5f9ff5511b7992060131de2b105684f776c26a69fdead496",
+      "image-1192.png": "9027844c2f907ca7d5f5226bada9c79c1326f0a4b3fbd106b46face34dc941da"
+    }
   },
   "TryHackMe/Challenge/Silent Monitor.md": {
     "slug": "silent-monitor",
@@ -403,7 +669,37 @@
       "image-1160.png",
       "image-1161.png",
       "image-1162.png"
-    ]
+    ],
+    "source_sha256": "eda160fd1de4933c4a1e68ca576aefc171cbfa3bf5d660b013d0ea226c8fdfb6",
+    "post_sha256": "3250774e432657ecbaa721a40ff41096ab833dd1c6ed0286db39c00e783e9d35",
+    "image_sha256": {
+      "image-1135.png": "8a5757cc263302748fb1763a1d484bb45aa5b9d78a669677c94b0d934886d338",
+      "image-1136.png": "54d2c07c52dba84a79f24572305b334bad6d0b725ecad1995a5091ca4110779c",
+      "image-1137.png": "e9a5bbeb73e6c9848dc8c5f0b08f9586d3a3ee4046288582824a3595253590e2",
+      "image-1138.png": "98ef712578f35bac4a7f8348d983ed4508be69fef340b3c2e47fef3c88d50287",
+      "image-1139.png": "43c49c1fa834cf84745702e28076bd419bce330c64cd8267669a557bf57cbc4b",
+      "image-1140.png": "a55503d41ca3e221b82d31071c82b703dd125c5f0d60e439e04e63fd2e0bbb8a",
+      "image-1141.png": "808ce921180238922d8ab09ecbb83a76913865d5a6689372f37aaf66e1c20a28",
+      "image-1142.png": "b65533b1f9f850c98fe497eff5d66f35344e5ea5058b08b97b4473d7f58e7a67",
+      "image-1143.png": "c8db2cc2681d34eae535f1ba0a96e105431a0c09b8b075a94281004a4d2cd1e0",
+      "image-1144.png": "38ab0405d5353ff3b188e88dc95df6e884b9507137e2229e2d156d403cf2374f",
+      "image-1145.png": "72d14dd1f344ff480edba932a04e5f74eb7f919f2b9a1fbf04115578d23a33c4",
+      "image-1146.png": "a441353d9edc7f3583b6620d3d2a4eaeb59b2cbcf32d8a38e77c0dae918f3162",
+      "image-1147.png": "5fef2576789e934e8a72a50bf33a41e628ee901296fa63ae623dbe29d93c579b",
+      "image-1148.png": "118e2e355b62ada83bb2fac289970cce1ef6b79c7f6c9cd4f7da055f7969f1ce",
+      "image-1150.png": "400ee5e58723f585c118453375c70290aaa1738e6f70df356be4848557fe642b",
+      "image-1151.png": "e860146ef51740d0fb4b468e9f5ffe57f0d21608a3db2a827155bacca8c6a4c6",
+      "image-1152.png": "500f14604cc08b51594dfc0e3ea69e828d8fb902f600ae7b32c772e6dcd19b1f",
+      "image-1154.png": "54de6ca5c7120a1f1a05da34d3e280bb3af91e52fa01fba08ad607feb252b74d",
+      "image-1155.png": "ec41ed8df8f38e9561a46d98f1a24fdcf3b42b079fe8ec581872ce2ef2ec5511",
+      "image-1156.png": "84836ff53e5cd917dff8de0d4f5b664c4a5c5bb79a676fb14bda0f767f62c2c8",
+      "image-1157.png": "4ebd4d4ba5f1e00e6254d1f8dab1edfa0c8e0cee0f8389e46500dcee5a681642",
+      "image-1158.png": "53f2bbc755fa0f4c601f0a545f250b27caa0fff3ca2df92ea7db734da1389d20",
+      "image-1159.png": "2f33536fb54a9d9d3d69e543a55305ca62a25d125e338ea20ee3b6d403c00554",
+      "image-1160.png": "b02e82fec440a9a03e4c430ce6320fddd2d0a6eb09ec7b8498845ce1fe979db1",
+      "image-1161.png": "76f0cd2e62569bda7e954fd9eb70dad4b21482c37416743e67aa981605ebea06",
+      "image-1162.png": "f76d5c7484832d2837e7ec5b9074f7b34b3edf754d49818b21d8980a34ddfea2"
+    }
   },
   "TryHackMe/Challenge/Support.md": {
     "slug": "support",
@@ -437,7 +733,31 @@
       "image-1065.png",
       "image-1066.png",
       "image-1067.png"
-    ]
+    ],
+    "source_sha256": "5ec37938d4dd1a7f6c8f7910582af03581bcf700dd5c0184f4db4fa84c2f03e5",
+    "post_sha256": "842e60aa9237785e00d0e67a1dae22b987c943819f94e5e6620d3baccb06d127",
+    "image_sha256": {
+      "Pasted image 20261028111314.png": "4f7233f0522614f774bf926e2ea65ce25605b2319023639170019ebbde26b2a1",
+      "image-1045.png": "f3630262adaaef1c89c90d211aa2ace7d84bb2d6f858f65df98b254f2e2ed77f",
+      "image-1047.png": "675aea4693fb26e8172b797286b70b9e0a46b477409729c4cd9cf2820d2c08c4",
+      "image-1048.png": "7bca1eb02ba8e2330a864329d98e8b2bf0367d879769881a1f59d7addc12c710",
+      "image-1051.png": "0cd58513e171ddaafcfdbd5439fcd1e9d709182c75b3cf817c465eba2472b82d",
+      "image-1052.png": "16dad1f3acb323d99bb08738665ecb56f80020f63a684701e2e96da464bbbce5",
+      "image-1053.png": "a61b0499063c75c98ca897b63d9bbb063f3fb37241e75c917d5520af898eeef7",
+      "image-1054.png": "8cc58d590f039f0db8442f460c5d77e55b0f557b4e03108d5e74cbdc4d8acd2d",
+      "image-1055.png": "5a8673d55708908326d1950b65b3f4589d9b43241d041f5d320442a5f68f2e93",
+      "image-1056.png": "92d6f45acf800305f435e01a900958c23787e72c9a2c3737b6096bf08628491d",
+      "image-1057.png": "e6edb1c0eb9d79be4958bdb4261468cdf0f0cca1e509a7150aa3dca57935ea26",
+      "image-1058.png": "b21daf85f632ced871fe77f429741595f9a0d51a9a2e72c928e7f30d9cdcd5a5",
+      "image-1059.png": "165a8803276597636ede081334905f629b178b6c95aadda6e3cab7ae8f279f36",
+      "image-1061.png": "c2778f7f9197a04453865a5a79b7f03b5031b87d57fbdf91d978341ea411a165",
+      "image-1062.png": "1f39336402850805df05fecab5c8601014b28efcf5d2562a5c8246066b1aa08e",
+      "image-1063.png": "466af048066f5c9d5a96f9ac9d704113dbe0f651c5326e72acf064f4d8100fb0",
+      "image-1064.png": "0c404c8059313bb881cee202c5fd1a021e3c3594389531ad8f36b625f7721228",
+      "image-1065.png": "db73a06e64f9ccde05e0977a3b9108d716a5bd1b6a0a53d690441c438c65d890",
+      "image-1066.png": "8ceb9fa0de3b3982fa66655a9bc4b5ee590ff55e46b938d1edc5bfd3616ea25c",
+      "image-1067.png": "dc91a1943b9b43cbd46c912a3ba3ae7706ade6fd5a7c437e99d3c19c7c777bbd"
+    }
   },
   "TryHackMe/Holiday Challenge/Beach Bar.md": {
     "slug": "beach-bar",
@@ -470,7 +790,30 @@
       "image-1405.png",
       "image-1407.png",
       "image-1408.png"
-    ]
+    ],
+    "source_sha256": "315f24d200252195f3deb48a593be19f2968ff9a788ad1ba8beb63931b46778c",
+    "post_sha256": "6e761afef017fe5b57070b9d77e347933abb0004e12f5154a907387d2b30af50",
+    "image_sha256": {
+      "image-1385.png": "832a62042649382a6efb9e540b1034467055ef12e36b2a8ab3fbd069e656d291",
+      "image-1386.png": "c852f17fb7f26ca735f2356422af952b1705dfbb0ab1f679222218fb82796e80",
+      "image-1388.png": "42ec138f28ef62662519969393d71b9e0eaa597e005b389cec83110d4d123e37",
+      "image-1390.png": "a7b41887f16c4eaaad4c118b55e8667e16f7696697e97d16b6df34bf6dfbbb6d",
+      "image-1391.png": "9b57b18d950a59da56abd290196eb45400885da3b62f4eb99406bb970b32a4bf",
+      "image-1392.png": "db687410f42fbf58982a1bc776146db7093876e2cbe27b521e15165a4c7db80b",
+      "image-1393.png": "45d46d1bf840622ddd99b57185fd841b88361a30ddbb6e7094f8b2a7decceed0",
+      "image-1394.png": "9d3828adf25a2a4a29f88c7590ab91f79cebec727ba8b301d7efc102d7c9cb37",
+      "image-1395.png": "d58fba87f2ae9393f74c88e8a38884b01498a66eeec8d73800f2d91810f7f8b6",
+      "image-1396.png": "a72cc8a893195c98d6aea6b42dafae9f40d3cfd046116fa4e0c2f0524a495211",
+      "image-1398.png": "51a581b2c30bad40d531f1ae1450333706033a1928c18de18901f42da4135133",
+      "image-1399.png": "d96a2e4f0bbfc60dc27472b33571c6335c7cd96416c79295e04a3152dc86ed66",
+      "image-1400.png": "6a21946d392c83c3b16fc4c21c3866255e4f681fb14acf9149d92414518095fd",
+      "image-1401.png": "93c9b53f40a3731a2938ee2db81e384d5ed77bd2bb5326bfa0f618c12afe8ba3",
+      "image-1402.png": "109e605cc86e1f2ab63462233ff1d7c84a62be4e018266254dffa37216bf2294",
+      "image-1403.png": "8d85f0433f84f2b894fb523645dd127ac974d41d37d816c89cf60632da492d60",
+      "image-1405.png": "27e09738a6484c569049f9c7f9db1f42b86ba735573d5b1a6eba9ea260af30d9",
+      "image-1407.png": "54623860f306766e54285288867979294f52e4e181e70f8d2c7a765d4babedbb",
+      "image-1408.png": "ba49c9dc35ba2459aa0a8ccebf428b45eed3ce04f942aaac6e849491098e5e97"
+    }
   },
   "TryHackMe/Holiday Challenge/Do Not Disturb.md": {
     "slug": "do-not-disturb",
@@ -506,7 +849,33 @@
       "image-1440.png",
       "image-1441.png",
       "image-1442.png"
-    ]
+    ],
+    "source_sha256": "4dc5b70f0c52a2ddeb967da8270357527390985a5e04c288c40e9afe049e0fa5",
+    "post_sha256": "ea9a37832b54bac6fcdf5748efbf74b73b3af6b884c7b3a4a6d9925533248879",
+    "image_sha256": {
+      "image-1419.png": "62e1f594d06fa899c3dffd5b4bd0f3020f351ab21ecb5a79e2849908c3c8dcc1",
+      "image-1420.png": "1451453052e1659f9b0bd9b4b51c03664838ec52f767cd0c785a27880ff1d4d5",
+      "image-1422.png": "35078d0606bedbaffb780bcfa2e92fd832b5e4f64eaec04eb7f65c4490a2dfd6",
+      "image-1424.png": "88d20674bdc84f5de18724aa7e51e7bce6f129044ae3dbe9723c2dfb71a8faf0",
+      "image-1425.png": "73f9c51c20092abba34f7017b26ab97352ca3d8a217517bfdf256f268dd0f2ba",
+      "image-1426.png": "7a195d95d2ad1f186c17d04a805da73ac1db69f8722a99f466df004159b041a5",
+      "image-1427.png": "5de9c77c0e4f3b627866d8d6549983b68924da137d437f7b663c11d7881644de",
+      "image-1428.png": "4f43d0cde7402ef2f673a007eeb15ae6040fd4f953e8e288326057a63459c51c",
+      "image-1429.png": "dca567b388eaa7cdf0196707e11fa0021c3506fafaa5cb968ae2968ef1b42d5a",
+      "image-1430.png": "839e0b050da3fa1ed3f7d5388c8c903d1ee625934ecca65c63265d7d3aa7abea",
+      "image-1431.png": "ff9aedd503cc97833dd1e53b2c98271a0597e63f27e9637cc6b2304387dcecde",
+      "image-1432.png": "1ba934822e03ef4609a0ef8330724772b882d974e419d8308c1a3ec77084a1c9",
+      "image-1433.png": "a9fafeefab2684289c08d078261acb19cce0cba74ec5df84e43418fb817165b5",
+      "image-1434.png": "51045d76b33c330a01285aab4ab978815eb0e5ddd5a06f7ce708b953255da7b4",
+      "image-1435.png": "55d9f687dd13ea78757dacb1d7005655700ece98af3236e414a0589fb5a13830",
+      "image-1436.png": "b72ed17383af26657cb437efbbaff101aa3aeadef3021ee94d0dbd4f853df4b7",
+      "image-1437.png": "1b4f807b8b2651ea9a9f4a8fe7abfd831c646ae43ba1b77656a4cf9560f0dde0",
+      "image-1438.png": "6bbcbb0ad70eaa22c5360df9d371ed47dc459e20ed15c462278afb66a0be69d2",
+      "image-1439.png": "75fc8e5e151933676f621bc8c0a7e596d8b9265fe28d39f0e04c3d099d0c266e",
+      "image-1440.png": "7304eff90803bf25935ed913aaf6f0d8f09cedc65225ec1243b8398263f5df54",
+      "image-1441.png": "33af05cf4eba35efe3e3115282269df046cba87e66cbe1789bfa6f8cd65a08f6",
+      "image-1442.png": "240a2ea52331e6dcde486fa23435c1c308623e6ae76e95a244ac1fb43b16e34a"
+    }
   },
   "TryHackMe/Holiday Challenge/Overheard at Breakfast.md": {
     "slug": "overheard-at-breakfast",
@@ -530,7 +899,21 @@
       "image-1416.png",
       "image-1417.png",
       "image-1418.png"
-    ]
+    ],
+    "source_sha256": "febb4bfbdf30ca184f02b889f7c483ebe569a0180514d6499b8ae2d214965b1a",
+    "post_sha256": "02806f46f15f2cdfeaea160104e09d4a824ec89186bb07d298ffbd1e4e750796",
+    "image_sha256": {
+      "image-1409.png": "c629462441afe28da376ec3a2fdac991b3bbd1a4c539fdd7665303a0cdc2dea2",
+      "image-1410.png": "715f9f48b5ddaec01cd4babb3ecb0a5ff6638d4ca4e9dbbfe1b2a88949cca902",
+      "image-1411.png": "5179fe1d3cae2468f8692b2e0b243bc163efe2cc556a90af5cc88d91071e1be0",
+      "image-1412.png": "5ba0a40809ec6f64e86642ce9f50df56f6a8ccbb495dc76f13a76c48ca182137",
+      "image-1413.png": "e6589c53444a3f176418c3b86df3c54919d6b7db538099de374330c89969e071",
+      "image-1414.png": "71ecde7b0d826ce002c67089528762a738a0bcc6b93b0f4ade8920c8faa83dec",
+      "image-1415.png": "c3b38822b5478ee7eeeefee9aa058dc2678c6ee34723215a808dde47eeea5cc0",
+      "image-1416.png": "dcf4f7aed99519f1bf6494bd0bbaf898433ed7d98dcfb24efd44e304d3818e5c",
+      "image-1417.png": "9d696b8e0d5385bbbf64cccce5a039d7449c9ae6b3c5d6afd8cf1a8bb5749572",
+      "image-1418.png": "c8197598c9ba62813e1e33ade91288373e525a1cd96483de2a1daf138fd95a2b"
+    }
   },
   "TryHackMe/Holiday Challenge/Packed Light.md": {
     "slug": "packed-light",
@@ -554,7 +937,21 @@
       "image-1378.png",
       "image-1379.png",
       "image-1384.png"
-    ]
+    ],
+    "source_sha256": "04bebcc431036fee77278e7e7aa84d0a75b36077675d5fa8c4ab78bd8bb55c92",
+    "post_sha256": "0bab5ed1d91ec847b5b72415d959daf8cf1abeb903bff7d67854a32e6233937d",
+    "image_sha256": {
+      "image-1370.png": "b051f3f1883e29373611762ccb8ecf7e9ada5321a2709845a913cabad4eadf77",
+      "image-1371.png": "df8640a0dc2cd7969ec0577547b22b657cd5623593003c53eaf8d1c0cba59843",
+      "image-1372.png": "6434c072934bd3bfe074668d7ab71f4d0bbdf9152ff15d6ad3025f3141260b9f",
+      "image-1373.png": "d7ba7c41c30b65eac62d19642ce992bc78fb3fafc3cd03f510197f3820d39be8",
+      "image-1374.png": "60ea6ca71a36a19c45c0889d03a9ce7803d6b98715237b0f58e55dd1b1da7e6b",
+      "image-1376.png": "00049a023900890122f4157032cc5446f901f6eb07e71f32bf36a5af8b8005b6",
+      "image-1377.png": "dfb491d58e7f287785f92eba7f2546aa50d76889aebc902960bfa5e5505b4690",
+      "image-1378.png": "9c756181f740be746d93c91c29322ec251739388898b411f62f51ce1956beed0",
+      "image-1379.png": "03735b35e6e45b55909a59aabd289f218c3895d0cf714dc555d89e33894b91d5",
+      "image-1384.png": "405ba58b6d05ba911a62975d5e4471ba64ec959e0d0fe0f07aff18fb34645032"
+    }
   },
   "TryHackMe/Holiday Challenge/Room 404.md": {
     "slug": "room-404",
@@ -576,7 +973,19 @@
       "image-1198.png",
       "image-1199.png",
       "image-1201.png"
-    ]
+    ],
+    "source_sha256": "c4a3f6353f5336cf12cafc020c54eb9d2719ec5b3c866dc00f0a3e8c426b1469",
+    "post_sha256": "794cdc109838fa7b20a46ab0df362612cc92648a163223be5b231dcfc2ceec8f",
+    "image_sha256": {
+      "image-1193.png": "5a8072e7d4ed9acfc6dfd1b3bf38aa97abe0c83ccb38fe6259a514a09995179a",
+      "image-1194.png": "3d973f9c6075fc8f1fc57cb435d5208283ab1692f7bdbb5d91b0dbe8c10e1709",
+      "image-1195.png": "dbbf60cbef066a57f6d1d51d38aae4b504d281a409cebe22a4bfa5a01b3a7ba1",
+      "image-1196.png": "8127a60b8cb3027e7d8eeb31d82b6da613a1ba41d2f54661f99c028f2010d4eb",
+      "image-1197.png": "4d76677f626dceea99c6eba984d4ed194e954c551f97bbf4a6d0b5cc65644e03",
+      "image-1198.png": "be566878d15956246da2a574ff69f6b888e3b5edaac9ded0b57021cf6787b4f1",
+      "image-1199.png": "e2dce58338488c1dc483db2b2d9480bd6f5b1d4dff1719e6b1cdb44226d5ccaa",
+      "image-1201.png": "afacf5dc91cb7baff6f6fa0e5bf86ed99c7888eaee085d04d7efcb680f4b3f7c"
+    }
   },
   "TryHackMe/Holiday Challenge/Towel on the Sunbed.md": {
     "slug": "towel-on-the-sunbed",
@@ -608,7 +1017,29 @@
       "image-1498.png",
       "image-1499.png",
       "image-1501.png"
-    ]
+    ],
+    "source_sha256": "575353a279cbd404f89cdc01db5c734616aae58c4acec766e26d937e0cb88602",
+    "post_sha256": "e7461a1538ad2a02caba8d01f74e592c2fe573d2ef70cfa4f90d208f727c62ad",
+    "image_sha256": {
+      "image-1481.png": "a5f84b75d1da21698d90d29c7d906acaedb1737c811765ab8593971d659cc9c3",
+      "image-1482.png": "92c365766a048616e8d0723234ba020c3aeb0d086830ea7e167a96d5ec55b83c",
+      "image-1483.png": "a75f03924f1ae61e4df49b167659cb02f46c2e6b344216dab0de9f9152259c03",
+      "image-1485.png": "3cd6aeff4ded52c1fb37210562ae00d81ef1bd716b1dbdcdd295f0ad2fffaf6f",
+      "image-1486.png": "116da19cfbaa1a5fb47f8938ed2c734a354b4f6a001d1ad211321a73856b2329",
+      "image-1487.png": "e6ec25f19105344c04730a62f3a82cbd8b34d7b4fd0e6d5d671f0fa0e7c6ef08",
+      "image-1488.png": "8dcc3177f7aa2f4e3c2d78238395037f488f0b32af2d42f33917934a2f848db3",
+      "image-1489.png": "3b99c46c051e506aafc052467ad73aa61ff6df7268bcb8961c84b1944853e476",
+      "image-1490.png": "0b1250f2c8f5c6e36e951b77cfdaa77d19d5a856a3bae5172d5e16ab7dc8e246",
+      "image-1492.png": "135eba7dfcfcf206d92f5dd6554c290d38d4c168b1edf5c493eee55c5138d13d",
+      "image-1493.png": "6d964f9e8d13529c493e80279dd150913f2e13aa8106dc918c4c3d5907b65296",
+      "image-1494.png": "5d623af58c9013075b865edbb71ae80d1dd28c9b90afd6c35af37e7a71d4e490",
+      "image-1495.png": "02a46ff65fcc1814e8f9ebe6d9855eca0095ef769b586fee03bffb554865a84d",
+      "image-1496.png": "f9cdc8b4756ec4de5adacaf3bb2fd4eb20726d778755d7d57c2057c60d2bb14b",
+      "image-1497.png": "6532ea6eec44d1044ec403ed023f7bd192e275c594624d5404a585a20dcc116a",
+      "image-1498.png": "3de218d9bc56039b14096b5cfac409960446a61f3af1e397bd8ec56827d36972",
+      "image-1499.png": "10d885eaccffd1c2b2d268bbcfb2717dbdb567274476fa58641d51f21f734f76",
+      "image-1501.png": "f6e77dc2866a21cf7b5513285a2863a7599cabc2f86ad6c6d490c835579e44f4"
+    }
   },
   "TryHackMe/Holiday Challenge/Complimentary.md": {
     "slug": "complimentary",
@@ -631,6 +1062,19 @@
       "image-1367.png",
       "image-1368.png",
       "image-1369.png"
-    ]
+    ],
+    "source_sha256": "84fcdc7aa09a4a01d987326f5f09520bdfe87fca7465d2694f257d4fc307cdaa",
+    "post_sha256": "53b1481c3b89faceac152ddb09fc1d18ee94080af90be04b6d1321be22517b59",
+    "image_sha256": {
+      "image-1353.png": "e455932e808f72e3129c5e5709b4cec9a1dd2fb66b5ab8066783cc4097d7f8e5",
+      "image-1354.png": "6f1f03af35ba3663204e0ddedad7d14b2929c6787656d59e7b6da41b4ac5f785",
+      "image-1355.png": "9c546c2746d296d3e24f29b02c10dd37e04a703eb854b59019a7463726dd79a3",
+      "image-1357.png": "de749506aa48436596533f44e8d4c04a94805f31b14383022124cd7252f31ae6",
+      "image-1361.png": "2fce5ed191241488370d8e8e1762c9cb87320bb435f764559555661a8cedee97",
+      "image-1366.png": "50bd8756dd28a8461b2c96afe549e9452cb85ff04a43e61b4b98376e1c0ed360",
+      "image-1367.png": "e328b1f44b31eed54d55b4725b793a7a0b6b7373425be4c55b9d9700ff0c223f",
+      "image-1368.png": "67d205a8cee5113b36e07e8f50e748f446ae363eb7c2cdeda14c887c37e53436",
+      "image-1369.png": "c65db61856c9b32f621070b89bd8f78048c49e59aaa4286766b1b9e3621be144"
+    }
   }
 }
