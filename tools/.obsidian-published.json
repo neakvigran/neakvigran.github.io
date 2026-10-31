@@ -1,0 +1,46 @@
+{
+  "TryHackMe/Challenge/Whats Your Name?.md": {
+    "slug": "whats-your-name",
+    "published": "2026-10-31 17:47:21 +0700",
+    "post": "_posts/2026-10-31-whats-your-name.md",
+    "categories": [
+      "TryHackMe",
+      "Challenge"
+    ],
+    "tags": [
+      "tryhackme",
+      "xss",
+      "web-security"
+    ],
+    "images": [
+      "image-1900.png",
+      "image-1901.png",
+      "image-1904.png",
+      "image-1905.png",
+      "image-1906.png",
+      "image-1911.png",
+      "image-1913.png",
+      "image-1914.png",
+      "image-1918.png",
+      "image-1924.png",
+      "image-1925.png",
+      "image-1926.png",
+      "image-1928.png",
+      "image-1929.png",
+      "image-1931.png",
+      "image-1932.png",
+      "image-1933.png",
+      "image-1934.png",
+      "image-1935.png",
+      "image-1936.png",
+      "image-1937.png",
+      "image-1938.png",
+      "image-1940.png",
+      "image-1942.png",
+      "image-1943.png",
+      "image-1945.png",
+      "image-1946.png",
+      "image-1947.png"
+    ]
+  }
+}
