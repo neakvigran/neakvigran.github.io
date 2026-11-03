@@ -41,7 +41,8 @@ And I found directory pub that contain `backup.tar.gz` file
 ![image-1209](/assets/img/obsidian/operation-coldstart/image-1209.png)
 After extract file it contain `app.py`, which likely the source code for the site.
 
-```python title:app.py
+**app.py**:
+```python
 from flask import Flask, request, abort
 from urllib.parse import urlparse
 import html
@@ -157,9 +158,7 @@ def admin(p="index"):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
-
 ```
-
 
 The site is a flask-based "URL Preview Service" for Volt Labs that fetches a user-supplied URL and renders its contents on the page, gated by a hostname allow-list `kestrel.thm`. It also exposes an `/admin/` area restricted to loopback clients, including an `/admin/notes` endpoint that reads `admin_notes.txt` from disk
 
