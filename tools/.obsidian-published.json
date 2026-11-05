@@ -1120,8 +1120,8 @@
       "image-1624.png",
       "image-1625.png"
     ],
-    "source_sha256": "ba799b1cdd7230bde233d80da1ef416cb3bc03b40fc6c6db918ed170314e93f4",
-    "post_sha256": "80f1889ed4e5551206ba54affc87ed441988bdc60738257feab3026380321895",
+    "source_sha256": "781823c298bf246f12f4556918de8d141dfea2d6f775ad4ba8a8d62fc91ac39c",
+    "post_sha256": "803f788422e1839eb7820fa15c2990fc38d42ae176ffb01cbf55ab3eaf10c059",
     "image_sha256": {
       "image-1620.png": "431725b1c53d93563ed77287dd5cb45f039ed017d30aa468101cc5656f8c7055",
       "image-1621.png": "24f8be3eeff839fcab47d57873bde3f76e6ea237769918a0e2b962867cb4ed6c",
@@ -1198,8 +1198,8 @@
       "image-1628.png",
       "image-1630.png"
     ],
-    "source_sha256": "6e8a4fcd82c5baed2b09a946c96627571abba21273ed382a2017464a50d5fa9f",
-    "post_sha256": "196d82d7d2da103ea320e5317a2df89e49ef4cf846250629a2bc3b03ed1f6aaf",
+    "source_sha256": "4ba937de5ebe223f27a1e77c4896706f07af0c5cdd1c2cb1aa21c873db9ef02e",
+    "post_sha256": "dd7827daeb00a13fa5f70cee78e298e266d5abaddaffdfdde991bbb5c60085c4",
     "image_sha256": {
       "image-1626.png": "1d8807889ead71c4b8a484b8771aa33d667a7553439e63bd9bde3eecd09fcdf9",
       "image-1628.png": "e4ec454ffa822fff28b5af8429f2c1eff539740df401436b2834a24fa3fd979c",
@@ -1252,8 +1252,8 @@
       "image-1697.png",
       "image-1698.png"
     ],
-    "source_sha256": "06f6ac4bfa426446c4900e05ae94f093b13f767176f6c4fd6b39865329d6f2ea",
-    "post_sha256": "7e4f5586e55be899af16d278bc36520fe50a3daaef0030413179ed3f20655af4",
+    "source_sha256": "83e618fb6db12dcfb2e52cc980d91dd142887aaac6695d7a92481b9db4845df3",
+    "post_sha256": "3d81cc3499ee2ee9c208a63d900e6bf22819a2d4231fc7a462281c73426849c3",
     "image_sha256": {
       "image-1696.png": "1c14a53a517e5a10ab88e9a69ded8c2503e02ab80a6d1004d250d1fe571d4cea",
       "image-1697.png": "a5286db91721e14b1def7ce081c74fe10ff102739639bd56803dbf4151683134",
@@ -1277,8 +1277,8 @@
       "image-1701.png",
       "image-1702.png"
     ],
-    "source_sha256": "1eccc3e57c5a6a2161343def5e82d2e77bf6414b233b5ead112cc07d3ba18f6d",
-    "post_sha256": "4e47ab3645cbf6935ced5280917904752e4ff646c42f89ec8ca24954aacb86c6",
+    "source_sha256": "c14ade9d5d570b1339148955d7e091124b97c63b73022341104a0b9e77033b1c",
+    "post_sha256": "c294b32dae8c754c64dc73671ab4b4a874481f308a027ecef3d283313c958ea2",
     "image_sha256": {
       "image-1700.png": "2bc73b4f44c6c27daf75ee684bcd9c5f1b92a847c5309e146a4c71ae1a98d583",
       "image-1701.png": "fd8b299ac012996a3f79fe99e5ee273905ef85956f8b35e2504f7fb79a8bac44",
@@ -1581,8 +1581,8 @@
     "images": [
       "image-1513.png"
     ],
-    "source_sha256": "f3b89eea10997c3a63192ad4e52342bd4cd66e8aec46b90e36b823d2e0757436",
-    "post_sha256": "7ca4505b9220359fc592c775cbfdab890743317b9b4f6f88957ef6a5ddf68d6a",
+    "source_sha256": "c49f53d470deb1a355edfa8b15475e5c34db5dd99a9956783a35f03f57bfee9c",
+    "post_sha256": "e38a9929e628dc63b5556de7cea44c08d3223cbdb298dd70ee0f0ea64f18e16b",
     "image_sha256": {
       "image-1513.png": "17fd5effa7b00043fab764f6da0d2c732c60f6ce2a50e374f147eefafdee53c6"
     }
@@ -1969,8 +1969,8 @@
       "image-1722.png",
       "image-775.png"
     ],
-    "source_sha256": "1fbdf286f1d9285ffccebaf988e6145396664ae2734f3f496201c51e61dab025",
-    "post_sha256": "b1f7460bac9650021c3f720a23a5e7b6f9c90073f88267183093c1cb35b4e511",
+    "source_sha256": "f267fe8471dadbabd4eb4dabfde459885449ec2369cee4b66378133808b5eef2",
+    "post_sha256": "6e20678746938fd78ef79785e0cc7f5268f54472734c57b53d9216bf807bf55e",
     "image_sha256": {
       "image-1715.png": "2a286a10cb78eb114fc145fd19eb57aa4b37e0e7cbb6030212c23d3a2302eb69",
       "image-1716.png": "2d2c8ea81366a070be165c674cf10f2cefa62d42a06bdaea64e95cd935f0fb53",
@@ -2128,8 +2128,8 @@
     "images": [
       "image-1512.png"
     ],
-    "source_sha256": "66f129d3a21513969204320c49ecbeba6a60826d0d1c14d99b353c2cb4255599",
-    "post_sha256": "0a4e30809e5489b860d99978f55b0d98b6301fefb68127d1ba28fa6ca8fa1bc9",
+    "source_sha256": "50c0c162b581e25be003cc08d8b372bb3a88d3af26c7111d159030f33b8a17f1",
+    "post_sha256": "da74ba20038a8d5653eebbd264f72dbe4e256d51a5bedecafb470465025f4101",
     "image_sha256": {
       "image-1512.png": "f52c78d8ec25ec6e7e0a4f26b8b6f0e22b5a3fbac6ed9d7a9068aed509012e2a"
     }
@@ -2181,8 +2181,8 @@
       "image-1589.png",
       "image-1590.png"
     ],
-    "source_sha256": "00d04fb5a2c3e73a1ff777e083e607d4d4509447c91bf40296e281eb3cacbfff",
-    "post_sha256": "f2b07887bd2ebd6a3c1e3f6c4c8367f05c6b4bf26cd2664f9628cfd3bf883bd2",
+    "source_sha256": "7908f685bb2d4957b777e7677c2d680613be9385ded2f79f723f33a1dfd1ac33",
+    "post_sha256": "3d9a89ec3b416faf1a18410321870a50c8fd15e2debef442396a0886ff4be744",
     "image_sha256": {
       "image-1587.png": "5e01df965d40b11efd1d941bde472479cee696703084d549595ae796845ea952",
       "image-1588.png": "f3621ce521dc44cea79e514c5dfc244245e8f5b4428e587a0d70ff954203b57e",
@@ -2481,5 +2481,53 @@
       "image-1612.png": "cd85d3faaddf66d0c5c23b31e00787dc0f087dc91902d8bd320d7eb87a371253",
       "image-1613.png": "32207c2af1c82da5e9f6ca3097f07372ff2041b59e86058717e3ae6c17a37d83"
     }
+  },
+  "CyLab(picoCTF)/tools/reports/math-detection-report.md": {
+    "slug": "math-detection-report",
+    "published": "2026-11-05 17:00:58 +0700",
+    "post": "_posts/2026-11-05-math-detection-report.md",
+    "categories": [
+      "CyLab(picoCTF)",
+      "tools"
+    ],
+    "tags": [
+      "cylab-picoctf"
+    ],
+    "images": [],
+    "source_sha256": "a14bcdc7f7091cf9b36d3e538ae4a1a1c717c69ccad9c86557606179f2eeffcb",
+    "post_sha256": "c4f75e313cf715acdfcd35285a24666b511062c06ac1cc406259086c8fefb114",
+    "image_sha256": {}
+  },
+  "CyLab(picoCTF)/.writeup-backups/20261105-153928-math-auto-opt-in/detection-before-changes.md": {
+    "slug": "detection-before-changes",
+    "published": "2026-11-05 17:00:58 +0700",
+    "post": "_posts/2026-11-05-detection-before-changes.md",
+    "categories": [
+      "CyLab(picoCTF)",
+      ".writeup-backups"
+    ],
+    "tags": [
+      "cylab-picoctf"
+    ],
+    "images": [],
+    "source_sha256": "508ae9d718e7b4e058ec59681aa8b724f44e6c55c6f3d8daa96cc3b7bc0873f4",
+    "post_sha256": "bca1145c50ac003048478d9de174833f624cd6deb1e7588e09ece7a61cf21a4c",
+    "image_sha256": {}
+  },
+  "CyLab(picoCTF)/.writeup-backups/20261105-153928-math-auto-opt-in/final-report.md": {
+    "slug": "final-report",
+    "published": "2026-11-05 17:00:58 +0700",
+    "post": "_posts/2026-11-05-final-report.md",
+    "categories": [
+      "CyLab(picoCTF)",
+      ".writeup-backups"
+    ],
+    "tags": [
+      "cylab-picoctf"
+    ],
+    "images": [],
+    "source_sha256": "a14bcdc7f7091cf9b36d3e538ae4a1a1c717c69ccad9c86557606179f2eeffcb",
+    "post_sha256": "e8e83b87987f9d186812e8e64ebbfaa7bc06a4a5a8c6cbea8a74737d7291a36c",
+    "image_sha256": {}
   }
 }

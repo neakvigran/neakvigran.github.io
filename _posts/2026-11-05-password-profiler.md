@@ -63,7 +63,7 @@ result = crack_password(target_hash)
 
 if result:
 
-print(f"Password found: picoCTF{{{result}}}")
+print(f"Password found: picoCTF{% raw %}{{{result}}}{% endraw %}")
 
 else:
 

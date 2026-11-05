@@ -4,6 +4,7 @@ date: 2026-11-05 14:00:20 +0700
 categories: ["CyLab(picoCTF)", "Cryptography"]
 tags: ["medium", "cryptography"]
 description: "In RSA, a small e value can be problematic, but what about N? Can you decrypt this?"
+math: true
 toc: true
 comments: false
 ---
@@ -56,7 +57,7 @@ print(long_to_bytes(m)[::-1])
 
 Use this code to decrypt the ciphertext.
 
-Factoring $n$ into $p$ and $q$ lets you calculate $\varphi(n) = (p-1)(q-1)$ and the private exponent $d = e^{-1} \bmod \varphi(n)$. The script then recovers the message integer with `pow(c, d, n)` and converts it to bytes. Its final `[::-1]` reverses the byte order. See the [RSA decryption primitive](https://www.rfc-editor.org/rfc/rfc8017.html#section-5.1.2) for the modular decryption operation.
+Factoring $$n$$ into $$p$$ and $$q$$ lets you calculate $$\varphi(n) = (p-1)(q-1)$$ and the private exponent $$d = e^{-1} \bmod \varphi(n)$$. The script then recovers the message integer with `pow(c, d, n)` and converts it to bytes. Its final `[::-1]` reverses the byte order. See the [RSA decryption primitive](https://www.rfc-editor.org/rfc/rfc8017.html#section-5.1.2) for the modular decryption operation.
 
 ![image-1625](/assets/img/obsidian/mind-your-ps-and-qs/image-1625.png)
 
