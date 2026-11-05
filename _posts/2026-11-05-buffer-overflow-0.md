@@ -15,7 +15,8 @@ Download the files.
 
 Apply `chmod +x` to both files.
 
-```c title:vuln.c
+**vuln.c:**
+```c
 #include <stdio.h>
 
 #include <stdlib.h>

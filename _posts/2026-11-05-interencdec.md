@@ -23,7 +23,7 @@ The result looks like Base64 again, so run `base64 -d` a second time.
 
 The result now resembled a flag, but it appeared to need Caesar cipher decryption.
 
-Enter it into https://www.dcode.fr/caesar-cipher.
+Enter it into `https://www.dcode.fr/caesar-cipher`.
 
 ![image-1618](/assets/img/obsidian/interencdec/image-1618.png)
 
