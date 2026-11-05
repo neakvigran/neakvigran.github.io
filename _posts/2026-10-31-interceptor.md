@@ -44,6 +44,8 @@ Then I will use `gobuster` to find hidden directory.
 
 ![image-1299](/assets/img/obsidian/interceptor/image-1299.png)![image-1292](/assets/img/obsidian/interceptor/image-1292.png)
 
+---
+
 ## Find the Password
 
 We found an interesting dir, `login.php.bak`, which seems to be a backup file, so let's download this file first.
@@ -155,6 +157,8 @@ Password is `MediaHub2026`
 
 ![image-1302](/assets/img/obsidian/interceptor/image-1302.png)
 
+---
+
 ## OTP Bypass
 
 After login, it asks for an **OTP** sent to the email. I inspect this page's script, and we can see that if we succeed, it will redirect to `dashboard.php` 
@@ -215,6 +219,8 @@ Now, it says redirecting... so I change the path to `/dashboard.php`, and now we
 ![image-1305](/assets/img/obsidian/interceptor/image-1305.png)
 
 ![image-1306](/assets/img/obsidian/interceptor/image-1306.png)
+
+---
 
 ## Import Feed
 

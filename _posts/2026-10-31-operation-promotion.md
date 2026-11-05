@@ -52,6 +52,8 @@ I found `/admin `and `/config`, but for the config page, we need authorization t
 
 ![image-1169](/assets/img/obsidian/operation-promotion/image-1169.png)
 
+---
+
 ## Login Bypass
 
 The `/admin` page is a sign-in page.
@@ -73,6 +75,8 @@ We discover a new path `admin/sysmaint-checks/ping.php`
 
 ![image-1176](/assets/img/obsidian/operation-promotion/image-1176.png)
 
+---
+
 ## Command Injection
 
 This means we can ping a target via this url.
@@ -91,6 +95,8 @@ and use `nc -lvnp 4444` to wait for a connection.
 but we have to encode this command into url format first using cyber chef.
 
 ![image-1181](/assets/img/obsidian/operation-promotion/image-1181.png)
+
+---
 
 ## SSH Access
 
@@ -120,6 +126,8 @@ and we get the password
 now connect to jford using these credentials and `cat user.txt` to get the flag
 
 ![image-1187](/assets/img/obsidian/operation-promotion/image-1187.png)
+
+---
 
 ## Get Root
 

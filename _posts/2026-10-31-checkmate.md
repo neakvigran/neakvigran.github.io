@@ -20,9 +20,11 @@ comments: false
 ---
 
 
-## Setup
+# Setup
 
 `echo 10.48.131.148 firewall.thm jobs.thm social.thm >> /etc/hosts`
+
+---
 
 ## Level 1
 ![image-1070](/assets/img/obsidian/checkmate/image-1070.png)

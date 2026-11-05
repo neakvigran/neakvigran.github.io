@@ -22,6 +22,8 @@ add `worldwap.thm` to /etc/hosts
 
 ![image-1924](/assets/img/obsidian/whats-your-name/image-1924.png)
 
+---
+
 ## Enumeration and Scanning
 
 using `nmap`
@@ -45,6 +47,8 @@ So, let's open the website.
 
 If **role = moderator -> admin.php if not -> dashboard.php**
 
+
+---
 
 ## Get Moderator Role
 
@@ -118,6 +122,8 @@ This is the hint that we have to visit `http://login.worldwap.thm/login.php`
 ![image-1937](/assets/img/obsidian/whats-your-name/image-1937.png)
 
 With our moderator session, we now access the moderator's `profile.php` and find our first flag.
+
+---
 
 ## Get Admin Role
 

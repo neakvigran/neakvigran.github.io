@@ -42,6 +42,8 @@ Let's use `nmap` to scan for open ports
 
 	**Ans** 7
 
+---
+
 ## Service Banners
 
 4. *On port 80, what is the service version value?*
@@ -65,6 +67,8 @@ Since **port 10121** previously showed an unknown service, I assume that this po
 **Ans** `vsftpd 3.0.5`
 
 
+---
+
 ## FTP Access
 
 7. *We learned two usernames using social engineering: **eddie** and **quinn**. What is the flag hidden in one of these two account files and accessible via FTP?* 
@@ -82,6 +86,8 @@ Now, let's log in to FTP as `quinn` with the password we found. I list the files
 find `ftp_flag.txt` in the **quinn** account
 
 ![image-1231](/assets/img/obsidian/net-sec-challenge/image-1231.png)
+
+---
 
 ## NULL Scan
 

@@ -12,6 +12,8 @@ comments: false
 
 # Scenario
 
+---
+
 ## Green Lights, Dark Corners
 
 CorpNet's internal network operations centre has been running quietly for years. Monitoring hosts, logging events, and keeping the infrastructure alive. Or so it seems. A tip from a disgruntled contractor suggests that someone on the NOC team has been cutting corners, leaving doors open, and hiding things in places no one thinks to look.
@@ -78,6 +80,8 @@ In the audit log, we can see that an attacker already tried to attack using SQL 
 
 ![image-1144](/assets/img/obsidian/silent-monitor/image-1144.png)
 
+---
+
 ## Command Injection
 
 Now, on the **Host Health** page, this looks like something where we can use`command injection`
@@ -100,6 +104,8 @@ I found a `secret.config` file. This is interesting, let's see what's inside the
 
 ![image-1151](/assets/img/obsidian/silent-monitor/image-1151.png)
 
+---
+
 ## SSH Access
 
 We got the user `syadmin` and its password. Since port 22 (SSH) is open, let's access the user using these credentials
@@ -111,6 +117,8 @@ Now we can access this user
 ![image-1154](/assets/img/obsidian/silent-monitor/image-1154.png)
 
 And this is the answer for our first question.
+
+---
 
 ## Crack KeePass
 
