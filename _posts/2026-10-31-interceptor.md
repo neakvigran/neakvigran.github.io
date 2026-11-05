@@ -24,7 +24,7 @@ If you understand the flow well enough, a small change in the request might be a
 
 ---
 
-# Recon
+## Reconnaissance
 
 `rustscan -a 10.48.166.24 -- -sV -sC`
 
@@ -32,19 +32,21 @@ If you understand the flow well enough, a small change in the request might be a
 
 ![image-1288](/assets/img/obsidian/interceptor/image-1288.png)
 
-Port 22 (SSH), 53 (DNS), 80 (HTTP) are opened.
+**Ports 22 (SSH), 53 (DNS), 80 (HTTP)** are open.
 
-So, let start from website enumerate first.
+So, let's start with website enumeration first.
 
 ![image-1289](/assets/img/obsidian/interceptor/image-1289.png)
 
 ![image-1291](/assets/img/obsidian/interceptor/image-1291.png)
 
-Then I will use `gobuster` to find hidden dir.
+Then I will use `gobuster` to find hidden directory.
 
 ![image-1299](/assets/img/obsidian/interceptor/image-1299.png)![image-1292](/assets/img/obsidian/interceptor/image-1292.png)
 
-We found interesting dir `login.php.bak`, which seem to be backup file, so let's download this file first.
+## Find the Password
+
+We found an interesting dir, `login.php.bak`, which seems to be a backup file, so let's download this file first.
 
 ```php title:login.php.bak
 <?php
@@ -129,7 +131,7 @@ form.addEventListener("submit", async (e) => {
 
 ![image-1297](/assets/img/obsidian/interceptor/image-1297.png)
 
-It show inportant information like admin email and password format `MediaHub + YEAR`, so we can create custom word list to brute force on login page.
+It shows important information like the admin email and password format `MediaHub + YEAR`, so we can create a custom word list to brute-force on the login page.
 
 ```bash
 for y in {1990..2035}; do
@@ -137,11 +139,11 @@ for y in {1990..2035}; do
 done > mediahub-years.txt
 ```
 
-I use some simple for loop to create wordlists contained custom password follow the format.
+I use a simple for loop to create wordlists containing custom passwords following the format.
 
 ![image-1300](/assets/img/obsidian/interceptor/image-1300.png)
 
-I use simple script to use curl command and check which password is correct
+I use a simple script to use the curl command and check which password is correct
 
 ![image-1301](/assets/img/obsidian/interceptor/image-1301.png)
 
@@ -153,7 +155,9 @@ Password is `MediaHub2026`
 
 ![image-1302](/assets/img/obsidian/interceptor/image-1302.png)
 
-After login it ask for OTP sent to the email. I inspect this page script and we can see that if we success it will redirect to `dashboard.php` 
+## OTP Bypass
+
+After login, it asks for an **OTP** sent to the email. I inspect this page's script, and we can see that if we succeed, it will redirect to `dashboard.php` 
 
 ```html
 <script>
@@ -198,29 +202,31 @@ form.addEventListener("submit", async (e) => {
 </script>
 ```
 
-So, I try put some number and use burp to inspect response
+So, I try putting in some numbers and use `burpsuite` to inspect the response
 
 ![image-1303](/assets/img/obsidian/interceptor/image-1303.png)
 
-"is_verified:false" is interesting, I will use this to bypass otp verification. So, I use burp intercept and put is_verified and set value to true and send request.
+"is_verified:false" is interesting. I will use this to bypass otp verification. So, I use burp intercept and put is_verified and set its value to true and send the request.
 
 ![image-1304](/assets/img/obsidian/interceptor/image-1304.png)
 
-Now, it said redirecting... so I change path to `/dashboard.php` and now we are in.
+Now, it says redirecting... so I change the path to `/dashboard.php`, and now we are in.
 
 ![image-1305](/assets/img/obsidian/interceptor/image-1305.png)
 
 ![image-1306](/assets/img/obsidian/interceptor/image-1306.png)
 
-Inside we can use upload and Import feed. This might be vuln.
+## Import Feed
 
-But it seem like picture upload is filter only picture, so let's focus on import feed features 
+Inside, we can use upload and Import feed. This might be vulnerable.
+
+But it seems like picture upload is filtered to allow only pictures, so let's focus on the import feed features 
 
 ![image-1307](/assets/img/obsidian/interceptor/image-1307.png)
 
-we can see from error that they use curl command.
+we can see from the error that they use the curl command.
 
-Now, I try to do command injection by fetch back to they localhost ip.
+Now, I try to do command injection by fetching back to their localhost ip.
 
 ![image-1310](/assets/img/obsidian/interceptor/image-1310.png)
 
@@ -229,18 +235,18 @@ Now, I try to do command injection by fetch back to they localhost ip.
 ![image-1311](/assets/img/obsidian/interceptor/image-1311.png)
 
 
-Now it work!
+Now it works!
 
 ![image-1312](/assets/img/obsidian/interceptor/image-1312.png)
 
-but it not work but from the error message "Could not resolve host: id"
-this might mean we have to put file path instead of command.
+but it doesn't work. From the error message **"Could not resolve host: id"**,
+this might mean we have to put a file path instead of a command.
 
 ![image-1313](/assets/img/obsidian/interceptor/image-1313.png)
 
-I try `http://127.1 ; file:///etc/passwd` and now it work this mean we can fetch file directly via this injection 
+I try `http://127.1 ; file:///etc/passwd`, and now it works. This means we can fetch files directly via this injection 
 
-since question asked for `/var/www/user.txt`
+since the question asked for `/var/www/user.txt`
 
 Use `http://127.1 ; file:///var/www/user.txt`
 

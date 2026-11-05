@@ -20,7 +20,7 @@ Volt Labs, a small SaaS shop, suspects an old staging server has rotted into a
 
 ---
 
-# Recon
+## Reconnaissance
 
 `rustscan -a 10.48.168.62 -- -sV -sC`
 
@@ -28,18 +28,18 @@ Volt Labs, a small SaaS shop, suspects an old staging server has rotted into a
 
 ![image-1205](/assets/img/obsidian/operation-coldstart/image-1205.png)
 
-Port 21 (FTP),22 (SSH) and 80 (HTTP) are opened. So, I will try with ftp protocol first. I try login as anonymous and it work
+**Ports 21 (FTP),22 (SSH) and 80 (HTTP)** are open. So, I will try with the `ftp` protocol first. I try logging in as anonymous, and it works
 
 ![image-1206](/assets/img/obsidian/operation-coldstart/image-1206.png)
 
-And I found directory pub that contain `backup.tar.gz` file
+And I found a directory pub that contains a `backup.tar.gz` file
 
 ![image-1207](/assets/img/obsidian/operation-coldstart/image-1207.png)
 
 ![image-1208](/assets/img/obsidian/operation-coldstart/image-1208.png)
 
 ![image-1209](/assets/img/obsidian/operation-coldstart/image-1209.png)
-After extract file it contain `app.py`, which likely the source code for the site.
+After extracting the file, it contains `app.py`, which is likely the source code for the site.
 
 **app.py**:
 ```python
@@ -160,30 +160,32 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
 ```
 
-The site is a flask-based "URL Preview Service" for Volt Labs that fetches a user-supplied URL and renders its contents on the page, gated by a hostname allow-list `kestrel.thm`. It also exposes an `/admin/` area restricted to loopback clients, including an `/admin/notes` endpoint that reads `admin_notes.txt` from disk
+The site is a flask-based **"URL Preview Service"** for Volt Labs that fetches a user-supplied URL and renders its contents on the page, gated by a hostname allow-list `kestrel.thm`. It also exposes an `/admin/` area restricted to loopback clients, including an `/admin/notes` endpoint that reads `admin_notes.txt` from disk
 
 From the comments, we can see that `kestrel.thm` resolves to `127.0.0.1` in the internal `/etc/hosts` file. And the admin endpoint is only accessible internally.
 
 
 # Website
 
-Now, let enumerate the website.
+Now, let's enumerate the website.
 
 ![image-1210](/assets/img/obsidian/operation-coldstart/image-1210.png)
 
-Since we already know website source code. I will try to put 
-http://kestrel.thm which resolve to `127.0.0.1`
+Since we already know the website source code, I will try to put 
+http://kestrel.thm which resolves to `127.0.0.1`
 
 ![image-1213](/assets/img/obsidian/operation-coldstart/image-1213.png)
 ![image-1214](/assets/img/obsidian/operation-coldstart/image-1214.png)
 
-and in the source code we can access to `admin_note.txt `via `/admin/note`
+and in the source code we can access `admin_note.txt `via `/admin/note`
 
 ![image-1215](/assets/img/obsidian/operation-coldstart/image-1215.png)
 
-And we got the SSH access credential.
+And we got the SSH access credentials.
 
 ![image-1216](/assets/img/obsidian/operation-coldstart/image-1216.png)
+
+The credentials work for `webdev` over SSH. Now, let's check the home directory for the user flag.
 
 ![image-1217](/assets/img/obsidian/operation-coldstart/image-1217.png)
 
@@ -193,13 +195,13 @@ and got the first flag!
 
 # Privilege escalation (root)
 
-I continue enumerate the targets to find vuln for **privilege escalation** and I found something interesting at `/etc/cron.d/*`
+I continue enumerating the targets to find vulns for **privilege escalation**, and I found something interesting at `/etc/cron.d/*`
 
 ![image-1219](/assets/img/obsidian/operation-coldstart/image-1219.png)
 
 `* * * * * root cd /opt/backups && tar czf /var/backups/uploads.tgz *
 `
-This seem to vuln with **wildcard injection attack** or **argument injection** 
+This seems to be vuln to a **wildcard injection attack** or **argument injection** 
 
 When root's cron runs `tar czf out.tgz *` in a directory you can write to, the shell expands `*` to whatever filenames exist there. So files named `--checkpoint=1` and `--checkpoint-action=exec=sh shell.sh` get passed to tar as actual command-line flags. Tar's `--checkpoint-action=exec=` runs a shell command at each checkpoint, so it executes `shell.sh` as `root`.
 
@@ -216,7 +218,9 @@ Once root runs e.g. `tar -czf /root/backup.tgz *`, `shell.sh` is executed as `ro
 
 ![image-1220](/assets/img/obsidian/operation-coldstart/image-1220.png)
 
-and we will find flag at `/root/flag.txt`
+The shell shows `euid=0(root)`, so we have root privileges. The `-p` option keeps the elevated privileges when starting the SUID bash shown here.
+
+and we will find the flag at `/root/flag.txt`
 
 ![image-1221](/assets/img/obsidian/operation-coldstart/image-1221.png)
 

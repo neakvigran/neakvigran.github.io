@@ -28,23 +28,23 @@ Your job is to get in, move through the system, and find out what is really runn
 
 ---
 
-# Reconnaissance
+## Reconnaissance
 
 
 ![image-1137](/assets/img/obsidian/silent-monitor/image-1137.png)
 
 ![image-1138](/assets/img/obsidian/silent-monitor/image-1138.png)
 
-It show that port 22 (SSH) and 5050 (http) are running, which mean this website use unusually port instead of port 80.
+It shows that ports **22 (SSH) and 5050 (http)** are running, which means this website uses an unusual port instead of port 80.
 
-**Check that it access able**
+**Check that it is accessible**
 ![image-1139](/assets/img/obsidian/silent-monitor/image-1139.png)
 
 `http://10.49.191.80:5050`
 
 ![image-1140](/assets/img/obsidian/silent-monitor/image-1140.png)
 
-I try to inspect this page, but since it not have any feature to try on. Next I will try to use gobuster tool to find more pages.
+I try to inspect this page, but since it doesn't have any features to try, next I will try to use the gobuster tool to find more pages.
 
 ```
 gobuster dir -u http://10.49.191.80:5050/ \
@@ -53,79 +53,87 @@ gobuster dir -u http://10.49.191.80:5050/ \
 
 ![image-1141](/assets/img/obsidian/silent-monitor/image-1141.png)
 
-I found `/internal` page
+I found the `/internal` page
 
 ![image-1142](/assets/img/obsidian/silent-monitor/image-1142.png)
 
-This seem like a sign in page for the website.
+This seems like a sign-in page for the website.
 
 # Burpsuite
 
-Since I gobuster hasn't found any other pages. I will catch the POST request using Burpsuite. And use SQL injection.
+Since `gobuster` hasn't found any other pages, I will catch the `POST` request using `Burpsuite`. And use `SQL injection`.
 
-I put username `' OR 1==1--` and randomly put password, let's see if it work or not.
+I put `' OR 1==1--` as the username and put in a random password. Let's see if it works or not.
 
 ![image-1143](/assets/img/obsidian/silent-monitor/image-1143.png)
 
-It worked! Now we login as `netops` user 
+It worked! Now we log in as user `netops` 
 
 ![image-1145](/assets/img/obsidian/silent-monitor/image-1145.png)
 
-In the audit log, we can see that attacker already try to attack using SQL injection and Command injection. This show that attacker might already successfully attacked.
+In the audit log, we can see that an attacker already tried to attack using SQL injection and Command injection. This shows that the attacker might have already successfully attacked.
 
 
 `http://10.49.191.80:5050/internal/health`
 
 ![image-1144](/assets/img/obsidian/silent-monitor/image-1144.png)
 
-Now, at Host Health page this look like something that we can use command injection
+## Command Injection
+
+Now, on the **Host Health** page, this looks like something where we can use`command injection`
 
 ![image-1146](/assets/img/obsidian/silent-monitor/image-1146.png)
 
 ![image-1147](/assets/img/obsidian/silent-monitor/image-1147.png)
 
-and from audit log we can see that attacker use `%0a` which mean newline. This mean we may bypass command using same method.
+and from the audit log we can see that the attacker uses `%0a`, which means newline. This means we may bypass the command using the same method.
 
-I use Burp suite Repeater to send command injection with the request
+I use `Burp suite Repeater` to send command injection with the request
 
 ![image-1148](/assets/img/obsidian/silent-monitor/image-1148.png)
 
-It worked! So, let's play around and find some thing interesting. 
+It worked! So, let's play around and find something interesting. 
 
 ![image-1150](/assets/img/obsidian/silent-monitor/image-1150.png)
 
-I found `secret.config` file this is interesting, let's see what inside the file.
+I found a `secret.config` file. This is interesting, let's see what's inside the file.
 
 ![image-1151](/assets/img/obsidian/silent-monitor/image-1151.png)
 
-We got the user `syadmin` and its password, Since port 22 (SSH) open let's access to the user using this credential
+## SSH Access
+
+We got the user `syadmin` and its password. Since port 22 (SSH) is open, let's access the user using these credentials
 
 ![image-1152](/assets/img/obsidian/silent-monitor/image-1152.png)
 
-Now we can access to this user
+Now we can access this user
 
 ![image-1154](/assets/img/obsidian/silent-monitor/image-1154.png)
 
 And this is the answer for our first question.
 
-Moreover, in backups folder it contain some important information
+## Crack KeePass
+
+Moreover, the backups folder contains some important information
 
 ![image-1155](/assets/img/obsidian/silent-monitor/image-1155.png)
 
-So, `infrastructure.kdbx` is contained backups credential. We will export this file to our machine and crack it using `keepass2john`
+So, `infrastructure.kdbx` contains backup credentials. We will export this file to our machine and crack it using `keepass2john`
 
 ![image-1156](/assets/img/obsidian/silent-monitor/image-1156.png)
+
+`keepass2john` extracts the database hash into `hash.txt`. We can then try cracking this hash to find the password for the KeePass file.
 
 then:![image-1157](/assets/img/obsidian/silent-monitor/image-1157.png)
 
 ![image-1158](/assets/img/obsidian/silent-monitor/image-1158.png)
 
-We got the password: `spring` to open `infrastructure.kdbx` file
+We got the password: `spring` to open the `infrastructure.kdbx` file
 
 I use` keepassxc infrastructure.kdbx ` to open the file
 ![image-1159](/assets/img/obsidian/silent-monitor/image-1159.png)
 
-And we got root password!
+And we got the root password!
 
 ![image-1160](/assets/img/obsidian/silent-monitor/image-1160.png)
 
@@ -133,9 +141,11 @@ And we got root password!
 
 ![image-1161](/assets/img/obsidian/silent-monitor/image-1161.png)
 
+I use `su` with the root password we found, and now we are root. Let's find `root.txt` and read it.
+
 ![image-1162](/assets/img/obsidian/silent-monitor/image-1162.png)
 
-and here we go! Answer for the last questions!
+and here we go! The answer to the last question!
 
 *DONE!!!*
 

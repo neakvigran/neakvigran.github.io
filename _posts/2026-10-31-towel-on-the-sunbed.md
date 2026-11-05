@@ -20,31 +20,31 @@ comments: false
 
 ---
 
-# Recon
+## Reconnaissance
 
 ![image-1485](/assets/img/obsidian/towel-on-the-sunbed/image-1485.png)
 
-Port 22 (SSH) and 3000 are opening.
+**Ports 22 (SSH) and 3000** are open.
 
-# Web Enum
+## Web Enumerate
 
 ![image-1486](/assets/img/obsidian/towel-on-the-sunbed/image-1486.png)
 
 ![image-1487](/assets/img/obsidian/towel-on-the-sunbed/image-1487.png)
 
-Contain `/js/auth.js` path
+Contains the `/js/auth.js` path
 
 ![image-1488](/assets/img/obsidian/towel-on-the-sunbed/image-1488.png)
 
 Doesn't contain anything interesting here
 
-Next I try using SQL injection on login page, but that also didn't work
+Next I try using **SQL injection** on the login page, but that also didn't work
 
-So, I use `/register` to create account and further enum inside website
+So, I use `/register` to create an account and further enum inside the website
 
 ![image-1489](/assets/img/obsidian/towel-on-the-sunbed/image-1489.png)
 
-# Burp Suite
+## Burp Suite
 
 ![image-1490](/assets/img/obsidian/towel-on-the-sunbed/image-1490.png)
 
@@ -52,7 +52,7 @@ Found  `<script src="/js/dashboard.js">`
 
 ![image-1492](/assets/img/obsidian/towel-on-the-sunbed/image-1492.png)
 
-This is the whole game logic — very useful. Here's what it tells us:
+This is the whole game logic very useful. Here's what it tells us:
 
 **The win condition:** `GET /vault` returns `json.flag` — but only when server-side logic allows it. The client just disables the button when `balance < 150`; that's cosmetic. **The real check has to happen server-side on `/vault` and `/claim`**, so the button being disabled means nothing to you as an attacker.
 
@@ -80,13 +80,15 @@ This is the whole game logic — very useful. Here's what it tells us:
     
 3. **Check `priceSnapshot` logic.** The claim reward involves a "PONZI price" snapshot — if price is attacker-influenceable anywhere (another endpoint, a websocket, admin panel), you might inflate reward value. Worth checking if there's a `/prices` or admin endpoint.
     
-4. **Check `/dashboard/api/me` response fully** — does it expose `tier`, `secondsUntilClaim`, or internal fields you could tamper via a PUT/PATCH if one exists?
+4. **Check the `/dashboard/api/me` response fully** — does it expose `tier`, `secondsUntilClaim`, or internal fields you could tamper with via a PUT/PATCH if one exists?
     
 
 Try step 1 first — it's the fastest possible win if the backend trusts the client. What does `/vault` return right now?
 
 
 ![image-1493](/assets/img/obsidian/towel-on-the-sunbed/image-1493.png)
+
+Direct access to `/vault` is denied because our balance is 0 and it requires 150. So, changing the button on the page won't be enough.
 
 ![image-1494](/assets/img/obsidian/towel-on-the-sunbed/image-1494.png)
 
@@ -96,17 +98,21 @@ A single claim gives **50 PONZI** — you need 3 successful claims to hit 150. T
 
 ![image-1496](/assets/img/obsidian/towel-on-the-sunbed/image-1496.png)
 
-Since we can't no longer claim reward I will create another account and use burpsuite to intercept request this time
+The second claim returns `429 Too Many Requests` and says the reward was already claimed. So, repeating requests one by one doesn't bypass the cooldown. Let's try sending them together.
+
+## Race Condition
+
+Since we can no longer claim rewards, I will create another account and use `burpsuite` to intercept the request this time
 
 ![image-1497](/assets/img/obsidian/towel-on-the-sunbed/image-1497.png)
 
-Send this request to repeater and we will create group to send over 3 request at the same time ans select seng group (parallel)
+Send this request to repeater, and we will create a group to send **over 3 requests at the same time** and select send group (parallel)
 
 ![image-1498](/assets/img/obsidian/towel-on-the-sunbed/image-1498.png)
 
 ![image-1499](/assets/img/obsidian/towel-on-the-sunbed/image-1499.png)
 
-And now we have Balance = 200, so now we are allow to access to vault and get the flag!
+And now we have `Balance = 200,` so now we are allowed to access the vault and get the flag!
 
 ![image-1501](/assets/img/obsidian/towel-on-the-sunbed/image-1501.png)
 
