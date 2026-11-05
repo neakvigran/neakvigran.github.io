@@ -133,7 +133,10 @@ if [[ "$MODE" == folder ]]; then
 
   if [[ "$RECURSIVE" == true ]]; then
     mapfile -d '' -t NOTES < <(
-      find "$DIR" -type f -name '*.md' -print0 | sort -z
+      find "$DIR" \
+        \( -type d \( -name '.writeup-backups' -o -name 'tools' \) -prune \) -o \
+        \( -type f -name '*.md' -print0 \) |
+        sort -z
     )
   else
     mapfile -d '' -t NOTES < <(
