@@ -78,7 +78,7 @@ def read_existing_description(post_path):
 
     return None
 
-def frontmatter(title, published, category, tags, description=None):
+def frontmatter(title, published, category, tags, description=None, math_enabled=None):
     """Generate Chirpy-compatible YAML front matter."""
     result = (
         "---\n"
@@ -94,6 +94,9 @@ def frontmatter(title, published, category, tags, description=None):
             + json.dumps(description, ensure_ascii=False)
             + "\n"
         )
+
+    if math_enabled is not None:
+        result += "math: " + ("true" if math_enabled else "false") + "\n"
 
     result += "toc: true\ncomments: false\n---\n\n"
     return result
@@ -126,6 +129,8 @@ def read_obsidian_metadata(content):
 
     description = metadata.get("description")
     tags = metadata.get("tags")
+    if "math" in metadata and type(metadata["math"]) is not bool:
+        raise ValueError("Math must be a YAML boolean (true or false).")
 
     if description is not None and not isinstance(description, str):
         raise ValueError("Description must be a string.")
@@ -204,6 +209,129 @@ def sha256_file(path):
     return sha256_bytes(path.read_bytes())
 
 
+def prepare_math(body):
+    """Translate opt-in math to Kramdown delimiters, preserving code and prices.
+
+    Numeric-leading inline math needs a mathematical operator or LaTeX token;
+    bare dollar amounts stay text. Use $$25$$ or \\(25\\) for a number alone.
+    No math is detected or enabled automatically.
+    """
+    def escaped(pos):
+        slashes = 0
+        while pos > 0 and body[pos - 1] == '\\':
+            slashes += 1
+            pos -= 1
+        return slashes % 2 == 1
+
+    def numeric_math(expression):
+        """Accept mathematical tokens, not prices or prose between dollars."""
+        commands = (
+            r'frac|sqrt|times|cdot|div|pm|mp|geq?|leq?|neq?|equiv|'
+            r'bmod|mod|pi|alpha|beta|gamma|delta|theta|lambda|mu|sigma|'
+            r'phi|varphi|omega|infty|sin|cos|tan|log|ln|exp|left|right'
+        )
+        # Removing known TeX commands also avoids treating their names as prose.
+        plain = re.sub(r'\\(?:' + commands + r')\b', ' ', expression)
+        if re.search(r'[A-Za-z]{2,}', plain):
+            return False
+        if re.search(r'[^\s0-9A-Za-z\u0370-\u03ff+*/^_=<>≤≥≠×÷·%{}()[\],.!|:\-]', plain):
+            return False
+        # A number, decimal, or comma-separated amount alone is not math.
+        return bool(re.search(r'[+*/^_=<>≤≥≠×÷·%\-]', plain)
+                    or re.search(r'\\(?:' + commands + r')\b', expression))
+
+    def end_delimiter(start, delimiter, same_line=False):
+        pos = start
+        while True:
+            pos = body.find(delimiter, pos)
+            if pos < 0 or (same_line and '\n' in body[start:pos]):
+                return -1
+            if not escaped(pos):
+                return pos
+            pos += len(delimiter)
+
+    result = []
+    i = 0
+    while i < len(body):
+        if i == 0 or body[i - 1] == '\n':
+            line_end = body.find('\n', i)
+            line_end = len(body) if line_end < 0 else line_end + 1
+            line = body[i:line_end]
+            fence = re.match(
+                r'(?: {0,3}>[ \t]?)*(?: {0,3}(?:[-+*]|\d+[.)])[ \t]+)?'
+                r' {0,3}(`{3,}|~{3,})([^\n]*)', line)
+            if fence and not (fence[1][0] == '`' and '`' in fence[2]):
+                marker = fence[1]
+                close = re.compile(r'^(?: {0,3}>[ \t]?)* {0,3}' + re.escape(marker[0])
+                                   + '{' + str(len(marker)) + r',}[ \t]*\r?$', re.M)
+                match = close.search(body, line_end)
+                stop = len(body) if match is None else match.end()
+                result.append(body[i:stop])
+                i = stop
+                continue
+            if line.startswith(('    ', '\t')):
+                result.append(line)
+                i = line_end
+                continue
+
+        # Markdown code spans can use any number of backticks and span lines.
+        if body[i] == '`' and not escaped(i):
+            run = re.match(r'`+', body[i:])[0]
+            close = re.compile(r'(?<!`)' + re.escape(run) + r'(?!`)').search(body, i + len(run))
+            if close:
+                result.append(body[i:close.end()])
+                i = close.end()
+                continue
+
+        if not escaped(i):
+            if body.startswith('$$', i):
+                end = end_delimiter(i + 2, '$$')
+                if end >= 0:
+                    result.append(body[i:end + 2])
+                    i = end + 2
+                    continue
+                result.append('$$')
+                i += 2
+                continue
+            elif body.startswith(('\\(', '\\['), i):
+                display = body[i + 1] == '['
+                end = end_delimiter(i + 2, '\\]' if display else '\\)', not display)
+                if end >= 0:
+                    formula = body[i + 2:end]
+                    result.append('\n\n$$\n' + formula.strip() + '\n$$\n\n'
+                                  if display else '$$' + formula + '$$')
+                    i = end + 2
+                    continue
+            elif body[i] == '$' and i + 1 < len(body):
+                first = body[i + 1]
+                if not first.isspace() and first != '$':
+                    end = end_delimiter(i + 1, '$', same_line=True)
+                    if (end > i + 1 and not body[end - 1].isspace()
+                            and not body.startswith('$$', end)
+                            and (end + 1 == len(body)
+                                 or not (body[end + 1].isalnum() or body[end + 1] == '_'))
+                            and (not first.isdigit() or numeric_math(body[i + 1:end]))):
+                        result.append('$$' + body[i + 1:end] + '$$')
+                        i = end + 1
+                        continue
+        result.append(body[i])
+        i += 1
+    return ''.join(result)
+
+
+def read_existing_math(post_path):
+    """Preserve an existing post's explicit math opt-in on update."""
+    if not post_path.is_file():
+        return None
+    match = re.match(r'\A---\r?\n(.*?)\r?\n---(?:\r?\n|$)',
+                     post_path.read_text(encoding='utf-8'), re.S)
+    metadata = yaml.safe_load(match[1]) if match else None
+    value = metadata.get('math') if isinstance(metadata, dict) else None
+    if value is not None and type(value) is not bool:
+        raise ValueError('Math must be a YAML boolean (true or false).')
+    return value
+
+
 def calculate_fingerprints(source, post, images, image_dir):
     """Calculate fingerprints for source, post, and images."""
     return {
@@ -270,6 +398,11 @@ def execute(args):
         raise ValueError(f'Post already exists: {post}')
     if args.command == 'update' and not post.is_file():
         raise ValueError(f'Expected post missing: {post}')
+    math_enabled = (
+        metadata['math'] if 'math' in metadata
+        else read_existing_math(post) if args.command == 'update'
+        else None
+    )
     known = {v['slug']: v['slug'] for v in manifest.values()}
     known[slug] = slug
     body, images, unresolved = convert(
@@ -277,6 +410,8 @@ def execute(args):
     slug,
     known
     )
+    if math_enabled:
+        body = prepare_math(body)
     for name in images:
         if not (IMAGE_DIR / name).is_file():
             raise ValueError(f'Missing image: {name}')
@@ -301,7 +436,8 @@ def execute(args):
         published,
         category,
         tags,
-        description
+        description,
+        math_enabled=math_enabled
     ) + body
 
     print(f'Mode: {args.command} ({"WRITE" if args.write else "PREVIEW"})')

@@ -232,7 +232,34 @@ for source in sources:
     planned[slug] = key
 
     if operation == "publish":
-        matches = list((repo / "_posts").glob(f"*-{slug}.md"))
+        # Prevent another registered source from owning the same slug.
+        owners = [
+            other_key
+            for other_key, other_entry in records.items()
+            if other_key != key
+            and isinstance(other_entry, dict)
+            and other_entry.get("slug") == slug
+        ]
+
+        if owners:
+            sys.exit(
+                f"Slug already belongs to another source: {owners[0]}"
+            )
+
+        # Match the exact slug after the YYYY-MM-DD date prefix.
+        date_slug_pattern = re.compile(
+            r"^\d{4}-\d{2}-\d{2}-(.+)\.md$"
+        )
+
+        matches = [
+            post
+            for post in (repo / "_posts").glob("*.md")
+            if (
+                (match := date_slug_pattern.match(post.name))
+                and match.group(1) == slug
+            )
+        ]
+
         if matches:
             sys.exit(f"Post already exists: {matches[0]}")
 
