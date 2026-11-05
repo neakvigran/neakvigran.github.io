@@ -92,6 +92,8 @@ AWS.config.credentials.get(function (err) {
 ```
 
 
+---
+
 ## Guest Credentials
 
 From `app.js`, we can see the Cognito pool ID, AWS region and DynamoDB table name. The app requests guest credentials without a login, so let's check what those credentials allow us to read.
@@ -130,6 +132,8 @@ aws sts get-caller-identity --region us-east-1
 ![image-1367](/assets/img/obsidian/complimentary/image-1367.png)
 
 This confirms the credentials work, and we are using the guest role `complimentary-cognito-unauth-role`. Next, let's try reading the table directly.
+
+---
 
 ## Read Guest Profiles
 

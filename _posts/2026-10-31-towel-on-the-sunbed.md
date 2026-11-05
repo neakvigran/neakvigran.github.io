@@ -26,6 +26,8 @@ comments: false
 
 **Ports 22 (SSH) and 3000** are open.
 
+---
+
 ## Web Enumerate
 
 ![image-1486](/assets/img/obsidian/towel-on-the-sunbed/image-1486.png)
@@ -43,6 +45,8 @@ Next I try using **SQL injection** on the login page, but that also didn't work
 So, I use `/register` to create an account and further enum inside the website
 
 ![image-1489](/assets/img/obsidian/towel-on-the-sunbed/image-1489.png)
+
+---
 
 ## Burp Suite
 
@@ -99,6 +103,8 @@ A single claim gives **50 PONZI** — you need 3 successful claims to hit 150. T
 ![image-1496](/assets/img/obsidian/towel-on-the-sunbed/image-1496.png)
 
 The second claim returns `429 Too Many Requests` and says the reward was already claimed. So, repeating requests one by one doesn't bypass the cooldown. Let's try sending them together.
+
+---
 
 ## Race Condition
 

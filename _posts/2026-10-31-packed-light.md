@@ -26,6 +26,8 @@ comments: false
 
 ![image-1374](/assets/img/obsidian/packed-light/image-1374.png)
 
+---
+
 ## Inspect the Traffic
 
 First, download and extract the file. We will see a file `traffic.pcapng` 
@@ -121,6 +123,8 @@ listener.join()
 
 `"Cookie": f"hotel_sess_state={b64_string}"`
 
+---
+
 ## Extract Cookie Values
 
 The script captures each keypress, XORs it and puts the base64 result in `hotel_sess_state`. So, let's filter for requests containing this cookie and collect the values in packet order.
@@ -134,6 +138,8 @@ the value is HA==
 now check every packet one by one
 
 `HA==,AA==,BQ==,Mw==,Hg==,ew==,Og==,fA==,Fw==,eQ==,Ow==,Fw==,Pw==,fA==,PA==,Kw==,IA==,eQ==,Jg==,Lw==,Fw==,eA==,Pg==,LQ==,Gg==,Fw==,MQ==,eA==,PQ==,NQ==`
+
+---
 
 ## Decode the Data
 
