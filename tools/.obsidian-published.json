@@ -2481,53 +2481,5 @@
       "image-1612.png": "cd85d3faaddf66d0c5c23b31e00787dc0f087dc91902d8bd320d7eb87a371253",
       "image-1613.png": "32207c2af1c82da5e9f6ca3097f07372ff2041b59e86058717e3ae6c17a37d83"
     }
-  },
-  "CyLab(picoCTF)/tools/reports/math-detection-report.md": {
-    "slug": "math-detection-report",
-    "published": "2026-11-05 17:00:58 +0700",
-    "post": "_posts/2026-11-05-math-detection-report.md",
-    "categories": [
-      "CyLab(picoCTF)",
-      "tools"
-    ],
-    "tags": [
-      "cylab-picoctf"
-    ],
-    "images": [],
-    "source_sha256": "a14bcdc7f7091cf9b36d3e538ae4a1a1c717c69ccad9c86557606179f2eeffcb",
-    "post_sha256": "c4f75e313cf715acdfcd35285a24666b511062c06ac1cc406259086c8fefb114",
-    "image_sha256": {}
-  },
-  "CyLab(picoCTF)/.writeup-backups/20261105-153928-math-auto-opt-in/detection-before-changes.md": {
-    "slug": "detection-before-changes",
-    "published": "2026-11-05 17:00:58 +0700",
-    "post": "_posts/2026-11-05-detection-before-changes.md",
-    "categories": [
-      "CyLab(picoCTF)",
-      ".writeup-backups"
-    ],
-    "tags": [
-      "cylab-picoctf"
-    ],
-    "images": [],
-    "source_sha256": "508ae9d718e7b4e058ec59681aa8b724f44e6c55c6f3d8daa96cc3b7bc0873f4",
-    "post_sha256": "bca1145c50ac003048478d9de174833f624cd6deb1e7588e09ece7a61cf21a4c",
-    "image_sha256": {}
-  },
-  "CyLab(picoCTF)/.writeup-backups/20261105-153928-math-auto-opt-in/final-report.md": {
-    "slug": "final-report",
-    "published": "2026-11-05 17:00:58 +0700",
-    "post": "_posts/2026-11-05-final-report.md",
-    "categories": [
-      "CyLab(picoCTF)",
-      ".writeup-backups"
-    ],
-    "tags": [
-      "cylab-picoctf"
-    ],
-    "images": [],
-    "source_sha256": "a14bcdc7f7091cf9b36d3e538ae4a1a1c717c69ccad9c86557606179f2eeffcb",
-    "post_sha256": "e8e83b87987f9d186812e8e64ebbfaa7bc06a4a5a8c6cbea8a74737d7291a36c",
-    "image_sha256": {}
   }
 }
