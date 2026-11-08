@@ -78,7 +78,7 @@ def read_existing_description(post_path):
 
     return None
 
-def frontmatter(title, published, category, tags, description=None, math_enabled=None):
+def frontmatter(title, published, category, tags, description=None, math_enabled=None, last_modified_at=None):
     """Generate Chirpy-compatible YAML front matter."""
     result = (
         "---\n"
@@ -94,6 +94,9 @@ def frontmatter(title, published, category, tags, description=None, math_enabled
             + json.dumps(description, ensure_ascii=False)
             + "\n"
         )
+
+    if last_modified_at is not None:
+        result += f"last_modified_at: {last_modified_at}\n"
 
     if math_enabled is not None:
         result += "math: " + ("true" if math_enabled else "false") + "\n"
@@ -126,6 +129,19 @@ def read_obsidian_metadata(content):
         raise ValueError(
             "Obsidian front matter must be a YAML mapping."
         )
+
+    for key in ("date", "last_modified_at"):
+        if key in metadata and metadata[key] is not None:
+            value = metadata[key]
+            if isinstance(value, dt.date) and not isinstance(value, dt.datetime):
+                metadata[key] = value.isoformat()
+            elif isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+                try:
+                    dt.date.fromisoformat(value)
+                except ValueError:
+                    raise ValueError(f"{key} must be a valid YYYY-MM-DD date")
+            else:
+                raise ValueError(f"{key} must be a valid YYYY-MM-DD date or null")
 
     description = metadata.get("description")
     tags = metadata.get("tags")
@@ -369,13 +385,20 @@ def execute(args):
         else [args.platform, args.category]
     )
 
-    published = (
-        existing["published"]
-        if existing
-        else dt.datetime.now().astimezone().strftime(
-            "%Y-%m-%d %H:%M:%S %z"
-        )
-    )
+    old_published = existing["published"] if existing else None
+    if "date" in metadata:
+        published = metadata["date"]
+    elif existing:
+        published = str(old_published)[:10]
+        dt.date.fromisoformat(published)
+    else:
+        published = dt.date.today().isoformat()
+    if "last_modified_at" in metadata:
+        last_modified_at = metadata["last_modified_at"]
+    elif existing:
+        last_modified_at = existing.get("last_modified_at")
+    else:
+        last_modified_at = None
 
     # Obsidian tags take priority over existing tags.
     if "tags" in metadata:
@@ -398,6 +421,18 @@ def execute(args):
         raise ValueError(f'Post already exists: {post}')
     if args.command == 'update' and not post.is_file():
         raise ValueError(f'Expected post missing: {post}')
+    if 'last_modified_at' not in metadata and existing:
+        if last_modified_at is None:
+            match = re.search(r"^last_modified_at:\s*(.+)$", post.read_text(encoding="utf-8"), re.M)
+            if match:
+                value = yaml.safe_load(match.group(1))
+                last_modified_at = value.isoformat() if isinstance(value, dt.date) else value
+        if last_modified_at is not None:
+            last_modified_at = str(last_modified_at)[:10]
+            try:
+                dt.date.fromisoformat(last_modified_at)
+            except ValueError:
+                raise ValueError('last_modified_at in existing post must be a valid date')
     math_enabled = (
         metadata['math'] if 'math' in metadata
         else read_existing_math(post) if args.command == 'update'
@@ -437,7 +472,8 @@ def execute(args):
         category,
         tags,
         description,
-        math_enabled=math_enabled
+        math_enabled=math_enabled,
+        last_modified_at=last_modified_at
     ) + body
 
     print(f'Mode: {args.command} ({"WRITE" if args.write else "PREVIEW"})')
@@ -467,6 +503,7 @@ def execute(args):
     manifest[rel] = dict(
         slug=slug,
         published=published,
+        **({"last_modified_at": last_modified_at} if last_modified_at is not None else {}),
         post=post_rel,
         categories=category,
         tags=tags,

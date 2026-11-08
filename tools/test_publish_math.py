@@ -219,5 +219,31 @@ class WorkflowTests(unittest.TestCase):
         key='CyLab(picoCTF)/General Skill/unique.md';self.note(key,'ordinary')
         self.assertIn('Post already exists',self.run_cli(key,ok=False).stderr)
 
+    def test_date_metadata_lifecycle_and_validation(self):
+        key='TryHackMe/Challenge/dates.md'
+        note=self.note(key,'---\ndate: 2024-02-29\nlast_modified_at: "2026-11-08"\n---\nBody stays.\n')
+        self.run_cli(key,'--write')
+        mp=self.repo/'tools/.obsidian-published.json'; manifest=json.loads(mp.read_text())
+        post=self.repo/manifest[key]['post']; slug=manifest[key]['slug']; postpath=manifest[key]['post']
+        props=yaml.safe_load(post.read_text().split('---')[1])
+        self.assertEqual(props['date'].isoformat(),'2024-02-29')
+        self.assertEqual(props['last_modified_at'].isoformat(),'2026-11-08')
+        self.assertEqual(manifest[key]['last_modified_at'],'2026-11-08')
+        note.write_text('---\ndate: 2025-01-02\n---\nBody stays.\n')
+        self.run_cli(key,'--write')
+        manifest=json.loads(mp.read_text());props=yaml.safe_load(post.read_text().split('---')[1])
+        self.assertEqual(props['date'].isoformat(),'2025-01-02')
+        self.assertEqual(props['last_modified_at'].isoformat(),'2026-11-08')
+        self.assertEqual(manifest[key]['post'],postpath);self.assertEqual(manifest[key]['slug'],slug)
+        note.write_text('---\ndate: 2025-01-02\nlast_modified_at: null\n---\nBody stays.\n')
+        self.run_cli(key,'--write')
+        manifest=json.loads(mp.read_text());self.assertNotIn('last_modified_at',manifest[key])
+        self.assertNotIn('last_modified_at:',post.read_text())
+        before=(post.read_bytes(),mp.read_bytes())
+        for val in ['2026-02-29','2026-13-01','2026-04-31','2026-11-08 14:00:00','"2026-11-08T10:30:00+07:00"','123']:
+            note.write_text('---\ndate: '+val+'\n---\nChanged body\n')
+            self.run_cli(key,'--write',ok=False)
+            self.assertEqual((post.read_bytes(),mp.read_bytes()),before)
+
 
 if __name__=='__main__':unittest.main()
