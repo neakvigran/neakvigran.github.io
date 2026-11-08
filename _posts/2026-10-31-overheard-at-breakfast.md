@@ -1,6 +1,6 @@
 ---
 title: "Overheard at Breakfast"
-date: 2026-10-31 20:49:22 +0700
+date: 2026-09-01
 categories: ["TryHackMe", "Holiday Challenge"]
 tags: ["tryhackme"]
 description: "Two strangers. One conversation. One profile they never meant to reveal."

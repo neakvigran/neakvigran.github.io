@@ -1,6 +1,6 @@
 ---
 title: "Interceptor"
-date: 2026-10-31 18:17:37 +0700
+date: 2026-07-30
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
 description: "Use Burp or interception knowledge to modify the traffic and pwn the machine."

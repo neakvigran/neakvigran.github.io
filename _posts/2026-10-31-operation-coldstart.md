@@ -1,6 +1,6 @@
 ---
 title: "Operation Coldstart"
-date: 2026-10-31 18:17:37 +0700
+date: 2026-07-15
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
 description: "Wake up the staging server everyone left behind."

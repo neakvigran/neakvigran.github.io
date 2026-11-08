@@ -1,6 +1,6 @@
 ---
 title: "Whats Your Name?"
-date: 2026-10-31 17:47:21 +0700
+date: 2026-05-26
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
 description: "Utilise your client-side exploitation skills to take control of a web app."

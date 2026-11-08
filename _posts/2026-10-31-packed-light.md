@@ -1,6 +1,6 @@
 ---
 title: "Packed Light"
-date: 2026-10-31 20:49:22 +0700
+date: 2026-09-12
 categories: ["TryHackMe", "Holiday Challenge"]
 tags: ["tryhackme"]
 description: "Tiny packets. Odd hours. Suspiciously regular. Someone's smuggling out the data equivalent of a hotel towel every night, folded neatly inside traffic that looks ordinary until you decode it."

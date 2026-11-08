@@ -1,6 +1,6 @@
 ---
 title: "Net Sec Challenge"
-date: 2026-10-31 18:17:37 +0700
+date: 2026-07-22
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
 description: "Practice the skills you have learned in the Network Security module."

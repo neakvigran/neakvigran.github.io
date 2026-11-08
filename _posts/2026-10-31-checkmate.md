@@ -1,6 +1,6 @@
 ---
 title: "Checkmate"
-date: 2026-10-31 18:17:37 +0700
+date: 2026-06-02
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
 description: "Exploit weak password practices across Marco’s internal systems to achieve full compromise."

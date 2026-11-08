@@ -1,6 +1,6 @@
 ---
 title: "Silent Monitor"
-date: 2026-10-31 18:17:37 +0700
+date: 2026-06-23
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
 description: "Enumerate a running internal service, exploit a vulnerable web application, pivot through the system, and crack your way to root."

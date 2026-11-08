@@ -1,6 +1,6 @@
 ---
 title: "Operation Promotion"
-date: 2026-10-31 18:17:37 +0700
+date: 2026-07-08
 categories: ["TryHackMe", "Challenge"]
 tags: ["tryhackme"]
 description: "One engagement stands between you and your next title."

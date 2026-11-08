@@ -1,7 +1,7 @@
 {
   "TryHackMe/Challenge/Whats Your Name?.md": {
     "slug": "whats-your-name",
-    "published": "2026-10-31 17:47:21 +0700",
+    "published": "2026-05-26",
     "post": "_posts/2026-10-31-whats-your-name.md",
     "categories": [
       "TryHackMe",
@@ -40,8 +40,8 @@
       "image-1946.png",
       "image-1947.png"
     ],
-    "source_sha256": "5c58089146d27090eba2615008b8f620cb87a7a017d56dc3365a519dba397860",
-    "post_sha256": "b595092f2493c526cc48560e72a20f9be3e04b35bfba6bd1520a4c9620c21fbd",
+    "source_sha256": "659550cc3330635dc4f0b897757137acc40cee756436c79af3c3a36835cdeb52",
+    "post_sha256": "862d94443dfc7b04cd817227295d12137f95aac356b83bc45ddebde1820e30a5",
     "image_sha256": {
       "image-1900.png": "312f353a5e13aee5c582b44dd27efd5542f9dfd4d6a5db4b26875503cf347bf4",
       "image-1901.png": "de6851efb4c9522b2814126b70441ff83d5c209bfbebe4c00e6e95d95947b107",
@@ -75,7 +75,7 @@
   },
   "TryHackMe/Challenge/Checkmate.md": {
     "slug": "checkmate",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-06-02",
     "post": "_posts/2026-10-31-checkmate.md",
     "categories": [
       "TryHackMe",
@@ -106,8 +106,8 @@
       "image-1087.png",
       "image-1089.png"
     ],
-    "source_sha256": "93f8023317ff0eea985d2f6d7bcfd33691e8d6940f6982526dc325b4a4e9ce25",
-    "post_sha256": "f2eec7872bf16744cf1fde8311af8976584948e10581fd003592b972b4346fb2",
+    "source_sha256": "368d24950c100dbfab80c8baba00e767c5b278a491f2f086c2094603f329782c",
+    "post_sha256": "5c1f021c488f34f7e90e5a4e227e5e9d2339c7dee4e6ee1a17f039e51bb10f42",
     "image_sha256": {
       "Pasted image 20261028110746.png": "57ac1081f0d168cff4204fd34df60255292da0b4b1fff0c33fadc38e03e00d50",
       "image-1070.png": "ff286ad9ebef057411d35cb652fa36cb2afa2e3a4a2db1eb53354fce53b2a384",
@@ -133,7 +133,7 @@
   },
   "TryHackMe/Challenge/Dead Drop.md": {
     "slug": "dead-drop",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-07-01",
     "post": "_posts/2026-10-31-dead-drop.md",
     "categories": [
       "TryHackMe",
@@ -167,8 +167,8 @@
       "image-1270.png",
       "image-1271.png"
     ],
-    "source_sha256": "0c06c4640136713d2660922d46e7254f9c17f788331c628c45fd6e3fb03c7acd",
-    "post_sha256": "33407949579a26e99ae9df3f0687e8cbf2539c648e292d0860433f64be0cbe5d",
+    "source_sha256": "896f36701b0676bca113a670ba5bafa803eabbb5c9906d67d0bda4df48ba16e3",
+    "post_sha256": "d8f2ab75f912dfc9648d6e09d87e132d9d8c82aec71f4f85d1ebae58ef444049",
     "image_sha256": {
       "image-1236.png": "cc59df7193f291f7b70382c9f68c9b743a6c3bcc49e76ad13918631f5e6a18d5",
       "image-1237.png": "dcbe72e7099d22b781183a765fedad5673229f78feda92beac4d6a3f6f10889c",
@@ -197,7 +197,7 @@
   },
   "TryHackMe/Challenge/Forward.md": {
     "slug": "forward",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-06-09",
     "post": "_posts/2026-10-31-forward.md",
     "categories": [
       "TryHackMe",
@@ -229,8 +229,8 @@
       "image-1133.png",
       "image-1134.png"
     ],
-    "source_sha256": "414587618a8919da74444d91e9210efa2ad64bebf7b056dfcb4fbd5121f0ab40",
-    "post_sha256": "80e2c5fcff3834bf9c669a5221a0baaf5e9e5597c55b2c22cd05982962583be6",
+    "source_sha256": "85da2272818c5ee4fcb16f390df811d4335aaf4b4fd9a7730c6d32f840aeee6f",
+    "post_sha256": "ce71efd2735442d4b42a909032f80931aab42f52679ee4af4d2818dfd894530f",
     "image_sha256": {
       "Pasted image 20261028112214.png": "054458a000f78793d6244a787a7be9e34fce88f3eaad35f8d1a8e24d97ebc3fe",
       "Pasted image 20261028112236.png": "193f23dea51d364ce31888d0e7e33620009d385c01cf8cc397e333f71b6d2745",
@@ -257,7 +257,7 @@
   },
   "TryHackMe/Challenge/Hammer.md": {
     "slug": "hammer",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-05-12",
     "post": "_posts/2026-10-31-hammer.md",
     "categories": [
       "TryHackMe",
@@ -297,8 +297,8 @@
       "image-1479.png",
       "image-1480.png"
     ],
-    "source_sha256": "c70770532f5b056d1b226cd884641e9fede87b4ace61a8fdf790dbe32e756247",
-    "post_sha256": "91344bfebb0df7203f228bcc0e17d30cbddd79a341a2c4fa73b921cf7fe164df",
+    "source_sha256": "3c90f055fca3469742a7b46bdac038e5f1671354cf4d393588cd165760521c1e",
+    "post_sha256": "e9dfb750d613364bc56761303cfd861799a971c9fa74e69b31da55716683da4b",
     "image_sha256": {
       "image-1443.png": "a855155c52f7105361fa78a424571ce2ba835b19364ed5e3d2d6eeaaaf51fbad",
       "image-1445.png": "8daf02e0209f4afa5b4abad59806198ddfa120c22d8ecfba44ba6d0bca5492a9",
@@ -333,7 +333,7 @@
   },
   "TryHackMe/Challenge/Include.md": {
     "slug": "include",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-05-19",
     "post": "_posts/2026-10-31-include.md",
     "categories": [
       "TryHackMe",
@@ -370,8 +370,8 @@
       "image-1898.png",
       "image-1899.png"
     ],
-    "source_sha256": "a8abf0eb1b428c519d73d36e63521019ffd35246a0e69f08ff85d342cf7e1a76",
-    "post_sha256": "1072e52ed76b7883e5a09c19db52f36ea29fb13939713364177637ae3706e75c",
+    "source_sha256": "87d6b6cfb718da4669f976d11c89fa70b69ba07d38ca1bd27698c08fd3939a8b",
+    "post_sha256": "761f28d007886ac3d333c64d5c6bcdff9248a3f6bb4a27cad476a13e25274a1a",
     "image_sha256": {
       "image-1868.png": "6dd91b6017f800641b1e07d10e71d4b7e15146b9266108ed066372cb053c2c18",
       "image-1869.png": "0484fd3f929ed9149080eb816b09617f37f7ede32f3e20a56ebcaf77f84e7146",
@@ -403,7 +403,7 @@
   },
   "TryHackMe/Challenge/Interceptor.md": {
     "slug": "interceptor",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-07-30",
     "post": "_posts/2026-10-31-interceptor.md",
     "categories": [
       "TryHackMe",
@@ -437,8 +437,8 @@
       "image-1313.png",
       "image-1316.png"
     ],
-    "source_sha256": "28e2f17b6a886964b6f4ba8bf6f57074b62d6dc6ae584386ff50c0d52a766e28",
-    "post_sha256": "4f4cbdd3d350fc20253dd928a19f1bd541fcd693e45aab8840fbf90f652e79c5",
+    "source_sha256": "f61a5bc51d59744d35930970e36c8be48e40c5ac6cf3ac25bc0fc0cd63adc815",
+    "post_sha256": "55fa2cae331dcb6b882e1f9199d55299f724f0f3ea0f5b3863ef16f744a2a5fe",
     "image_sha256": {
       "image-1285.png": "403eebc56cfdda855ebb00ba5d8de1d2af904d3414f8aab909a86004bbbf9d96",
       "image-1286.png": "730ebf2ca9fc735843b1d1f977c256eb36728df47bd427ebb180b44c897c43ad",
@@ -467,7 +467,7 @@
   },
   "TryHackMe/Challenge/Net Sec Challenge.md": {
     "slug": "net-sec-challenge",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-07-22",
     "post": "_posts/2026-10-31-net-sec-challenge.md",
     "categories": [
       "TryHackMe",
@@ -490,8 +490,8 @@
       "image-1233.png",
       "image-1234.png"
     ],
-    "source_sha256": "911a506eaf17e8ec772f16db609b212fcb8a714ef131e929e25cdc8a6b537f67",
-    "post_sha256": "8d036c678266fa39e557ecfd46af3ce7bb0147a90ed51ee6b65698816f8beee4",
+    "source_sha256": "5ce1feaff801064d5e9b7089f5e797fe814c0db04080e301d36d0ba8074bbc38",
+    "post_sha256": "1042f3362bd92d65fb921909ef5e2a18452b9c66143128fe04ad7ad48a9c8b02",
     "image_sha256": {
       "image-1222.png": "bd1d30ed11682dec8f8172542ba714cd0976d8e9fbbd7de58110a2feeaa7ed19",
       "image-1223.png": "0b6478117f7e758ed230eded4c4ac2f32425dee14b15c0c681a56ce4c192f3da",
@@ -509,7 +509,7 @@
   },
   "TryHackMe/Challenge/Operation Coldstart.md": {
     "slug": "operation-coldstart",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-07-15",
     "post": "_posts/2026-10-31-operation-coldstart.md",
     "categories": [
       "TryHackMe",
@@ -538,8 +538,8 @@
       "image-1220.png",
       "image-1221.png"
     ],
-    "source_sha256": "e03ed4ea89a19fb02c2089cdcfdfb22ef2954542a55cf8fcfb5406a7bed8d664",
-    "post_sha256": "ada46512c8762546804024c6e3c07bf1e4ecf8f51cf302f675fb85b6f82cf179",
+    "source_sha256": "1df0d375d9be51dde153c505d18768465c7cc0f208df0f02b295cb64921559bd",
+    "post_sha256": "faeebe0e79a353ade45e7405bd14df5eb1c32282bd9941853adbd8c64aee62ed",
     "image_sha256": {
       "image-1202.png": "0ba2a68d6a67927c145e607c9f5ea119fa2f8cb32c51053b6df1d1388abda10e",
       "image-1203.png": "13a6610e70ff442fa9016b5918308a0a522251ef0cf0fafb7adcbe8565b765be",
@@ -563,7 +563,7 @@
   },
   "TryHackMe/Challenge/Operation Promotion.md": {
     "slug": "operation-promotion",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-07-08",
     "post": "_posts/2026-10-31-operation-promotion.md",
     "categories": [
       "TryHackMe",
@@ -600,8 +600,8 @@
       "image-1191.png",
       "image-1192.png"
     ],
-    "source_sha256": "ba15d2cd005292981e45e30a30293dbeb617a1bf159412c251e7b1e66da2a063",
-    "post_sha256": "7235c4d188fb0b9d074d2019f104d7736f7a4cfa705c0afd37cec1ddec30c7e8",
+    "source_sha256": "7559ef5983570b2a4c84e676b589f4ba0357d1b4d90a6e839d4096f47fe81f00",
+    "post_sha256": "17125113a47d604f6cfdeeb651a1aee1fe538f1b9a92b7af084be4b91a41574a",
     "image_sha256": {
       "image-1163.png": "679c892988a060b9f384f46762ca348fab810d252d6183beea0e5c48b1745b5a",
       "image-1164.png": "32bfa81384af9b11c12b39a203c20daa69ad558c1c62fa60db5ac708e7008520",
@@ -633,7 +633,7 @@
   },
   "TryHackMe/Challenge/Silent Monitor.md": {
     "slug": "silent-monitor",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-06-23",
     "post": "_posts/2026-10-31-silent-monitor.md",
     "categories": [
       "TryHackMe",
@@ -670,8 +670,8 @@
       "image-1161.png",
       "image-1162.png"
     ],
-    "source_sha256": "f510c21439b39fa47657dbfc589b7bc8263f18bb57480e24e2eb0e87be2ddbe1",
-    "post_sha256": "395ce68d099854c4ece1ac703574869e8dcc4e947f2efd78785fa0f18235fffc",
+    "source_sha256": "dbb53a9f4f646d4b141002697b38357a2382f04e2ea13910883f7622487bf682",
+    "post_sha256": "69eb689ee213c7ba645715f34328b1a2621671a895ea565830a6455a69dbcb98",
     "image_sha256": {
       "image-1135.png": "8a5757cc263302748fb1763a1d484bb45aa5b9d78a669677c94b0d934886d338",
       "image-1136.png": "54d2c07c52dba84a79f24572305b334bad6d0b725ecad1995a5091ca4110779c",
@@ -703,7 +703,7 @@
   },
   "TryHackMe/Challenge/Support.md": {
     "slug": "support",
-    "published": "2026-10-31 18:17:37 +0700",
+    "published": "2026-05-05",
     "post": "_posts/2026-10-31-support.md",
     "categories": [
       "TryHackMe",
@@ -734,8 +734,8 @@
       "image-1066.png",
       "image-1067.png"
     ],
-    "source_sha256": "55aea8b016ee829855a1944ca6a33c45c670c2c69c34173ad7b3cf6e365f5a4f",
-    "post_sha256": "daab8c993d767f59862d175998e5c9361f0d7403e7c3be406f29b8b949d8ecb5",
+    "source_sha256": "9ff8682bc42a1ff26ef4031dc40628997919565207750c0d27fdd342e7825e6c",
+    "post_sha256": "945dce18917e33d6fad1af684470aeae4445195892cce1b20d01151e0c630dbd",
     "image_sha256": {
       "Pasted image 20261028111314.png": "4f7233f0522614f774bf926e2ea65ce25605b2319023639170019ebbde26b2a1",
       "image-1045.png": "f3630262adaaef1c89c90d211aa2ace7d84bb2d6f858f65df98b254f2e2ed77f",
@@ -761,7 +761,7 @@
   },
   "TryHackMe/Holiday Challenge/Beach Bar.md": {
     "slug": "beach-bar",
-    "published": "2026-10-31 20:49:22 +0700",
+    "published": "2026-08-03",
     "post": "_posts/2026-10-31-beach-bar.md",
     "categories": [
       "TryHackMe",
@@ -791,8 +791,8 @@
       "image-1407.png",
       "image-1408.png"
     ],
-    "source_sha256": "bd0eaa114b431a4f85005fd6fbe150da1fbffcaf973cbf4db2d6d34aa3d90da7",
-    "post_sha256": "5735d5691627f7ed3bb054cfe1085be5f1bfe76f4ae641be639cd438faa58ad7",
+    "source_sha256": "01d2c9096048fc6bddef9dcf707ab329271786ac23d9480d2c0ef25e3cb80c39",
+    "post_sha256": "f86e5c9cd69ea10ae2a8002e1c0fde35950f8f589fc6244db54615803c072b9d",
     "image_sha256": {
       "image-1385.png": "832a62042649382a6efb9e540b1034467055ef12e36b2a8ab3fbd069e656d291",
       "image-1386.png": "c852f17fb7f26ca735f2356422af952b1705dfbb0ab1f679222218fb82796e80",
@@ -817,7 +817,7 @@
   },
   "TryHackMe/Holiday Challenge/Do Not Disturb.md": {
     "slug": "do-not-disturb",
-    "published": "2026-10-31 20:49:22 +0700",
+    "published": "2026-08-17",
     "post": "_posts/2026-10-31-do-not-disturb.md",
     "categories": [
       "TryHackMe",
@@ -850,8 +850,8 @@
       "image-1441.png",
       "image-1442.png"
     ],
-    "source_sha256": "1167a6a5454ffc2a42d261339f77cb650e3c76741ef4740dccdbc828339644b0",
-    "post_sha256": "8a7bf36d986e593fc53060340ae7e5b571aff24064fa21fe8da4503203a185c0",
+    "source_sha256": "137c389599b26410a480b13a8587423ceac47403b49cace4a9095d973a1e75c3",
+    "post_sha256": "502354b251783ce84f0923f558cb68de64909d3a8d86ebe49164eac7c8140bfd",
     "image_sha256": {
       "image-1419.png": "62e1f594d06fa899c3dffd5b4bd0f3020f351ab21ecb5a79e2849908c3c8dcc1",
       "image-1420.png": "1451453052e1659f9b0bd9b4b51c03664838ec52f767cd0c785a27880ff1d4d5",
@@ -879,7 +879,7 @@
   },
   "TryHackMe/Holiday Challenge/Overheard at Breakfast.md": {
     "slug": "overheard-at-breakfast",
-    "published": "2026-10-31 20:49:22 +0700",
+    "published": "2026-09-01",
     "post": "_posts/2026-10-31-overheard-at-breakfast.md",
     "categories": [
       "TryHackMe",
@@ -900,8 +900,8 @@
       "image-1417.png",
       "image-1418.png"
     ],
-    "source_sha256": "e65a018a286473c093d968690e0265df5a2e373b6719cf661765c30285c9d60d",
-    "post_sha256": "b7539fc9a0cc374e8b476473e40f3a288f1d4f7e435bdf94b856fefc0c2cbc06",
+    "source_sha256": "9e41d9ddd6febd8049e92c5305fbb5a43f673c98d0ec92c5a8b4731bd285fb81",
+    "post_sha256": "dd2ab04beea68b349f54ab1da31590913f62690bf75f8196d3822fe951f89300",
     "image_sha256": {
       "image-1409.png": "c629462441afe28da376ec3a2fdac991b3bbd1a4c539fdd7665303a0cdc2dea2",
       "image-1410.png": "715f9f48b5ddaec01cd4babb3ecb0a5ff6638d4ca4e9dbbfe1b2a88949cca902",
@@ -917,7 +917,7 @@
   },
   "TryHackMe/Holiday Challenge/Packed Light.md": {
     "slug": "packed-light",
-    "published": "2026-10-31 20:49:22 +0700",
+    "published": "2026-09-12",
     "post": "_posts/2026-10-31-packed-light.md",
     "categories": [
       "TryHackMe",
@@ -938,8 +938,8 @@
       "image-1379.png",
       "image-1384.png"
     ],
-    "source_sha256": "b10e70e40720e88e1913fe7ebdc22fc2834badfe5e3438f9e98d372864a482ff",
-    "post_sha256": "91c8b80c212df7f038858b126b1bf1fe7acfc7888fc7399f5b6040a976df9a57",
+    "source_sha256": "dd14464f00f46b5c4532da2b467ec548a4d026b2c7aa879d3b074f133fbc00ae",
+    "post_sha256": "10074701607fc99aa15d048a8e400a6c0589760ec15d87370ca74f55b81ea928",
     "image_sha256": {
       "image-1370.png": "b051f3f1883e29373611762ccb8ecf7e9ada5321a2709845a913cabad4eadf77",
       "image-1371.png": "df8640a0dc2cd7969ec0577547b22b657cd5623593003c53eaf8d1c0cba59843",
@@ -955,7 +955,7 @@
   },
   "TryHackMe/Holiday Challenge/Room 404.md": {
     "slug": "room-404",
-    "published": "2026-10-31 20:49:22 +0700",
+    "published": "2026-09-23",
     "post": "_posts/2026-10-31-room-404.md",
     "categories": [
       "TryHackMe",
@@ -974,8 +974,8 @@
       "image-1199.png",
       "image-1201.png"
     ],
-    "source_sha256": "b634ba80038ba24a4cc730e80153f2b29b665f75e0dc655774405e56f081b065",
-    "post_sha256": "1b1efc2c48f5709d96ee68cc5cb04f21b0c57db7791bf68201027a1f4332135b",
+    "source_sha256": "9d20cbe04f13471a9b04eb26a91b232c99023cc6cc789c3a97d0aff664571533",
+    "post_sha256": "662775ca44b6ff73fb81e62311f7efa43af3e3d9aff8168061e2b3c7c19a64dc",
     "image_sha256": {
       "image-1193.png": "5a8072e7d4ed9acfc6dfd1b3bf38aa97abe0c83ccb38fe6259a514a09995179a",
       "image-1194.png": "3d973f9c6075fc8f1fc57cb435d5208283ab1692f7bdbb5d91b0dbe8c10e1709",
@@ -989,7 +989,7 @@
   },
   "TryHackMe/Holiday Challenge/Towel on the Sunbed.md": {
     "slug": "towel-on-the-sunbed",
-    "published": "2026-10-31 20:49:22 +0700",
+    "published": "2026-10-08",
     "post": "_posts/2026-10-31-towel-on-the-sunbed.md",
     "categories": [
       "TryHackMe",
@@ -1018,8 +1018,8 @@
       "image-1499.png",
       "image-1501.png"
     ],
-    "source_sha256": "9ef178dda443f2b6b7e51cc82dedb4984d86bfde1c83c2c7f27722d1d66aa027",
-    "post_sha256": "7cf0947fbad27c68ec84b4f43840f700b015c24dfdff901488c6e77ef0281c14",
+    "source_sha256": "3cf2f306fd1188ea56c6b7e37e5c57bef3b0e540b3280f43326eb0ae3f77ae26",
+    "post_sha256": "3ff4bbc660b5d13dd9577201f5dcbd5c2f76b43112b923f833657255e6591a49",
     "image_sha256": {
       "image-1481.png": "a5f84b75d1da21698d90d29c7d906acaedb1737c811765ab8593971d659cc9c3",
       "image-1482.png": "92c365766a048616e8d0723234ba020c3aeb0d086830ea7e167a96d5ec55b83c",
@@ -1043,7 +1043,7 @@
   },
   "TryHackMe/Holiday Challenge/Complimentary.md": {
     "slug": "complimentary",
-    "published": "2026-10-31 20:49:22 +0700",
+    "published": "2026-10-23",
     "post": "_posts/2026-10-31-complimentary.md",
     "categories": [
       "TryHackMe",
@@ -1063,8 +1063,8 @@
       "image-1368.png",
       "image-1369.png"
     ],
-    "source_sha256": "18b55b6d81d0b7f6c01fdf76283bdb7679db19dc791abe6545f609256f5b47d6",
-    "post_sha256": "b5e193612d566e4c6fdb76b61ec769804dceab0a81b65d7168bb59e1cc4bd4d8",
+    "source_sha256": "b8e8c176cb359e8b27bda23c1ec7524f631d343726573bbee4adae9d77e3c368",
+    "post_sha256": "9cd6925bc90de6d33975e8dbc54c814f8adb101f8df7996a2154ebf506b0c71c",
     "image_sha256": {
       "image-1353.png": "e455932e808f72e3129c5e5709b4cec9a1dd2fb66b5ab8066783cc4097d7f8e5",
       "image-1354.png": "6f1f03af35ba3663204e0ddedad7d14b2929c6787656d59e7b6da41b4ac5f785",
@@ -2480,6 +2480,80 @@
       "image-1611.png": "c46108534c5bd982387e9b361160de70257a7bf52c6c07cc7deb8118ea814509",
       "image-1612.png": "cd85d3faaddf66d0c5c23b31e00787dc0f087dc91902d8bd320d7eb87a371253",
       "image-1613.png": "32207c2af1c82da5e9f6ca3097f07372ff2041b59e86058717e3ae6c17a37d83"
+    }
+  },
+  "TryHackMe/Challenge/El Bandito.md": {
+    "slug": "el-bandito",
+    "published": "2026-10-31",
+    "post": "_posts/2026-10-31-el-bandito.md",
+    "categories": [
+      "TryHackMe",
+      "Challenge"
+    ],
+    "tags": [
+      "tryhackme"
+    ],
+    "images": [
+      "Pasted image 20261108095012.png",
+      "Pasted image 20261108095047.png",
+      "Pasted image 20261108095115.png",
+      "Pasted image 20261108102557.png",
+      "Pasted image 20261108103723.png",
+      "Pasted image 20261108111816.png",
+      "Pasted image 20261108112005.png",
+      "Pasted image 20261108115107.png",
+      "Pasted image 20261108115519.png",
+      "Pasted image 20261108120330.png",
+      "Pasted image 20261108122704.png",
+      "Pasted image 20261108123949.png",
+      "Pasted image 20261108124255.png",
+      "Pasted image 20261108125508.png",
+      "Pasted image 20261108125800.png",
+      "Pasted image 20261108130316.png",
+      "Pasted image 20261108130549.png",
+      "Pasted image 20261108130751.png",
+      "Pasted image 20261108131933.png",
+      "Pasted image 20261108132008.png",
+      "Pasted image 20261108132716.png",
+      "Pasted image 20261108132946.png",
+      "Pasted image 20261108133041.png",
+      "Pasted image 20261108133052.png",
+      "Pasted image 20261108133106.png",
+      "Pasted image 20261108133928.png",
+      "Pasted image 20261108135948.png",
+      "Pasted image 20261108140104.png"
+    ],
+    "source_sha256": "2470a37f60011c629e08bce586bddb6cbcc4dd16a5cf80fd1b983c8772c941af",
+    "post_sha256": "08d99ad667d5992c835975e40215970849ea60d4dfbfa12866a362fd1d57c147",
+    "image_sha256": {
+      "Pasted image 20261108095012.png": "bbb09d57c300fadb96c00c2e0071546bd9bfd1daa3abec32663d2f7bc680cdbe",
+      "Pasted image 20261108095047.png": "80dc7f2160f4dcaff7f5d7ae8942007819297ffb26418c8c18b82cc6da808468",
+      "Pasted image 20261108095115.png": "e954337e5e3c77059dc1d02fa362faea0dcb62ae4450d49b096cd8b748a3a377",
+      "Pasted image 20261108102557.png": "f853d4b1e8408509fe4e8159baaaad474b1f94d0008f008d485752bfac93b7b8",
+      "Pasted image 20261108103723.png": "65c71b54811e36246d65d7fb38a18f5665043e0c52f3e7cc18341a56e19b4f09",
+      "Pasted image 20261108111816.png": "c79e597882360dc229082ec9e94a2cf6c2e026805d7fd9f594b60a079edb5efc",
+      "Pasted image 20261108112005.png": "f7e2b378846111d4b92a570aa080ef7e0bb9952bb8a41daadaedf6a815d70baf",
+      "Pasted image 20261108115107.png": "0679e68b84e984261d254af40250e1bf346971d3709999034cdb76ca798f8b3b",
+      "Pasted image 20261108115519.png": "02bcd7b7a3258f275718d3314f37de9cf8f73c6af494a72914970a841dc087cc",
+      "Pasted image 20261108120330.png": "07c3cf58d9174b73b079a9c6e72101ddc39852cecf37141b8e4af6f4824e5854",
+      "Pasted image 20261108122704.png": "ed0c4e8339c2331f2d4083355f23148bf2d29104648ce0cdfa2954b92eef2c8d",
+      "Pasted image 20261108123949.png": "c7e90bba2d23532390e5d666f40bc6438efc5d9d612986fb2dd7bd3e3cbb3a0d",
+      "Pasted image 20261108124255.png": "ee76caf4d5de01038b397a7a98f73bc75caee5001e1655dad5d35af6c4bcd78a",
+      "Pasted image 20261108125508.png": "c9adcf567a786b24aeae0af3a9d14e321c5f69106b2c19d6aaf8ad7d07e5a4cf",
+      "Pasted image 20261108125800.png": "1035d6f23927e2e46f4a342cff5ec124130ab5bfb7ee878fdd53fc629453d6f8",
+      "Pasted image 20261108130316.png": "1e82bbdefda170f82937b86c364e2280db77955533371dc30ff25f860b231923",
+      "Pasted image 20261108130549.png": "692e8bd36d49b5f825fe7e7db16caba6f47078b8bfd4c3f1a7fb4e6d5d97f837",
+      "Pasted image 20261108130751.png": "249070be1ec9a09cceba00e1ea49c61f0da33a5eb314d877e0e44c37305fa379",
+      "Pasted image 20261108131933.png": "711f5dfbc199425d392d7d307226d5bec4719911e2043ff06dfeeb6c9666d3c4",
+      "Pasted image 20261108132008.png": "006507ecc29290c9793f4685d4dd3c150e6a4ef6d803152077a49eaa9ab86e30",
+      "Pasted image 20261108132716.png": "a501caffbb2809a523748e74e787031af495f068b69cbb02292603eb4f76e118",
+      "Pasted image 20261108132946.png": "432cc964273d296f18ec5a77e1e3d8b18cbe07168c0852844d5c50d7ca01b17d",
+      "Pasted image 20261108133041.png": "cc1250910c7a5bea2d293cefe9ae3e31590667d3654bf8b5e72cfe9883742df8",
+      "Pasted image 20261108133052.png": "9d3e7a587566cbf5562ee33b905c0f34053d9e748166271f414694025dace728",
+      "Pasted image 20261108133106.png": "c13e446d4c07fc16857496d85e8edc82c69bd43c4cf089647653b30908864aad",
+      "Pasted image 20261108133928.png": "5d984608331f918dc6aa12eea1a3d165a7197cf2de86866b436d3e1f3d9803e6",
+      "Pasted image 20261108135948.png": "c1e19e418253e2744a0df8f4ec969e859e22678de0404013e41382f162d7067d",
+      "Pasted image 20261108140104.png": "3ce680e6b0fa90de2298a13462a2599c8449747dd913f65dc033fc09c8562422"
     }
   }
 }
