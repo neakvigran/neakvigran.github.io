@@ -1,6 +1,6 @@
 ---
 title: "Glory of the Garden"
-date: 2026-11-05 14:04:38 +0700
+date: 2026-07-23
 categories: ["CyLab(picoCTF)", "Forensics"]
 tags: ["easy", "forensics"]
 description: "This file contains more than it seems.\n\nGet the flag from garden.jpg."

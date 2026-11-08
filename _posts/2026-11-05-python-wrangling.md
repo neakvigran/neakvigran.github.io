@@ -1,6 +1,6 @@
 ---
 title: "Python Wrangling"
-date: 2026-11-05 14:04:41 +0700
+date: 2026-08-27
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["medium", "general-skills"]
 description: "Python scripts are invoked kind of like programs in the Terminal...\n\nCan you run ende.py using password.txt to get flag.txt.en?"

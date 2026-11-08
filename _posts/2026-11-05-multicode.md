@@ -1,6 +1,6 @@
 ---
 title: "Multicode"
-date: 2026-11-05 14:04:40 +0700
+date: 2026-08-05
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "We intercepted a suspiciously encoded message, but it’s clearly hiding a flag. No encryption, just multiple layers of obfuscation. Can you peel back the layers and reveal the truth?\n\nDownload the message."

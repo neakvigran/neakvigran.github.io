@@ -1,6 +1,6 @@
 ---
 title: "Static ain't always noise"
-date: 2026-11-05 14:04:42 +0700
+date: 2026-07-02
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "Can you look at the data in this binary? The bash script might help!"

@@ -1,6 +1,6 @@
 ---
 title: "Password Profiler"
-date: 2026-11-05 14:04:41 +0700
+date: 2026-08-31
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "We intercepted a suspicious file from a system, but instead of the password itself, it only contains its SHA-1 hash. Using OSINT techniques, you are provided with personal details about the target. Your task is to leverage this information to generate a custom password list and recover the original password by matching its hash.\n\nDownload the following files:\n\nuserinfo: Contains the personal details.\n\nhash: Contains the SHA-1 hash of the password.\n\ncheck_password: Script to test passwords against the hash."

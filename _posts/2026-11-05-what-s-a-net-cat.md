@@ -1,6 +1,6 @@
 ---
 title: "what's a net cat?"
-date: 2026-11-05 14:04:43 +0700
+date: 2026-08-10
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "Using netcat (nc) is going to be pretty important. Can you connect to fickle-tempest.picoctf.net at port 53218 to get the flag?"

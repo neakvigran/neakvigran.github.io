@@ -1,6 +1,6 @@
 ---
 title: "convertme.py"
-date: 2026-11-05 14:04:42 +0700
+date: 2026-07-05
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "Run the Python script and convert the given number from decimal to binary to get the flag."

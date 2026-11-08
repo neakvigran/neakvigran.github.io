@@ -1,6 +1,6 @@
 ---
 title: "First Grep"
-date: 2026-11-05 14:04:40 +0700
+date: 2026-08-14
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "Can you find the flag in the file? This would be really tedious to look through manually, something tells me there is a better way.\n\nThe flag is in this file."

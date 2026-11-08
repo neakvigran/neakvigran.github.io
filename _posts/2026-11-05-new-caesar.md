@@ -1,6 +1,6 @@
 ---
 title: "New Caesar"
-date: 2026-11-05 14:00:20 +0700
+date: 2026-08-26
 categories: ["CyLab(picoCTF)", "Cryptography"]
 tags: ["medium", "cryptography"]
 description: "We found a brand new type of encryption, can you break the secret code? (Wrap with picoCTF{})\n\nfegdeogdgecoeocgcgchcfcffccfca"

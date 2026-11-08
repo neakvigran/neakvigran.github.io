@@ -1,6 +1,6 @@
 ---
 title: "where are the robots"
-date: 2026-11-05 14:04:44 +0700
+date: 2026-07-17
 categories: ["CyLab(picoCTF)", "Web Exploitation"]
 tags: ["easy", "web-exploitation"]
 description: "Can you find the robots?\n\nhttp://fickle-tempest.picoctf.net:52070"

@@ -1,6 +1,6 @@
 ---
 title: "Neuron Meet 2D-O"
-date: 2026-11-05 14:04:38 +0700
+date: 2026-07-08
 categories: ["CyLab(picoCTF)", "AI"]
 tags: ["easy", "ai"]
 description: "Probe a 2D perceptron over the network. Send it pairs of numbers (x, y) and watch whether the neuron fires or not. Use those responses to figure out the decision boundary, then line up the last eight outputs to read the ASCII for p (01110000) and you'll earn the flag. Connect with netcat:\n\n$ nc aureolin-pixie.cylabacademy.net 64543\n\nThe input bounds are shown on connect to keep the search small. You cannot submit the same (x, y) pair back-to-back."

@@ -1,6 +1,6 @@
 ---
 title: "rsa_oracle"
-date: 2026-11-05 14:00:20 +0700
+date: 2026-07-26
 categories: ["CyLab(picoCTF)", "Cryptography"]
 tags: ["medium", "cryptography"]
 description: "Can you abuse the oracle?\n\nAn attacker was able to intercept communications between a bank and a fintech company. They managed to get the message (ciphertext) and the password that was used to encrypt the message."

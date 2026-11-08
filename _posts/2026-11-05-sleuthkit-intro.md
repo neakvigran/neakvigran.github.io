@@ -1,6 +1,6 @@
 ---
 title: "Sleuthkit Intro"
-date: 2026-11-05 14:04:39 +0700
+date: 2026-07-27
 categories: ["CyLab(picoCTF)", "Forensics"]
 tags: ["medium", "forensics"]
 description: "Download the disk image and use mmls on it to find the size of the Linux partition. Connect to the remote checker service to check your answer and get the flag.\n\nNote: if you are using the webshell, download and extract the disk image into /tmp not your home directory.\n\nAccess checker program: nc saturn.picoctf.net 53218"

@@ -1,6 +1,6 @@
 ---
 title: "Magikarp Ground Mission"
-date: 2026-11-05 14:04:40 +0700
+date: 2026-08-25
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "Do you know how to move between directories and read files in the shell? Start the container, ssh to it, and then ls once connected to begin.\n\nLogin via ssh as ctf-player with the password, 8c606eb1 on the host wily-courier.picoctf.net and port 49770."

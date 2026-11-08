@@ -1,6 +1,6 @@
 ---
 title: "extensions"
-date: 2026-11-05 14:04:39 +0700
+date: 2026-08-23
 categories: ["CyLab(picoCTF)", "Forensics"]
 tags: ["medium", "forensics"]
 description: "This is a really weird text file. Can you find the flag?\n\nGet the flag from TXT."

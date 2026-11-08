@@ -1,6 +1,6 @@
 ---
 title: "Neuron Meet 0"
-date: 2026-11-05 14:04:38 +0700
+date: 2026-08-16
 categories: ["CyLab(picoCTF)", "AI"]
 tags: ["easy", "ai"]
 description: "Probe a 1D perceptron over the network. Send it numbers and watch whether the neuron fires or not. Use those responses to figure out the decision boundary, then line up the last eight outputs to read the ASCII for p (01110000) and you'll earn the flag. Connect with netcat:\n\n$ nc aureolin-pixie.cylabacademy.net 50288\n\nThe input bounds are shown on connect to keep the search small. You cannot submit the same number back-to-back."

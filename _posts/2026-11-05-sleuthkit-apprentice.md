@@ -1,6 +1,6 @@
 ---
 title: "Sleuthkit Apprentice"
-date: 2026-11-05 14:04:39 +0700
+date: 2026-07-07
 categories: ["CyLab(picoCTF)", "Forensics"]
 tags: ["medium", "forensics"]
 description: "Download this disk image and find the flag.\n\nNote: if you are using the webshell, download and extract the disk image into /tmp not your home directory."

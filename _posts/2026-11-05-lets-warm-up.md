@@ -1,6 +1,6 @@
 ---
 title: "Lets Warm Up"
-date: 2026-11-05 14:04:40 +0700
+date: 2026-08-01
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "If I told you a word started with 0x70 in hexadecimal, what would it start with in ASCII?"

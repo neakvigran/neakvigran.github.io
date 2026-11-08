@@ -1,6 +1,6 @@
 ---
 title: "What Lies Within"
-date: 2026-11-05 14:04:39 +0700
+date: 2026-08-18
 categories: ["CyLab(picoCTF)", "Forensics"]
 tags: ["medium", "forensics"]
 description: "There's something in the building. Can you retrieve the flag?"

@@ -1,6 +1,6 @@
 ---
 title: "Information"
-date: 2026-11-05 14:04:39 +0700
+date: 2026-08-15
 categories: ["CyLab(picoCTF)", "Forensics"]
 tags: ["easy", "forensics"]
 description: "Files can always be changed in a secret way. Can you find the flag?"

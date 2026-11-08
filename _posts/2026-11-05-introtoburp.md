@@ -1,6 +1,6 @@
 ---
 title: "IntroToBurp"
-date: 2026-11-05 14:04:43 +0700
+date: 2026-07-24
 categories: ["CyLab(picoCTF)", "Web Exploitation"]
 tags: ["easy", "web-exploitation"]
 description: "Try here to find the flag"

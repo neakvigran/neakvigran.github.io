@@ -1,6 +1,6 @@
 ---
 title: "interencdec"
-date: 2026-11-05 14:00:20 +0700
+date: 2026-08-08
 categories: ["CyLab(picoCTF)", "Cryptography"]
 tags: ["easy", "cryptography"]
 description: "Can you get the real meaning from this file.\n\nDownload the file here."

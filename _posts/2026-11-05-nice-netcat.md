@@ -1,6 +1,6 @@
 ---
 title: "Nice netcat..."
-date: 2026-11-05 14:04:40 +0700
+date: 2026-08-28
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "There is a nice program that you can talk to by using this command in a shell:\n$ nc wily-courier.picoctf.net 53695, but it doesn't speak English..."

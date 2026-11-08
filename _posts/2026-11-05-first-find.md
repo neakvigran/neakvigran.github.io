@@ -1,6 +1,6 @@
 ---
 title: "First Find"
-date: 2026-11-05 14:04:40 +0700
+date: 2026-07-03
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "Unzip this archive and find the file named 'uber-secret.txt'"

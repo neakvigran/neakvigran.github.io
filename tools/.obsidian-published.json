@@ -1079,7 +1079,7 @@
   },
   "CyLab(picoCTF)/Binary Exploitation/buffer overflow 0.md": {
     "slug": "buffer-overflow-0",
-    "published": "2026-11-05 14:00:20 +0700",
+    "published": "2026-07-01",
     "post": "_posts/2026-11-05-buffer-overflow-0.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1094,8 +1094,8 @@
       "image-1583.png",
       "image-1584.png"
     ],
-    "source_sha256": "9aa3671a6cd771c4a10465acfadc0aee2f4b0e7c851cdc5d403870f3cefb350a",
-    "post_sha256": "c4012820f64f00f2b1f5c1eea637861fa7b1c93fe579da23a58fd8fa3606a970",
+    "source_sha256": "28a45322cd1baae0c0420315ea098571096ef371073b7ce2d80503ffcae7f3cd",
+    "post_sha256": "b72409682f0b8c3844f53afa8559f38280184bcb7c32374a8b90a5895f8d839e",
     "image_sha256": {
       "image-1579.png": "1b19e74f67d770560b33cea24c36bfef2a9a60142072a84b973eb793c2589ded",
       "image-1583.png": "05446c721fbe5776cab8fff031a94f62f11c08ae1c7f27deb4a42532ea61b7d9",
@@ -1104,7 +1104,7 @@
   },
   "CyLab(picoCTF)/Cryptography/Mind your Ps and Qs.md": {
     "slug": "mind-your-ps-and-qs",
-    "published": "2026-11-05 14:00:20 +0700",
+    "published": "2026-07-20",
     "post": "_posts/2026-11-05-mind-your-ps-and-qs.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1120,8 +1120,8 @@
       "image-1624.png",
       "image-1625.png"
     ],
-    "source_sha256": "781823c298bf246f12f4556918de8d141dfea2d6f775ad4ba8a8d62fc91ac39c",
-    "post_sha256": "803f788422e1839eb7820fa15c2990fc38d42ae176ffb01cbf55ab3eaf10c059",
+    "source_sha256": "1d3c074581be994d477b12ebfce52e7f4329ea9a62e5061b1dc3c9d5d7a09845",
+    "post_sha256": "8996c8ba289a80c6fe2ef40f2bc400799f0c28466177e9c2ab3d7a1ac9e9408e",
     "image_sha256": {
       "image-1620.png": "431725b1c53d93563ed77287dd5cb45f039ed017d30aa468101cc5656f8c7055",
       "image-1621.png": "24f8be3eeff839fcab47d57873bde3f76e6ea237769918a0e2b962867cb4ed6c",
@@ -1131,7 +1131,7 @@
   },
   "CyLab(picoCTF)/Cryptography/New Caesar.md": {
     "slug": "new-caesar",
-    "published": "2026-11-05 14:00:20 +0700",
+    "published": "2026-08-26",
     "post": "_posts/2026-11-05-new-caesar.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1144,15 +1144,15 @@
     "images": [
       "image-1619.png"
     ],
-    "source_sha256": "3e4bd5b63031cd86d74ec3cb0a81acd71cff9d1f7b550ae7cd5653db1a769c54",
-    "post_sha256": "f26f10271f8e905437eb76f0b6fa6023925563444a86515aaec83c030a053533",
+    "source_sha256": "2021d48174027e2c6aee0709b2699a1310bbd020f11000f300cc06188653b7f3",
+    "post_sha256": "78eb778350a7a71163129fc1d06e378d9175059b3802ba748443dbb4d39fe788",
     "image_sha256": {
       "image-1619.png": "47d64f26b36fb09f0f9e8edaf0abcafc5b159d7ee227a5f13fa28282c896d31d"
     }
   },
   "CyLab(picoCTF)/Cryptography/rsa_oracle.md": {
     "slug": "rsa-oracle",
-    "published": "2026-11-05 14:00:20 +0700",
+    "published": "2026-07-26",
     "post": "_posts/2026-11-05-rsa-oracle.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1170,8 +1170,8 @@
       "image-1635.png",
       "image-1636.png"
     ],
-    "source_sha256": "c660b8625ed77b92ab9ee761c37f683ff4095ddb0a6e75e3f4ea88396c91f171",
-    "post_sha256": "b0e3a28aad2825621eb819e3b16766a99bd54144a6d2dd8b8620f20e84da17b9",
+    "source_sha256": "34438159da28d41942e9a2e4df7b7a654216eb4d2655b78487ca95496b37e2b4",
+    "post_sha256": "13a355ceb5db54d2e0d500e32b311531c6827226d472331d18d4c05a860a096d",
     "image_sha256": {
       "image-1631.png": "87f0c920f1bd6fad76b1abd2b476551381436387b4d8a219ce6ccf68926ea682",
       "image-1632.png": "2572e5d4316bcf74fee3d69cc90598d04defd6b84c22e5f0944e0b61a5ffd7db",
@@ -1183,7 +1183,7 @@
   },
   "CyLab(picoCTF)/Cryptography/Mini RSA.md": {
     "slug": "mini-rsa",
-    "published": "2026-11-05 14:00:20 +0700",
+    "published": "2026-07-16",
     "post": "_posts/2026-11-05-mini-rsa.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1198,8 +1198,8 @@
       "image-1628.png",
       "image-1630.png"
     ],
-    "source_sha256": "4ba937de5ebe223f27a1e77c4896706f07af0c5cdd1c2cb1aa21c873db9ef02e",
-    "post_sha256": "dd7827daeb00a13fa5f70cee78e298e266d5abaddaffdfdde991bbb5c60085c4",
+    "source_sha256": "44cc62cf9d65e91c41649c50db63ad73ec1f612008dc79a4639a2cc4048c0e8a",
+    "post_sha256": "bc105a8145c98906fdbfe636d60368e5f7bdafabadc9d6d60e3a52d938028f5c",
     "image_sha256": {
       "image-1626.png": "1d8807889ead71c4b8a484b8771aa33d667a7553439e63bd9bde3eecd09fcdf9",
       "image-1628.png": "e4ec454ffa822fff28b5af8429f2c1eff539740df401436b2834a24fa3fd979c",
@@ -1208,7 +1208,7 @@
   },
   "CyLab(picoCTF)/Cryptography/interencdec.md": {
     "slug": "interencdec",
-    "published": "2026-11-05 14:00:20 +0700",
+    "published": "2026-08-08",
     "post": "_posts/2026-11-05-interencdec.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1225,8 +1225,8 @@
       "image-1617.png",
       "image-1618.png"
     ],
-    "source_sha256": "86d3b1c2dc4bd39445d0069fd1a750de803add66ac6eacd399d8e677fa81d3d3",
-    "post_sha256": "9fec23ffae356ad4f8cd9f3c4e79a1031ee60a62204dcb94279b3a2936136319",
+    "source_sha256": "3cf0a8dbb9b9c76a3bad43d008b5555b6f99dbda5d5ed5ac689e2babf94be485",
+    "post_sha256": "05ffb0efdef98804a7467fa240e3e401a4116d0611a1388cefcca8f33bcf0609",
     "image_sha256": {
       "image-1614.png": "9db644ca57a9095c08d5a5becc5ceadf7e0d09d7acbd313331e98436e6f81e0c",
       "image-1615.png": "000bb454c63d84e583325ddf5c1e63f5cb0d8dacd8353661bad02f71efbfe524",
@@ -1237,7 +1237,7 @@
   },
   "CyLab(picoCTF)/AI/Neuron Meet 0.md": {
     "slug": "neuron-meet-0",
-    "published": "2026-11-05 14:04:38 +0700",
+    "published": "2026-08-16",
     "post": "_posts/2026-11-05-neuron-meet-0.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1252,8 +1252,8 @@
       "image-1697.png",
       "image-1698.png"
     ],
-    "source_sha256": "83e618fb6db12dcfb2e52cc980d91dd142887aaac6695d7a92481b9db4845df3",
-    "post_sha256": "3d81cc3499ee2ee9c208a63d900e6bf22819a2d4231fc7a462281c73426849c3",
+    "source_sha256": "db3d2c47d11cf9f0578680fc11ddca9ecea397121de89593934570d1f9ea493d",
+    "post_sha256": "0c44434b4e667d4367c8af4da21b6e1a8e3633abc6023e1bc6a4997690935d12",
     "image_sha256": {
       "image-1696.png": "1c14a53a517e5a10ab88e9a69ded8c2503e02ab80a6d1004d250d1fe571d4cea",
       "image-1697.png": "a5286db91721e14b1def7ce081c74fe10ff102739639bd56803dbf4151683134",
@@ -1262,7 +1262,7 @@
   },
   "CyLab(picoCTF)/AI/Neuron Meet 2D-O.md": {
     "slug": "neuron-meet-2d-o",
-    "published": "2026-11-05 14:04:38 +0700",
+    "published": "2026-07-08",
     "post": "_posts/2026-11-05-neuron-meet-2d-o.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1277,8 +1277,8 @@
       "image-1701.png",
       "image-1702.png"
     ],
-    "source_sha256": "c14ade9d5d570b1339148955d7e091124b97c63b73022341104a0b9e77033b1c",
-    "post_sha256": "c294b32dae8c754c64dc73671ab4b4a874481f308a027ecef3d283313c958ea2",
+    "source_sha256": "9c0641f89ffa88bb3804dcb78a27732ffa67a7ea7b3324e6a98c1863bf71c9c8",
+    "post_sha256": "c12d69ec1b1ad9f5120d9bbce4724b80d63571fef8661fdc6db436d9995e8da0",
     "image_sha256": {
       "image-1700.png": "2bc73b4f44c6c27daf75ee684bcd9c5f1b92a847c5309e146a4c71ae1a98d583",
       "image-1701.png": "fd8b299ac012996a3f79fe99e5ee273905ef85956f8b35e2504f7fb79a8bac44",
@@ -1287,7 +1287,7 @@
   },
   "CyLab(picoCTF)/Cryptography/Mod 26.md": {
     "slug": "mod-26",
-    "published": "2026-11-05 14:04:38 +0700",
+    "published": "2026-07-30",
     "post": "_posts/2026-11-05-mod-26.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1302,8 +1302,8 @@
       "image-1510.png",
       "image-1511.png"
     ],
-    "source_sha256": "9683dc717c2601555b80a501287009145124877563a4e90c7f0e70b10c81bccd",
-    "post_sha256": "c74ade1c1b4bc1284fe6bb6a0e8b488120943b6981c4969e0b8a3104b03ed25b",
+    "source_sha256": "2cd218950f5ca2ffb32e84a8be1b0e9bcd94f4bc65056fd0675fd90792dd3c3e",
+    "post_sha256": "e446abe0bec849632ff789d388a066735990c85d709bd956428ca4d0ec555d90",
     "image_sha256": {
       "image-1509.png": "3ade53c127c842a14f0f01ef670fe0586064597ee0686deaadea76727a9162ec",
       "image-1510.png": "89cd817d22a5bb39ad955f2d9565964957bc9d8f734f44621bebe1790a14f914",
@@ -1312,7 +1312,7 @@
   },
   "CyLab(picoCTF)/Forensics/Disk,disk,sleuth!.md": {
     "slug": "disk-disk-sleuth",
-    "published": "2026-11-05 14:04:38 +0700",
+    "published": "2026-07-19",
     "post": "_posts/2026-11-05-disk-disk-sleuth.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1326,8 +1326,8 @@
       "image-1643.png",
       "image-1644.png"
     ],
-    "source_sha256": "eaf0cdc4599341078591e4d7c3c3d007f237ca0dad6f06abb1c44cf14b91e9e1",
-    "post_sha256": "32859a01cf8c9df6a39f7bd7fa18545f6e4b4a67f4d9f8165412d451aa205dbd",
+    "source_sha256": "86838507948b83ce5ee01bd4951e9c58a16e6af3214eb1a33d8b68452327fc89",
+    "post_sha256": "853d5d4c5f7bbf413d677ffc4b61c83724a4ae278f4c29e131ed970076b74d69",
     "image_sha256": {
       "image-1643.png": "593b7e0d9a59458a138b5d9aba66255fdf6c35c0907b7e1a79610d446ca2214f",
       "image-1644.png": "7fc02df8d93bdcca606ce2b96b7481ab60c20fb5685f10348761040effc27665"
@@ -1335,7 +1335,7 @@
   },
   "CyLab(picoCTF)/Forensics/Disk,disk,sleuth2.md": {
     "slug": "disk-disk-sleuth2",
-    "published": "2026-11-05 14:04:38 +0700",
+    "published": "2026-07-10",
     "post": "_posts/2026-11-05-disk-disk-sleuth2.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1351,8 +1351,8 @@
       "image-1649.png",
       "image-1650.png"
     ],
-    "source_sha256": "65989426defa4ba6d5f27a3c0f23b59cc2d8478692eec6bd8c0a30e5136e6727",
-    "post_sha256": "b2b61968363320b90e63d7710a3c2f6e261af8ee5c05638b6beccebe4517b6af",
+    "source_sha256": "4d22106df7057fa9e8adfce2ce8dd574756bf60fee0976801bfab565054964ae",
+    "post_sha256": "727e6bfcb1603313265d23ff0f07f3967b5ba9fdd77645ac043895d25ead1b3d",
     "image_sha256": {
       "image-1646.png": "6f96b41b62d8673bfc8ef972531b93591f0e0e1b7706c3daec8a298b8402908a",
       "image-1647.png": "b4cb1cebb1877623eacf42f0c47276538142e4ea1e33f69f5ca229d2b67a39f0",
@@ -1362,7 +1362,7 @@
   },
   "CyLab(picoCTF)/Forensics/Enhance!.md": {
     "slug": "enhance",
-    "published": "2026-11-05 14:04:38 +0700",
+    "published": "2026-08-21",
     "post": "_posts/2026-11-05-enhance.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1378,8 +1378,8 @@
       "image-1570.png",
       "image-1571.png"
     ],
-    "source_sha256": "06899569b436a61ef8a1a7df12c00e136311763339d7a6d2e7ac8b893cfe4fbc",
-    "post_sha256": "894474ce1b6ecd466f54c05b263890b592370a76bd443b96cb0a44305431ac82",
+    "source_sha256": "1a2652aa60fbbaef5c278157e409e1624999a1d9a964ac7cbef1d7e4699e992e",
+    "post_sha256": "9e861d171a5d286dd19515c7c0d9e48028a59dfbc54e2a882f0b9b99cf180fad",
     "image_sha256": {
       "image-1567.png": "596905924b2a1f5bd51ffe3555430b7e04e2232325b75c3cf0b979524ea9abac",
       "image-1569.png": "0375c1592b8bcb2c132aa3cb3201717c14b37eaec894b1606c664f4fbeda9629",
@@ -1389,7 +1389,7 @@
   },
   "CyLab(picoCTF)/Forensics/Glory of the Garden.md": {
     "slug": "glory-of-the-garden",
-    "published": "2026-11-05 14:04:38 +0700",
+    "published": "2026-07-23",
     "post": "_posts/2026-11-05-glory-of-the-garden.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1403,8 +1403,8 @@
       "image-1639.png",
       "image-1640.png"
     ],
-    "source_sha256": "01adc5a2e58741aee4910ea119bb1cc4b66e552194719c49282d6d9425c12d87",
-    "post_sha256": "1890b5a16f834aaf7c5595cd3647b00754f3182bbdac429538244b1f0b27497a",
+    "source_sha256": "5d4f3c6b154a71a8c716712e9aaa72fa25b14ee3bfcf02f6992e3bae60a48927",
+    "post_sha256": "f702fa6238160a7c4442d7ebae7e6763ff52111be0a5ebdfef44c25020b48249",
     "image_sha256": {
       "image-1639.png": "d92741bc38cfdc37427860ae0c6075e42030b33c5423f5a4ca696c7fead3ee72",
       "image-1640.png": "d9f370843c9a9c414fd4f9e96561e99c7e40d3775ecc07de5267c57fc0bf9212"
@@ -1412,7 +1412,7 @@
   },
   "CyLab(picoCTF)/Forensics/Information.md": {
     "slug": "information",
-    "published": "2026-11-05 14:04:39 +0700",
+    "published": "2026-08-15",
     "post": "_posts/2026-11-05-information.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1426,8 +1426,8 @@
       "image-1637.png",
       "image-1638.png"
     ],
-    "source_sha256": "b3f406b8665b23b37b09cb6a93d4184611e31b063aad61381e4fca475a26ea76",
-    "post_sha256": "5b1b34f5d6f5be0c6a39ad28935d864080074d904c647ad7f9aa169113051818",
+    "source_sha256": "9773bed018d4618cb78c0d8b24803493529a8b1beb2ae8371ad6aaadcfbfd45d",
+    "post_sha256": "c0c4f6fe7e7f245de347d687b6b8941caab0daaf1103eac90ef8fa4b4f3ed757",
     "image_sha256": {
       "image-1637.png": "fb147809d26cd54fc7ffd29beb745a77dfb7ccc86c9efd052637e35344917891",
       "image-1638.png": "d48daaa26a83810b77b83a1ac96a704673d3324a5fad6f254a54a22e4598ba9f"
@@ -1435,7 +1435,7 @@
   },
   "CyLab(picoCTF)/Forensics/Sleuthkit Apprentice.md": {
     "slug": "sleuthkit-apprentice",
-    "published": "2026-11-05 14:04:39 +0700",
+    "published": "2026-07-07",
     "post": "_posts/2026-11-05-sleuthkit-apprentice.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1453,8 +1453,8 @@
       "image-1655.png",
       "image-1656.png"
     ],
-    "source_sha256": "8fd4932863887d18a52810ebd9b9e3c01b1006b664fbfd46e8f9231a317ad5c4",
-    "post_sha256": "36f077fc90134807343913623126aa1f0346bd1f327a124798e208f31bc90d16",
+    "source_sha256": "3e4c55e6bf06d8f3ce75e2a90f059ff077ffce1f4d5cc7117e93096e02295954",
+    "post_sha256": "77909925a6fce87d5f021dfe59f40a68df18189a05657aa672f9e3c956bc51af",
     "image_sha256": {
       "image-1651.png": "5c8e09080aa86486f1001c5768db928e6d3d6b05140428ad5ca49669ae54edbe",
       "image-1652.png": "e7f9e59141dab20f921beffe54d1cd5651ddd3f5724c7f8c73ee74727c1964f1",
@@ -1466,7 +1466,7 @@
   },
   "CyLab(picoCTF)/Forensics/Sleuthkit Intro.md": {
     "slug": "sleuthkit-intro",
-    "published": "2026-11-05 14:04:39 +0700",
+    "published": "2026-07-27",
     "post": "_posts/2026-11-05-sleuthkit-intro.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1480,8 +1480,8 @@
       "image-1641.png",
       "image-1642.png"
     ],
-    "source_sha256": "c86c461a02aead4781405183fdae90b02a226670776d894cda1fd284daab593e",
-    "post_sha256": "9272d561accb936b026c6a78506a1e75b811b94699dcc0d5f4b9c766734c127a",
+    "source_sha256": "d798bb6faf6c1c392aec6e0e4d642c822a4b334ea93b42354996581ef9010710",
+    "post_sha256": "cab56c9c0985ea960c1509f5be313300d7a8867f088e159ed8dffd8aaf328129",
     "image_sha256": {
       "image-1641.png": "df909ee1f58f39a9c5954ddb9dcf0fd6697f17ab7b103aaa631321ba1873da3d",
       "image-1642.png": "3eedb7724c7526b04e1e3e35b71d93cbc7ae06ac0d1704a4855a381b76c05b14"
@@ -1489,7 +1489,7 @@
   },
   "CyLab(picoCTF)/Forensics/St3gO.md": {
     "slug": "st3go",
-    "published": "2026-11-05 14:04:39 +0700",
+    "published": "2026-08-07",
     "post": "_posts/2026-11-05-st3go.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1504,8 +1504,8 @@
       "image-1669.png",
       "image-1670.png"
     ],
-    "source_sha256": "e348a20179a5a92a99e3866e3c0a53e08f5832530c2dbde941ebb041bd9e4e8f",
-    "post_sha256": "04cdf27de07a317348d8a29a008c9948fbb5872ff3d25edf5ada6cc28093ef5e",
+    "source_sha256": "4997ff19be8a7beecb6e17e9d9f6301626b40693caeff26ce183849b74093e70",
+    "post_sha256": "239000c3ec370c8e3533b1a6954248631388c0b11ae7d32d262ae43c3aedcde3",
     "image_sha256": {
       "image-1668.png": "d49543531516185fbb8441a1f4c60122a999cb652f2b095e11dc7f9871beaa3f",
       "image-1669.png": "45aaa60f3773bfc7fa7b96553723dde04f798ef53d64b20b855cdb073de39fdf",
@@ -1514,7 +1514,7 @@
   },
   "CyLab(picoCTF)/Forensics/What Lies Within.md": {
     "slug": "what-lies-within",
-    "published": "2026-11-05 14:04:39 +0700",
+    "published": "2026-08-18",
     "post": "_posts/2026-11-05-what-lies-within.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1529,8 +1529,8 @@
       "image-1672.png",
       "image-1673.png"
     ],
-    "source_sha256": "811e7c4fdcbfb34af9476e5eb0217e197eb439f843cea4b79bd0d984ba9c622a",
-    "post_sha256": "af522fae518f88d426c50bf35e1b054e79ecf3820bfbbc24a977626af8be585c",
+    "source_sha256": "8ee61c3fcf65f1a8c725df81a9c67e48b742e19a0d4af022a1e5fec464fb488d",
+    "post_sha256": "88a80e338dc5009086ca1e0ade09bf8db362250690f7c47cbb8a0fc0f8356ce7",
     "image_sha256": {
       "image-1671.png": "4a453faf700e7719f1b5ec402c900ab86930a8e45c9b29835551a221d17d45c2",
       "image-1672.png": "b88a1d0b3d5aae2054858cccfa51941a4935a45d406a2cd846a09f275a862647",
@@ -1539,7 +1539,7 @@
   },
   "CyLab(picoCTF)/Forensics/extensions.md": {
     "slug": "extensions",
-    "published": "2026-11-05 14:04:39 +0700",
+    "published": "2026-08-23",
     "post": "_posts/2026-11-05-extensions.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1556,8 +1556,8 @@
       "image-1666.png",
       "image-1667.png"
     ],
-    "source_sha256": "a62f0a7d25d93aa9174963604e98c046dd93a113f64842f62171a7a072aa77d9",
-    "post_sha256": "f9c6c57dd0a1fac9152447d2c75c62bb561f9c8d949cb3ee840369f7c7242859",
+    "source_sha256": "33a6f6f96cd524ad677a32084dbe751a2041183ed88721bee3362d5d51e80862",
+    "post_sha256": "61906c4047c53e904035f2bb8535b368e63c9c247bbc4f89818c776540c507f5",
     "image_sha256": {
       "image-1663.png": "fade3bb45c9ddcdef13f29e3d287a73762dfdc834213f3b11875d1e400f8dc65",
       "image-1664.png": "a8a3a2fcf23641a51b0302dd9411293857b5dbae0a40f30711953c6bc543e61b",
@@ -1568,7 +1568,7 @@
   },
   "CyLab(picoCTF)/General Skill/2warm.md": {
     "slug": "2warm",
-    "published": "2026-11-05 14:04:39 +0700",
+    "published": "2026-08-19",
     "post": "_posts/2026-11-05-2warm.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1581,15 +1581,15 @@
     "images": [
       "image-1513.png"
     ],
-    "source_sha256": "c49f53d470deb1a355edfa8b15475e5c34db5dd99a9956783a35f03f57bfee9c",
-    "post_sha256": "e38a9929e628dc63b5556de7cea44c08d3223cbdb298dd70ee0f0ea64f18e16b",
+    "source_sha256": "4ae68632478fa4945a7d1323ece9d035d5053ab36d09a1800bd08de3adafafb7",
+    "post_sha256": "391d75443067b50b8f024572f8fd622b187530dbc2d68af7ac11eb46d3005363",
     "image_sha256": {
       "image-1513.png": "17fd5effa7b00043fab764f6da0d2c732c60f6ce2a50e374f147eefafdee53c6"
     }
   },
   "CyLab(picoCTF)/General Skill/Bases.md": {
     "slug": "bases",
-    "published": "2026-11-05 14:04:39 +0700",
+    "published": "2026-08-09",
     "post": "_posts/2026-11-05-bases.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1603,8 +1603,8 @@
       "image-1514.png",
       "image-1516.png"
     ],
-    "source_sha256": "73a8cb461bd3e9b45a5edb5f9a5cde697b057e4b24ef24f6163179727eb0b9f4",
-    "post_sha256": "b3d80407673de6d1f1e33b3210fd5f7edf30a36695144ddf74138c3f201d04df",
+    "source_sha256": "d79e18045e8215b5c94c9c99686bf0ddd51aba6373a0445b92c2e34bb4519816",
+    "post_sha256": "78f55672b217656a9057e7ad353de23ba73b456164c134b2b1b760c33e16951c",
     "image_sha256": {
       "image-1514.png": "5a30de61b1e118ef64774a2bd2f434e9651eec663483a245039740984f8d3c0f",
       "image-1516.png": "559e5422525e6e7777c0c9bf728b04d18be57bd597803cc770e768662f071309"
@@ -1612,7 +1612,7 @@
   },
   "CyLab(picoCTF)/General Skill/Big Zip.md": {
     "slug": "big-zip",
-    "published": "2026-11-05 14:04:40 +0700",
+    "published": "2026-08-04",
     "post": "_posts/2026-11-05-big-zip.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1626,8 +1626,8 @@
       "image-1572.png",
       "image-1573.png"
     ],
-    "source_sha256": "ef7b4214b9f9b73722f9b38b2b8a5e86efe8ea1e8e3ca0b1f1df4f041620a574",
-    "post_sha256": "69dae1ebfeb4d4151ffbb7d9fd7391f3114a8be94abd4cdee7e83473f9fd4b3e",
+    "source_sha256": "40b3ec4a85a33c05aa1f974821f602141d9b1cb59ea5c66b8e866775b0294cf6",
+    "post_sha256": "23db1113c0aec82756f93696c1e6541349f80ed88b054f4015f937492f8d43d5",
     "image_sha256": {
       "image-1572.png": "b921f0800a9701c59d5341b308a62f7b041dd0be81f1afe101f88708414a1fa8",
       "image-1573.png": "f9692c52336b1f664787a1077e51dbbcd00cb74da974a23d84adc6aeef75b02b"
@@ -1635,7 +1635,7 @@
   },
   "CyLab(picoCTF)/General Skill/First Find.md": {
     "slug": "first-find",
-    "published": "2026-11-05 14:04:40 +0700",
+    "published": "2026-07-03",
     "post": "_posts/2026-11-05-first-find.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1649,8 +1649,8 @@
       "image-1599.png",
       "image-1601.png"
     ],
-    "source_sha256": "a0d0301e9de48298b5365ebd917f522ad2f7a09943c3d6a6b8edc83f1808a5ca",
-    "post_sha256": "01780e6ebb4faf766ef7e7055966f830598071f1504db2f14fa708a422d675e7",
+    "source_sha256": "b93fdbdbc592b123a6bc52e85580fa76b7014b85350e9c818e917d07277c432c",
+    "post_sha256": "815d3fdb4f9dcf9478527812e6e4c8ed9657ce1f6d3135b1d796803d1d14a5a4",
     "image_sha256": {
       "image-1599.png": "745b148ed9b8467c8855b2c91b9390f83ab259e81b7524bc69b920dc6cb68501",
       "image-1601.png": "2d39ebfe598f3ee00b1fe92a66f789ad51b3f479ffbe86824c8cb9b9cc0ef903"
@@ -1658,7 +1658,7 @@
   },
   "CyLab(picoCTF)/General Skill/First Grep.md": {
     "slug": "first-grep",
-    "published": "2026-11-05 14:04:40 +0700",
+    "published": "2026-08-14",
     "post": "_posts/2026-11-05-first-grep.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1672,8 +1672,8 @@
       "image-1534.png",
       "image-1535.png"
     ],
-    "source_sha256": "551e2228391f8cf336608ffc46659f8914333df64ee9d003cf712fa1bc8070bb",
-    "post_sha256": "9020bd318d7dd30108528b214b822db2a7845993c324893cc8b27947e26ef414",
+    "source_sha256": "3350feb530a4af2c1b93869338d0994d4abb78669e66cd7b685d290568be0685",
+    "post_sha256": "d9a91fd38a4ab4bbcffcd4c1677bcb62a25920581dc3f6fc360d4d168ce2e756",
     "image_sha256": {
       "image-1534.png": "670e7db0422578d0f8a0cf4806ef9d32ddf55606338dd9e2a9aa5f2fb6a6b52b",
       "image-1535.png": "edc3b4b0d4d87796cc792b9d775f4ad5a5fdf87a2ac0655eafa5efb16930805b"
@@ -1681,7 +1681,7 @@
   },
   "CyLab(picoCTF)/General Skill/Lets Warm Up.md": {
     "slug": "lets-warm-up",
-    "published": "2026-11-05 14:04:40 +0700",
+    "published": "2026-08-01",
     "post": "_posts/2026-11-05-lets-warm-up.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1695,8 +1695,8 @@
       "image-1585.png",
       "image-1586.png"
     ],
-    "source_sha256": "1f7b9db6e0c91d32876b8a5435b625caa2602eaacfba4886ed755a84e2fcb5b5",
-    "post_sha256": "a8a68decc49b28aff0761cbedde61a58d7039a5d1726117dc307c97db03717cf",
+    "source_sha256": "8945fa15ae92f0ff96f8a2fa018f275bb114812a6543c69c33fc9b4c191b78cd",
+    "post_sha256": "8235907c81423e3342f5d7d75fb2a192ce43cbd860debce0ca2e16f555d19db5",
     "image_sha256": {
       "image-1585.png": "b8b72ae14ee62222fd2e85be482d2c859a7506443dba8d336b65c970247cc159",
       "image-1586.png": "4635d5a735d531d67e7bfe1c49c64cc5a35dae2fe2e763865aeaee3064965827"
@@ -1704,7 +1704,7 @@
   },
   "CyLab(picoCTF)/General Skill/Magikarp Ground Mission.md": {
     "slug": "magikarp-ground-mission",
-    "published": "2026-11-05 14:04:40 +0700",
+    "published": "2026-08-25",
     "post": "_posts/2026-11-05-magikarp-ground-mission.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1720,8 +1720,8 @@
       "image-1597.png",
       "image-1598.png"
     ],
-    "source_sha256": "7ee3fa9a897462a0fa76f84c12426159e743fa3ec166b5a9c651551b575f031b",
-    "post_sha256": "39ca753256f719ecd0a82941757b1c484d520103c8f3dee61547633ccc798932",
+    "source_sha256": "795b9019fc99d10c3f057d1fe4cb502ffbf2c8ab950cfd1cf2be1ac469d79af5",
+    "post_sha256": "6fab4aecba4f179f5ae6463cc585a8bd8be5236ea7f6ded0e2b7be735dde1258",
     "image_sha256": {
       "image-1595.png": "5ecf7a81479a108d09dfc9214e5fd01571edb2aa76e739e60aece3ba3de2a9ed",
       "image-1596.png": "dc23be36ca0b2cca38762beba2b146b5c15c925db0109f8e274531d5a5ba5cf3",
@@ -1731,7 +1731,7 @@
   },
   "CyLab(picoCTF)/General Skill/Multicode.md": {
     "slug": "multicode",
-    "published": "2026-11-05 14:04:40 +0700",
+    "published": "2026-08-05",
     "post": "_posts/2026-11-05-multicode.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1749,8 +1749,8 @@
       "image-1781.png",
       "image-1782.png"
     ],
-    "source_sha256": "75faf97fc29c55aaa362885c938c67b08dcb9deef24d5c471dfae6045adc952b",
-    "post_sha256": "b44766d5b0262f29bedf922aa72f5d4a7a50487a75fc96eca3443030b5b60738",
+    "source_sha256": "16df7db45ed3c543bf5d7a1617764fdc3276f59b77db0717084a17d449114608",
+    "post_sha256": "1cee9a6f1fa23d1d8b4275b84535bf39baf5dd0c008507f5917ee2add29c872f",
     "image_sha256": {
       "image-1777.png": "d1c84269cd6bc47932ad5fabb7a18bb02b1bf097ba0abf77aa152436bd9a5e28",
       "image-1778.png": "989607546f649ec11ecb0f48d1aea6e770f47276c91d1dfb199777e3da5a87d7",
@@ -1762,7 +1762,7 @@
   },
   "CyLab(picoCTF)/General Skill/Nice netcat....md": {
     "slug": "nice-netcat",
-    "published": "2026-11-05 14:04:40 +0700",
+    "published": "2026-08-28",
     "post": "_posts/2026-11-05-nice-netcat.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1777,8 +1777,8 @@
       "image-1592.png",
       "image-1593.png"
     ],
-    "source_sha256": "fb4e528036869d2970801a11e74d243d0f3315695e5c391d7fb3f4da29e2ac7e",
-    "post_sha256": "8ca441395a64f64a5499ce2a7ae529c8f89c0d7e0ceccc582033dc810ae0bcf9",
+    "source_sha256": "43f7235a955d69b8ec4996b4285424c07aa3994766fc10e012327a5c133131e2",
+    "post_sha256": "605fa33465af279d129e30927c3a9a2ec3877a18185815d0f59908ecff03296d",
     "image_sha256": {
       "image-1591.png": "10e945c7bb599ad20db09d6e13785c4388cc090624d9c2923da8609591d0595f",
       "image-1592.png": "55dc793c8878d3ea843eb11f4d9767b994699f78b670b960feb38f5b8c78720e",
@@ -1787,7 +1787,7 @@
   },
   "CyLab(picoCTF)/General Skill/Obedient Cat.md": {
     "slug": "obedient-cat",
-    "published": "2026-11-05 14:04:41 +0700",
+    "published": "2026-07-25",
     "post": "_posts/2026-11-05-obedient-cat.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1801,8 +1801,8 @@
       "image-1502.png",
       "image-1503.png"
     ],
-    "source_sha256": "114afdb6a8072f250e84af4c6f7c3eb6e68ae3f2282818a0b70362e9942e5101",
-    "post_sha256": "4d892dac6d4b052ab9114f20c304b864c0547e023b5b6e56e94d1f2014404cc6",
+    "source_sha256": "56f0b620cba6ab058a16815f6488357ed23319fff030b53ef83ff38e1e3942f0",
+    "post_sha256": "9cedb165c8a5e7d673a925208d11d671f3be58581adbc708bfb1cdc81a5cf7f2",
     "image_sha256": {
       "image-1502.png": "db9c7948db6755e4145613a5c06244d556ac1a4cd764785bd9536f33c7184e0a",
       "image-1503.png": "ad3b07b35d024b7c400dc3136be5890572d4e6ddece008ecccba3c95509d4df1"
@@ -1810,7 +1810,7 @@
   },
   "CyLab(picoCTF)/General Skill/PW Crack 1.md": {
     "slug": "pw-crack-1",
-    "published": "2026-11-05 14:04:41 +0700",
+    "published": "2026-07-28",
     "post": "_posts/2026-11-05-pw-crack-1.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1825,8 +1825,8 @@
       "image-1544.png",
       "image-1545.png"
     ],
-    "source_sha256": "cea04b3e2d545103b848de32776e84dd1e80d8f199477eec235a27c84d0cfde9",
-    "post_sha256": "7467219916354d34bcc528f8d5de326ad592869d6a07baef1576fad26e6a6a2b",
+    "source_sha256": "ed066269a72be1ee616d02b1037db0bf128274f93b768e0155cdbe58027a34c1",
+    "post_sha256": "64ed32a7f7f6391c092268060b1c3dd990f058b4d4919533fbcff31f19203c98",
     "image_sha256": {
       "image-1543.png": "02d58db1539b019443d357183bde83404c9eb0885fc36a246a5c886ade48e9db",
       "image-1544.png": "4db63a5391569125fd0b4ebdb72e6b2f15990fb29adbc5a0742afabcfbd19bc2",
@@ -1835,7 +1835,7 @@
   },
   "CyLab(picoCTF)/General Skill/PW Crack 2.md": {
     "slug": "pw-crack-2",
-    "published": "2026-11-05 14:04:41 +0700",
+    "published": "2026-08-29",
     "post": "_posts/2026-11-05-pw-crack-2.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1852,8 +1852,8 @@
       "image-1549.png",
       "image-1550.png"
     ],
-    "source_sha256": "9bee10051b1a4d942b6587d6d37c9be7ee244b74edb106d617f78919d510f74e",
-    "post_sha256": "4e7bcfd3e838499382505d5f18807345e955c51ba487fc7592aa2ffd3119a153",
+    "source_sha256": "b03a5de02cb01404418b36ef5ebcb1cb392e1129a8ad9e5a06741d8720af2535",
+    "post_sha256": "db91bbb5db0e4bbc765cd024766bd47ff89ad37c2b61a370c480f2d7accc249a",
     "image_sha256": {
       "image-1546.png": "af89167f5571401379d80ee9e5c35a7e642fac848816410969214a697d223608",
       "image-1547.png": "3a44450b2034a32e98b7bcf336ec77042dc0f32c162a3360d9ebb484f556e68e",
@@ -1864,7 +1864,7 @@
   },
   "CyLab(picoCTF)/General Skill/PW Crack 3.md": {
     "slug": "pw-crack-3",
-    "published": "2026-11-05 14:04:41 +0700",
+    "published": "2026-07-31",
     "post": "_posts/2026-11-05-pw-crack-3.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1881,8 +1881,8 @@
       "image-1554.png",
       "image-1555.png"
     ],
-    "source_sha256": "8ce2ea8046e3f63b9041f0350eff5bdade8b76892bbbeef421f6330ff689b920",
-    "post_sha256": "2a8b38bceb818ee238ee3d331a2f09971cc692a82b77f124ff82d0fbb7fbd634",
+    "source_sha256": "5ab0c397b7b0459c9bf55562a50d16c93bda5de5720ec8a8d6e6bbf8b2d161b8",
+    "post_sha256": "79c2f83b8f59161ef37133ebf9cd7a11ae0d516e5a4a703988870926d9a16a99",
     "image_sha256": {
       "image-1551.png": "5d11270147c69bcf6339a65f8fb2de9aaeda802332f7e109f6488cdad37b31bf",
       "image-1552.png": "160e5334d7c27808061bcd3f99674ee4c2eae43c4003e7885896a3bda750773f",
@@ -1893,7 +1893,7 @@
   },
   "CyLab(picoCTF)/General Skill/PW Crack 4.md": {
     "slug": "pw-crack-4",
-    "published": "2026-11-05 14:04:41 +0700",
+    "published": "2026-08-30",
     "post": "_posts/2026-11-05-pw-crack-4.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1910,8 +1910,8 @@
       "image-1559.png",
       "image-1560.png"
     ],
-    "source_sha256": "06764178f2580f2fac66662c762bd84597a94df4eb620bb68a11e0d79554985c",
-    "post_sha256": "057c466a9c3d64e26804843e9ce065cd952c50b62f328dbe40bb63121ba1b50d",
+    "source_sha256": "a40c26293775c003141dcfc08a39885ef266fc900fb3eb9be4c65e5252010254",
+    "post_sha256": "736890ef2c7960cd780de422ab185fb2b04fa0e384ec53956c0a237ecd0507fa",
     "image_sha256": {
       "image-1556.png": "896656e50abf09e0af5c8885b6b89cd7244cf9312529af64706603ac4863c3f1",
       "image-1557.png": "daf191bd66198be91ee5066aaa850365fd31413fd666ac96421784733e0455ce",
@@ -1922,7 +1922,7 @@
   },
   "CyLab(picoCTF)/General Skill/PW Crack 5.md": {
     "slug": "pw-crack-5",
-    "published": "2026-11-05 14:04:41 +0700",
+    "published": "2026-07-21",
     "post": "_posts/2026-11-05-pw-crack-5.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1939,8 +1939,8 @@
       "image-1565.png",
       "image-1566.png"
     ],
-    "source_sha256": "2d42933a883103717452179df816eda1ffcdcfe14859ed78a4664001f5ae3367",
-    "post_sha256": "1c757be2b1391d3c25ece020a0e96dc4a5eba3819df13c54758e8fae1af0aa32",
+    "source_sha256": "e9413d89986dd59b7c0183c4bfb3e961f5ad4a2c876d57605114d63b55e32e7a",
+    "post_sha256": "e8afbfd00bd4d7adca707838014db9d6312beffd870e4a348520638947843633",
     "image_sha256": {
       "image-1561.png": "0198bf6e797a81898446b70120ea5062cdd25662e5862d876ef6111ab46fde4d",
       "image-1562.png": "4f52fae18430577497f15fbab2bcd4871ce1105ecadb5c27ce64d56c9c649cb8",
@@ -1951,7 +1951,7 @@
   },
   "CyLab(picoCTF)/General Skill/Password Profiler.md": {
     "slug": "password-profiler",
-    "published": "2026-11-05 14:04:41 +0700",
+    "published": "2026-08-31",
     "post": "_posts/2026-11-05-password-profiler.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1969,8 +1969,8 @@
       "image-1722.png",
       "image-775.png"
     ],
-    "source_sha256": "f267fe8471dadbabd4eb4dabfde459885449ec2369cee4b66378133808b5eef2",
-    "post_sha256": "6e20678746938fd78ef79785e0cc7f5268f54472734c57b53d9216bf807bf55e",
+    "source_sha256": "c3d7358970518ae8d68df694cc4a0dda86a3a060ab6e181bd93f346013b8a5da",
+    "post_sha256": "53fc22544a502ffdbcab310ce0d9a0e4751865f18d2bc2486dc7378a7c353c01",
     "image_sha256": {
       "image-1715.png": "2a286a10cb78eb114fc145fd19eb57aa4b37e0e7cbb6030212c23d3a2302eb69",
       "image-1716.png": "2d2c8ea81366a070be165c674cf10f2cefa62d42a06bdaea64e95cd935f0fb53",
@@ -1982,7 +1982,7 @@
   },
   "CyLab(picoCTF)/General Skill/Python Wrangling.md": {
     "slug": "python-wrangling",
-    "published": "2026-11-05 14:04:41 +0700",
+    "published": "2026-08-27",
     "post": "_posts/2026-11-05-python-wrangling.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -1997,8 +1997,8 @@
       "image-1541.png",
       "image-1542.png"
     ],
-    "source_sha256": "4a3e20777c674598aeafb384c098d8fa40d1856e2ded38db1dfd7ec5e897c4fa",
-    "post_sha256": "ee6d5b89bb4fd66a5c4a1be8e6e04e2f09609ccc14fcf941d1cb6c479829537a",
+    "source_sha256": "3abbbdbaacffd2fcaa8499a37ceed98022ea094f4d9ccec38334473eb9b53c18",
+    "post_sha256": "712bafec9f2e5560c4849b6bffb23ea1303343e3e1e5f1e375d61518318d5bbe",
     "image_sha256": {
       "image-1540.png": "d85e76ec0666eef144686629ea26490875269a44275294a606131ed655af8a51",
       "image-1541.png": "c1d2bb2bb8332b881f34c6686e2449eef1c51b3930eb16fabbbabe63e6cdf6fa",
@@ -2007,7 +2007,7 @@
   },
   "CyLab(picoCTF)/General Skill/SUDO MAKE ME A SANDWICH.md": {
     "slug": "sudo-make-me-a-sandwich",
-    "published": "2026-11-05 14:04:42 +0700",
+    "published": "2026-08-22",
     "post": "_posts/2026-11-05-sudo-make-me-a-sandwich.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2024,8 +2024,8 @@
       "image-1710.png",
       "image-1711.png"
     ],
-    "source_sha256": "1a94fdb51a7942115f6bc6457d025d57df26504e0e483b275b60d6ba484a6561",
-    "post_sha256": "4da1165c13019a6bd556622d8090b148d5ab7314f5aa6c63dcfee6ba7397a340",
+    "source_sha256": "d58c9f214514303c18c5632d5a0798534b60df79069239dd5ba1af48e709280e",
+    "post_sha256": "e9d54bffb55ce66f8f6e74fe47ae5562d6fec854f3906dc710dd480e7094ccea",
     "image_sha256": {
       "image-1706.png": "9d2a2b64b6e2c03d67e3cb884b01d639befe9ef1a6f78033eef209552117eabc",
       "image-1707.png": "22a60bfac5d333f49e306024ccc3f2f3ef85e036a02fa38bc7ae934fb677606c",
@@ -2036,7 +2036,7 @@
   },
   "CyLab(picoCTF)/General Skill/Static ain't always noise.md": {
     "slug": "static-ain-t-always-noise",
-    "published": "2026-11-05 14:04:42 +0700",
+    "published": "2026-07-02",
     "post": "_posts/2026-11-05-static-ain-t-always-noise.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2053,8 +2053,8 @@
       "image-1606.png",
       "image-1607.png"
     ],
-    "source_sha256": "944c197b7d234d1a6597480962ee54c196fff84b41aa1ebfdf32e1140f5b4138",
-    "post_sha256": "b591b0ea1e7b80e7f9c6b042a01fba2bbe764c60d7a8aa60521ef70da4496b63",
+    "source_sha256": "b037d222065bfc386b1c160ea8ce3e5487987c00b4f0365fab58260d33bd143d",
+    "post_sha256": "2f5f5409845eddeda2c6d4b77924bc7cbd62ea9489319c32ab56775eb6d0f040",
     "image_sha256": {
       "image-1602.png": "66f4cb9eb2c6c6ec6cd007fa7434b064418b69d26ae30e692ca44b9b6c676e59",
       "image-1604.png": "09dfc4e6c2135f0af5664d6e0e76f9240032c183b3edfea6be8f777b999ca40a",
@@ -2065,7 +2065,7 @@
   },
   "CyLab(picoCTF)/General Skill/Super SSH.md": {
     "slug": "super-ssh",
-    "published": "2026-11-05 14:04:42 +0700",
+    "published": "2026-07-13",
     "post": "_posts/2026-11-05-super-ssh.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2079,8 +2079,8 @@
       "image-1505.png",
       "image-1506.png"
     ],
-    "source_sha256": "0970a643f1838660ba851c96edc3f296c95d16521b3bc1cb391d04f4d569c5f8",
-    "post_sha256": "db9348c689374d41dec4c013700a265b11f2d02d1b3cca881d21c1075818eab8",
+    "source_sha256": "2a12d6b82bf1813e6f2a60271a4e362a23c25b5851cd1bdc85ea3fdb02bceae0",
+    "post_sha256": "aad3488917b8f29146e8c066fe1cfba000141952482e556f4665d58eb1178a40",
     "image_sha256": {
       "image-1505.png": "deedcb91ccdd386eb14b1253d365889da3e0096ba4649ae045216f9ac9515eee",
       "image-1506.png": "10f997a9bba0827fbb82e7772a1d32845b087a34744412e90d7f46e44b212894"
@@ -2088,7 +2088,7 @@
   },
   "CyLab(picoCTF)/General Skill/Tab, Tab, Attack.md": {
     "slug": "tab-tab-attack",
-    "published": "2026-11-05 14:04:42 +0700",
+    "published": "2026-07-11",
     "post": "_posts/2026-11-05-tab-tab-attack.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2104,8 +2104,8 @@
       "image-1525.png",
       "image-1526.png"
     ],
-    "source_sha256": "f455ddd707ece3a2d2e16c065d3c1b02210263dc0ac7c85fdd7203600f199326",
-    "post_sha256": "933c21d52bc9116dd0e793c7927fb674e477df2834d290332026f2c8de1188ce",
+    "source_sha256": "49b727d253e5853c4367b0f9c25bc7baa4347a499e9481d2f51c131d4f68e0a5",
+    "post_sha256": "f7a1a7d3e2ad988d49e2f005babdb124f0d7a76f1a96042b1dd74c9748d35b73",
     "image_sha256": {
       "image-1523.png": "0dff61d984e9d5fa327ab4891389ee938bfa12998e8f9c54001a4f2420362735",
       "image-1524.png": "989d9bd984116b26cdd4bb61cfb033b9c8de1cf0e6dedb6865f87c0eb662388e",
@@ -2115,7 +2115,7 @@
   },
   "CyLab(picoCTF)/General Skill/Warmed Up.md": {
     "slug": "warmed-up",
-    "published": "2026-11-05 14:04:42 +0700",
+    "published": "2026-07-12",
     "post": "_posts/2026-11-05-warmed-up.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2128,15 +2128,15 @@
     "images": [
       "image-1512.png"
     ],
-    "source_sha256": "50c0c162b581e25be003cc08d8b372bb3a88d3af26c7111d159030f33b8a17f1",
-    "post_sha256": "da74ba20038a8d5653eebbd264f72dbe4e256d51a5bedecafb470465025f4101",
+    "source_sha256": "e7a5acace9bb6cd204435cf26545e21a838b8d2809507becf64329a6138eeb8b",
+    "post_sha256": "32e8fba2271e058139f1ce9aa77fd68d860f0d299015ad6b7a45cc0193349588",
     "image_sha256": {
       "image-1512.png": "f52c78d8ec25ec6e7e0a4f26b8b6f0e22b5a3fbac6ed9d7a9068aed509012e2a"
     }
   },
   "CyLab(picoCTF)/General Skill/Wave a flag.md": {
     "slug": "wave-a-flag",
-    "published": "2026-11-05 14:04:42 +0700",
+    "published": "2026-07-06",
     "post": "_posts/2026-11-05-wave-a-flag.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2153,8 +2153,8 @@
       "image-1521.png",
       "image-1522.png"
     ],
-    "source_sha256": "58992b94add16a3cb289f9f997bc867790a7d6a55f4592012a7c2caef3f6242a",
-    "post_sha256": "c54de810dce0427427165a587e4bf2dc323c923a67a78669469243a659e82b2f",
+    "source_sha256": "53ed29689d6841e59dff7af31447faa2fe490668dbdc3273b52d194b99f8d040",
+    "post_sha256": "f6caf015b149a527b43ee423a315a5cdca5429a74e2d60bc6437f82ace12ce8e",
     "image_sha256": {
       "image-1518.png": "2e600edc97148165957c7a040df60a31b5cb5b8d1896b99f4f7ea86ee6b9d772",
       "image-1519.png": "67c205ff64fbe96d87251dce2bc21d3d4bf684ebc4d2d699dcc7da617f6be9bf",
@@ -2165,7 +2165,7 @@
   },
   "CyLab(picoCTF)/General Skill/convertme.py.md": {
     "slug": "convertme-py",
-    "published": "2026-11-05 14:04:42 +0700",
+    "published": "2026-07-05",
     "post": "_posts/2026-11-05-convertme-py.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2181,8 +2181,8 @@
       "image-1589.png",
       "image-1590.png"
     ],
-    "source_sha256": "7908f685bb2d4957b777e7677c2d680613be9385ded2f79f723f33a1dfd1ac33",
-    "post_sha256": "3d9a89ec3b416faf1a18410321870a50c8fd15e2debef442396a0886ff4be744",
+    "source_sha256": "ed29ff789109b31bb85ff856fd95e867d213c6299866500bde3a0cd398286db8",
+    "post_sha256": "74f3dc7f10b820f4d2b8fef8ee601ea88992d2c2ba59a4005544cec62e147811",
     "image_sha256": {
       "image-1587.png": "5e01df965d40b11efd1d941bde472479cee696703084d549595ae796845ea952",
       "image-1588.png": "f3621ce521dc44cea79e514c5dfc244245e8f5b4428e587a0d70ff954203b57e",
@@ -2192,7 +2192,7 @@
   },
   "CyLab(picoCTF)/General Skill/plumbing.md": {
     "slug": "plumbing",
-    "published": "2026-11-05 14:04:42 +0700",
+    "published": "2026-07-22",
     "post": "_posts/2026-11-05-plumbing.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2206,8 +2206,8 @@
       "image-1608.png",
       "image-1609.png"
     ],
-    "source_sha256": "6a1d2c89239efde5d195defb2398b3416c999dfd7e2e2c881fe9b21eb5b07b6d",
-    "post_sha256": "bfc2974d41db35ffffc7e3462eb7c44c206a0a39083f43f5b149211118d26cbc",
+    "source_sha256": "7f923a9a7c48e11a1ad24519e9b4dfa395479bbab2456263516221428e9239dd",
+    "post_sha256": "97beeeb99f6fc02acb197223d1322a1a5f2af6688cdf1dd05a2055a38f26e89b",
     "image_sha256": {
       "image-1608.png": "8346ad78995b3c5c14191e551278117ced71428f3cc41cb82df8ce9a1fd4c7d8",
       "image-1609.png": "3a53ff5da495068fb7fa108e9dc60c8c489bd5836e51256ec4ab653800744dd7"
@@ -2215,7 +2215,7 @@
   },
   "CyLab(picoCTF)/General Skill/strings it.md": {
     "slug": "strings-it",
-    "published": "2026-11-05 14:04:43 +0700",
+    "published": "2026-07-18",
     "post": "_posts/2026-11-05-strings-it.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2229,8 +2229,8 @@
       "image-1532.png",
       "image-1533.png"
     ],
-    "source_sha256": "7f9e5f0d3ed9c45d3b02ceaccb010df1d0281d7c84213a0c158e209b5ebf16ff",
-    "post_sha256": "b4875cbd58008cc02171ce2e507daa8de19b59a49c38d5373dc1ce59ad3e8b07",
+    "source_sha256": "046529e72e285c4e852dcc8b700448234e13973cd7f39aefa5ea18998f5f911e",
+    "post_sha256": "8268a47a6b9a69a0d0a224992cc5adeda941dc32ef97ea5490bbe5a529237e9c",
     "image_sha256": {
       "image-1532.png": "376093ceccc6b5923a40bb325c7eeb6586c5e779117bd7f79f90a3d9964d653e",
       "image-1533.png": "9cde7771181f46e00e145b123a08401d6620ebeb187480563870a7a67a52fb4c"
@@ -2238,7 +2238,7 @@
   },
   "CyLab(picoCTF)/General Skill/what's a net cat?.md": {
     "slug": "what-s-a-net-cat",
-    "published": "2026-11-05 14:04:43 +0700",
+    "published": "2026-08-10",
     "post": "_posts/2026-11-05-what-s-a-net-cat.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2252,8 +2252,8 @@
       "image-1507.png",
       "image-1508.png"
     ],
-    "source_sha256": "395b452cc6bf1c852faccc163b1f8c7093ddf87815e53f31ddb2ab5e4782d302",
-    "post_sha256": "b0d527fdbe21a03552d9fffd4971cc25ed5bcf5c72317e5e5492ec6ef246be6b",
+    "source_sha256": "26fedcfb6834c0f330a34203031a87decd5c91116e6e7984e416978bbbcef048",
+    "post_sha256": "c11dc25c3d4def7727cd0eaa35434cce2f2c7b87d9f6cba2383e845e870c5343",
     "image_sha256": {
       "image-1507.png": "ad3fa204037ca62339c2800d62bd89067710bd7c9cb3d5af4b4a9fbc8c15c327",
       "image-1508.png": "7c11c936aab3ebe1736a93a5339669b7866c2aa093962ffd6ca37fd42bfd085f"
@@ -2261,7 +2261,7 @@
   },
   "CyLab(picoCTF)/Reverse Engineer/keygenme-py.md": {
     "slug": "keygenme-py",
-    "published": "2026-11-05 14:04:43 +0700",
+    "published": "2026-08-03",
     "post": "_posts/2026-11-05-keygenme-py.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2276,8 +2276,8 @@
       "image-1576.png",
       "image-1577.png"
     ],
-    "source_sha256": "841248a5628f0e5a1a3bbeb7fc28c645245e707108d417e71ad58a93892610e8",
-    "post_sha256": "e92b8f38b1c63642afab11a2595c7c1ddbc31f3b0d4ca26bae28dd106771032e",
+    "source_sha256": "11d33a4e7a770666fc99e1feef90f232d5d50f955e8e72b40790cf246b86b774",
+    "post_sha256": "2fefba8471ef7d7e1b219192d6d2494b3c927b3f3fc8b1d96992ffb022420643",
     "image_sha256": {
       "image-1575.png": "3d6e0bc74d55883bb8e5f401e73c991469758dac126310cbfa904bfdcfd1578e",
       "image-1576.png": "b2196724ae3a3dcf2954289a0e94cf56194bcfd33c1d7690bb742c1cc7eb9a4a",
@@ -2286,7 +2286,7 @@
   },
   "CyLab(picoCTF)/Reverse Engineer/vault-door-1.md": {
     "slug": "vault-door-1",
-    "published": "2026-11-05 14:04:43 +0700",
+    "published": "2026-07-14",
     "post": "_posts/2026-11-05-vault-door-1.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2299,15 +2299,15 @@
     "images": [
       "image-1657.png"
     ],
-    "source_sha256": "fdcaf9913ce0bd50c849aa579309b2a350dbd3e090d6d9f4cce1712ac77f5e54",
-    "post_sha256": "72160fce39a77df8004b82ffa9d43d94af9210bc1ddc99ebfc57ababa6dbbe0a",
+    "source_sha256": "80fc7a390b39846be4b206319a465e5cbd52099fd1eddedce7487cc04ffff383",
+    "post_sha256": "aabfb226b96ca379e656136b3bfca9cefa812f20e4c1438622675b06a6fc3c0c",
     "image_sha256": {
       "image-1657.png": "0ffad9a22747d20712b177048c964864ff9af4bd5d14660cb7fc85ded4962b61"
     }
   },
   "CyLab(picoCTF)/Reverse Engineer/vault-door-3.md": {
     "slug": "vault-door-3",
-    "published": "2026-11-05 14:04:43 +0700",
+    "published": "2026-07-29",
     "post": "_posts/2026-11-05-vault-door-3.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2320,15 +2320,15 @@
     "images": [
       "image-1658.png"
     ],
-    "source_sha256": "08010ac5bc2fc3d88f84ab46c4c987993f51ed229b04533651e9529b1122724e",
-    "post_sha256": "5757a27a028e5901c07b5831c6b1154259e29bf777b274fabbf9bf1dfe17b940",
+    "source_sha256": "0122b04636f9f79e91574f19b98dfd260d461f21a82928a22e9176651b16c008",
+    "post_sha256": "f1ceddee95ab2b7c81e53286df21b48aa21db6ff5f7c10b39c837b3d60dc6fc1",
     "image_sha256": {
       "image-1658.png": "256bda73fb5d66f415ec90456f03d7d4a4b38b3c949a30d1d349e2c04fa2c35b"
     }
   },
   "CyLab(picoCTF)/Reverse Engineer/vault-door-training.md": {
     "slug": "vault-door-training",
-    "published": "2026-11-05 14:04:43 +0700",
+    "published": "2026-08-24",
     "post": "_posts/2026-11-05-vault-door-training.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2341,15 +2341,15 @@
     "images": [
       "image-1574.png"
     ],
-    "source_sha256": "8222c3ed138cdc8c40f5f68bbe1c2b6b172d00af18251061c214aa0037552b4c",
-    "post_sha256": "f29518b9f1dce518623a48e17bc9cc6ceef75d9b7200637d63e5eb91de40f355",
+    "source_sha256": "33cd100303913cb28b76b106677bd4023c6e750504c41228d9fca9c9bc73e24f",
+    "post_sha256": "f239dedae48172fdff0699a9913e411ea0395fcbbd5e6850a960982dd6dccb4f",
     "image_sha256": {
       "image-1574.png": "7c4fe2271040f052932d65d05096178b2475bad03bb2bdcb70b7f12f55af8832"
     }
   },
   "CyLab(picoCTF)/Web Exploitation/Insp3ct0r.md": {
     "slug": "insp3ct0r",
-    "published": "2026-11-05 14:04:43 +0700",
+    "published": "2026-08-20",
     "post": "_posts/2026-11-05-insp3ct0r.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2366,8 +2366,8 @@
       "image-1530.png",
       "image-1531.png"
     ],
-    "source_sha256": "422bec3ae85b201627869cff04145a520ecee62b8d667530e30f05a65ec4df2a",
-    "post_sha256": "99c0da8166c71d501073d14577606131d92be3406e92c3b8e10d25d0d7558d36",
+    "source_sha256": "a7895d7d552b128efb1c8118a4db1836e669eee7e28e8dd4ce5b98e708028d77",
+    "post_sha256": "63fd04835fcd8f104bb55fa556efbde185958e5a3600ad00f0df10c43c1b2945",
     "image_sha256": {
       "image-1527.png": "da0a0010c11c3684cd8a93dd1e49161898094711ba72344e6c1b3109eeb16867",
       "image-1528.png": "d038b1e653b9e87da7d84b09d23fb831b08e2437acfeb7b6934931cb4325a611",
@@ -2378,7 +2378,7 @@
   },
   "CyLab(picoCTF)/Web Exploitation/IntroToBurp.md": {
     "slug": "introtoburp",
-    "published": "2026-11-05 14:04:43 +0700",
+    "published": "2026-07-24",
     "post": "_posts/2026-11-05-introtoburp.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2394,8 +2394,8 @@
       "image-1741.png",
       "image-1742.png"
     ],
-    "source_sha256": "7e43cbedf845cae938611e010bb4244f4002fda086ac58bd44b8a6f27d091496",
-    "post_sha256": "72bbcda4a58ecfb3cfe4c4da5cae1052a1798e269a6356551497c80d94451321",
+    "source_sha256": "37fc3c68d6d09d3986917f3e14a5057e71e895306ac70fe33e3a58a7cf3e5a82",
+    "post_sha256": "177f337afa386dc4763e4cbfd6b505954c42440e1d1fa03dcb60a7294d8a8fb1",
     "image_sha256": {
       "image-1739.png": "2af98ef9a6b359a3ab32176fb4bfe42ca8389905fca2fab3158830f392e9e1b1",
       "image-1740.png": "15c66e96165c9e1acdf8ca8d89604ad668f21474d1e26f5cf55405a5e3f4356a",
@@ -2405,7 +2405,7 @@
   },
   "CyLab(picoCTF)/Web Exploitation/Unminify.md": {
     "slug": "unminify",
-    "published": "2026-11-05 14:04:43 +0700",
+    "published": "2026-08-13",
     "post": "_posts/2026-11-05-unminify.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2420,8 +2420,8 @@
       "image-1737.png",
       "image-1738.png"
     ],
-    "source_sha256": "5402b7feaac22d2b11804238eecdc836475c81e069626786c228801f0c18c601",
-    "post_sha256": "08c6524fc1af9d8e6dd2151ea86ced04115aa01c2013ef4ba6c856a937e58aaf",
+    "source_sha256": "cf3950f7f8c6f95444810a677f99ae4c0fc02cc0ca0b2ef58d12141657dfef97",
+    "post_sha256": "c96aaa7ccdcca7a35b630ab0975d38fce1e74350db5404a2c583378d5d57c744",
     "image_sha256": {
       "image-1736.png": "6e4caede391b3fd3df432240649d184026accaead72cfeb46911dbc47368300c",
       "image-1737.png": "9b6ff72371374eef4812f2ef9fb6eed497f440908ab03af4db84632a7ae85d17",
@@ -2430,7 +2430,7 @@
   },
   "CyLab(picoCTF)/Web Exploitation/where are the robots.md": {
     "slug": "where-are-the-robots",
-    "published": "2026-11-05 14:04:44 +0700",
+    "published": "2026-07-17",
     "post": "_posts/2026-11-05-where-are-the-robots.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2446,8 +2446,8 @@
       "image-1538.png",
       "image-1539.png"
     ],
-    "source_sha256": "6fcdaa8381527ae9ae2e0de452cecdf461889c0bcb77e1f6e494212873e51e39",
-    "post_sha256": "2f839e1433740e513e0a811ce41e78f0759831482d5128831e03db2667a06960",
+    "source_sha256": "a150c25f74052c9d8033152beff0ca822267fee74850915060d0b87606550ad8",
+    "post_sha256": "acca20549fdd683b80e828ace353f1f3929fae1fd8d7c3290e5f68fba1b566aa",
     "image_sha256": {
       "image-1536.png": "284ee94731a39578e2a6e7301be6c227efb11fe293ac3b77d266059c5786ce2a",
       "image-1537.png": "e4aa16b7bb4f6221baaae280b9a56813618c5fbb1e7ac5477a894f39b34c249b",
@@ -2457,7 +2457,7 @@
   },
   "CyLab(picoCTF)/Cryptography/caesar.md": {
     "slug": "caesar",
-    "published": "2026-11-05 14:12:22 +0700",
+    "published": "2026-08-12",
     "post": "_posts/2026-11-05-caesar.md",
     "categories": [
       "CyLab(picoCTF)",
@@ -2473,8 +2473,8 @@
       "image-1612.png",
       "image-1613.png"
     ],
-    "source_sha256": "32391363cc523a3109d072e8a8203b2922582f08cc31270ff18213e087da0fee",
-    "post_sha256": "f466d8dadcf6ebc3337ed2073df475785d8a9bb632991ce3fb0e6e722245f7db",
+    "source_sha256": "1647a13d7d2af9ef79cae3c995f5be75260feccf710f0a28fc38794513d1b1fc",
+    "post_sha256": "b88faa34824d5958c3f61df40c3659bde48c25c515ebe364874c8f2f13580e5f",
     "image_sha256": {
       "image-1610.png": "57607e33a580b2c85a0a83d1e474fcacd614e73fb643a36c558a6db3fc9ae839",
       "image-1611.png": "c46108534c5bd982387e9b361160de70257a7bf52c6c07cc7deb8118ea814509",

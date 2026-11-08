@@ -1,6 +1,6 @@
 ---
 title: "keygenme-py"
-date: 2026-11-05 14:04:43 +0700
+date: 2026-08-03
 categories: ["CyLab(picoCTF)", "Reverse Engineer"]
 tags: ["medium", "reverse-engineering"]
 description: "keygenme-trial.py"

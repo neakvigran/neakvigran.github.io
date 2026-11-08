@@ -1,6 +1,6 @@
 ---
 title: "Wave a flag"
-date: 2026-11-05 14:04:42 +0700
+date: 2026-07-06
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "Can you invoke help flags for a tool or binary? This program has extraordinarily helpful information..."

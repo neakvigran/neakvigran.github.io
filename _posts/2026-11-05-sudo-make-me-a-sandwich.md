@@ -1,6 +1,6 @@
 ---
 title: "SUDO MAKE ME A SANDWICH"
-date: 2026-11-05 14:04:42 +0700
+date: 2026-08-22
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "Can you read the flag? I think you can!\n\nssh -p 59861 ctf-player@green-hill.picoctf.net using password f7e73aca"

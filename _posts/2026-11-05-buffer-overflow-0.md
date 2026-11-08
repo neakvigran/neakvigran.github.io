@@ -1,6 +1,6 @@
 ---
 title: "buffer overflow 0"
-date: 2026-11-05 14:00:20 +0700
+date: 2026-07-01
 categories: ["CyLab(picoCTF)", "Binary Exploitation"]
 tags: ["medium", "binary-exploitation"]
 description: "Let's start off simple, can you overflow the correct buffer? The program is available here. You can view source here.\n\nConnect using:\n\nnc saturn.picoctf.net 63283"

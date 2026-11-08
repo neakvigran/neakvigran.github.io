@@ -1,6 +1,6 @@
 ---
 title: "Obedient Cat"
-date: 2026-11-05 14:04:41 +0700
+date: 2026-07-25
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "This file has a flag in plain sight (aka \"in-the-clear\")."

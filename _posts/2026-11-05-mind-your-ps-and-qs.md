@@ -1,6 +1,6 @@
 ---
 title: "Mind your Ps and Qs"
-date: 2026-11-05 14:00:20 +0700
+date: 2026-07-20
 categories: ["CyLab(picoCTF)", "Cryptography"]
 tags: ["medium", "cryptography"]
 description: "In RSA, a small e value can be problematic, but what about N? Can you decrypt this?"

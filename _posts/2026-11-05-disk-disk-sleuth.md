@@ -1,6 +1,6 @@
 ---
 title: "Disk,disk,sleuth!"
-date: 2026-11-05 14:04:38 +0700
+date: 2026-07-19
 categories: ["CyLab(picoCTF)", "Forensics"]
 tags: ["medium", "forensics"]
 description: "Use srch_strings from the sleuthkit and some terminal-fu to find a flag in this disk image."

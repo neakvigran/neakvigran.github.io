@@ -1,6 +1,6 @@
 ---
 title: "strings it"
-date: 2026-11-05 14:04:43 +0700
+date: 2026-07-18
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "Can you find the flag in file without running it?"

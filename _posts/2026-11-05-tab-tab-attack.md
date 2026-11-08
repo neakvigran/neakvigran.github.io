@@ -1,6 +1,6 @@
 ---
 title: "Tab, Tab, Attack"
-date: 2026-11-05 14:04:42 +0700
+date: 2026-07-11
 categories: ["CyLab(picoCTF)", "General Skill"]
 tags: ["easy", "general-skills"]
 description: "Using tabcomplete in the Terminal will add years to your life, esp. when dealing with long rambling directory structures and filenames."

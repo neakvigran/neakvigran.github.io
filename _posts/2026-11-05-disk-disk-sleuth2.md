@@ -1,6 +1,6 @@
 ---
 title: "Disk,disk,sleuth2"
-date: 2026-11-05 14:04:38 +0700
+date: 2026-07-10
 categories: ["CyLab(picoCTF)", "Forensics"]
 tags: ["medium", "forensics"]
 description: "All we know is the file with the flag is named down-at-the-bottom.txt..."
