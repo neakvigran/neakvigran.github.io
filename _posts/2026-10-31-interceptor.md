@@ -50,7 +50,9 @@ Then I will use `gobuster` to find hidden directory.
 
 We found an interesting dir, `login.php.bak`, which seems to be a backup file, so let's download this file first.
 
-```php title:login.php.bak
+`login.php.bak`:
+
+```php
 <?php
 include "header.php";
 
@@ -130,7 +132,6 @@ form.addEventListener("submit", async (e) => {
 
 <?php include "footer.php"; ?>  
 ```
-
 ![image-1297](/assets/img/obsidian/interceptor/image-1297.png)
 
 It shows important information like the admin email and password format `MediaHub + YEAR`, so we can create a custom word list to brute-force on the login page.
