@@ -249,6 +249,7 @@ and at `/admin-creds`, we got the admin credentials. We might have to use these 
 ## Inspect the Chat
 
 Let's inspect another endpoint on port 80. 
+
 ![Pasted image 20261108131933](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108131933.png)
 The index page displays `nothing to see`, but let's view the source first.
 ![Pasted image 20261108132008](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108132008.png)
