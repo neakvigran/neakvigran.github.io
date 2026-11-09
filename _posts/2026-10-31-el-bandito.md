@@ -225,7 +225,8 @@ HTTPServer(("", int(sys.argv[1])), Redirect).serve_forever()
 ```
 
 
-Start the server:
+**Start the server:**
+
 ![Pasted image 20261108125508](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108125508.png)
 
 Then change the `url` to our attack server on port `5555` and keep the WebSocket upgrade headers. The server returns a fake `101` response, which the status-check endpoint passes back to the proxy.
