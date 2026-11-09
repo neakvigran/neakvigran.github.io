@@ -23,14 +23,14 @@ Use this challenge to test your mastery of the skills you have acquired in the N
 ## Reconnaissance
 
 Let's use `nmap` to scan for open ports
-1. *What is the highest port number that is open and less than 10,000?*
+*What is the highest port number that is open and less than 10,000?*
 
 ![image-1224](/assets/img/obsidian/net-sec-challenge/image-1224.png)
 
 **Ans** 
 	 Port number 8081
 
-2. *There is an open port outside the common 1000 ports; it is above 10,100. What is it?*
+*There is an open port outside the common 1000 ports; it is above 10,100. What is it?*
 
 ![image-1225](/assets/img/obsidian/net-sec-challenge/image-1225.png)
 
@@ -38,28 +38,28 @@ Let's use `nmap` to scan for open ports
 **Ans** 
 	Port number 10121
 
-3. *How many TCP ports are open?*
+*How many TCP ports are open?*
 
-	**Ans** 7
+**Ans**  7
 
 ---
 
 ## Service Banners
 
-4. *On port 80, what is the service version value?*
+ *On port 80, what is the service version value?*
 
 ![image-1226](/assets/img/obsidian/net-sec-challenge/image-1226.png)
 
 I use `nmap -sV` on port 80 to check the service response. The HTTP `Server` header contains the value we need.
 
-5. *What is the flag hidden in the SSH server header?*    
+*What is the flag hidden in the SSH server header?*    
 
 ![image-1227](/assets/img/obsidian/net-sec-challenge/image-1227.png)
 
 Same idea for SSH. I check port 22 with service detection, and the flag is inside the server banner.
 
 
-6. *We have an FTP server listening on a nonstandard port. What is the version of the FTP server?*
+*We have an FTP server listening on a nonstandard port. What is the version of the FTP server?*
 ![image-1228](/assets/img/obsidian/net-sec-challenge/image-1228.png)
 
 Since **port 10121** previously showed an unknown service, I assume that this port may use the ftp protocol. I use `nmap -sV -p 10121 ` to check.
@@ -71,7 +71,7 @@ Since **port 10121** previously showed an unknown service, I assume that this po
 
 ## FTP Access
 
-7. *We learned two usernames using social engineering: **eddie** and **quinn**. What is the flag hidden in one of these two account files and accessible via FTP?* 
+*We learned two usernames using social engineering: **eddie** and **quinn**. What is the flag hidden in one of these two account files and accessible via FTP?* 
 
 Seems like we need to brute-force to find passwords for these two accounts using the hydra tool
 
@@ -91,7 +91,7 @@ find `ftp_flag.txt` in the **quinn** account
 
 ## NULL Scan
 
-8. *Browsing to `http://10.48.167.230:8081` displays a small challenge that will give you a flag once you solve it. What is the flag?*
+*Browsing to `http://10.48.167.230:8081` displays a small challenge that will give you a flag once you solve it. What is the flag?*
 
 ![image-1233](/assets/img/obsidian/net-sec-challenge/image-1233.png)
 
