@@ -150,6 +150,60 @@
   border-radius: 8px;
 }
 
+/* Obsidian's explicit alignment hints only; ordinary embeds keep normal flow. */
+.content img.obsidian-image-left,
+.content img.obsidian-image-right {
+  max-width: min(50%, 28rem);
+  margin-bottom: 0.75rem;
+}
+
+.content img.obsidian-image-left {
+  float: left;
+  margin-right: 1rem;
+}
+
+.content img.obsidian-image-right {
+  float: right;
+  margin-left: 1rem;
+}
+
+/* Let explanatory paragraphs wrap, but start every new section below images. */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  clear: both;
+}
+
+/* Keep Chirpy highlighting and copy controls while making long lines scroll. */
+.content .highlighter-rouge,
+.content .highlight {
+  max-width: 100%;
+}
+
+.content .highlight {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.content .highlight pre {
+  white-space: pre;
+  overflow-wrap: normal;
+}
+
+@media (max-width: 768px) {
+  .content img.obsidian-image-left,
+  .content img.obsidian-image-right {
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 0.5rem auto 1rem;
+  }
+}
+
 
 /* =========================================
    8. ACCESSIBILITY

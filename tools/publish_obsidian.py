@@ -188,8 +188,11 @@ def extract_body(s):
 def convert(source, slug, known_posts):
     body = extract_body(source)
     images = {}
+    unsupported_image_modifiers = []
     def image_replace(m):
-        raw = m.group(1).split('|', 1)[0].strip()
+        parts = m.group(1).split('|')
+        raw = parts[0].strip()
+        modifier = '|'.join(parts[1:]).strip().lower() if len(parts) > 1 else ''
         filename = Path(raw).name
         if filename != raw and '/' not in raw.replace('\\', '/'):
             raise ValueError('Unsupported image path')
@@ -198,7 +201,12 @@ def convert(source, slug, known_posts):
         if filename in images and images[filename] != raw:
             raise ValueError(f'Ambiguous image basename: {filename}')
         images[filename] = raw
-        return f'![{Path(filename).stem}](/assets/img/obsidian/{slug}/{quote(filename)})'
+        image = f'![{Path(filename).stem}](/assets/img/obsidian/{slug}/{quote(filename)})'
+        if modifier in ('left', 'right'):
+            image += f'{{: .obsidian-image-{modifier} }}'
+        elif modifier:
+            unsupported_image_modifiers.append(modifier)
+        return image
     body = IMAGE.sub(image_replace, body)
     unresolved = []
     def link_replace(m):
@@ -212,7 +220,7 @@ def convert(source, slug, known_posts):
         unresolved.append(m.group(0))
         return m.group(0)
     body = WIKILINK.sub(link_replace, body)
-    return body, images, unresolved
+    return body, images, unresolved, sorted(set(unsupported_image_modifiers))
 
 
 def sha256_bytes(data):
@@ -440,7 +448,7 @@ def execute(args):
     )
     known = {v['slug']: v['slug'] for v in manifest.values()}
     known[slug] = slug
-    body, images, unresolved = convert(
+    body, images, unresolved, unsupported_image_modifiers = convert(
     source_content,
     slug,
     known
@@ -481,6 +489,9 @@ def execute(args):
     print(f'Categories: {category}; tags: {tags}')
     if unresolved:
         print('WARNING: unresolved Obsidian links: ' + ', '.join(sorted(set(unresolved))[:10]))
+    if unsupported_image_modifiers:
+        print('WARNING: unsupported Obsidian image modifiers (ignored): '
+              + ', '.join(unsupported_image_modifiers))
     print('Review code blocks, embedded HTML, links, screenshots, secrets, and room publication rules manually.')
     if not args.write:
         print('PREVIEW ONLY: no files changed.')

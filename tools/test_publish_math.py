@@ -114,6 +114,43 @@ class MathTests(unittest.TestCase):
         self.assertEqual(raw.count('math:'),1)
         self.assertNotIn('math:',publisher.frontmatter('Title','2026-01-01','Category',['tag']))
 
+    def test_obsidian_image_alignment_conversion(self):
+        body, images, unresolved, warnings = publisher.convert(
+            'Before\n![[shot.png|left]]\nAfter\n![[other.png|right]]',
+            'room', {}
+        )
+        self.assertIn('![shot](/assets/img/obsidian/room/shot.png){: .obsidian-image-left }', body)
+        self.assertIn('![other](/assets/img/obsidian/room/other.png){: .obsidian-image-right }', body)
+        self.assertEqual(set(images), {'shot.png', 'other.png'})
+        self.assertEqual(unresolved, [])
+        self.assertEqual(warnings, [])
+
+    def test_unmodified_image_conversion_and_unknown_modifier_warning(self):
+        body, images, _, warnings = publisher.convert(
+            '![[ordinary image.png]]\n![[wide.png|300]]', 'room', {}
+        )
+        self.assertIn('![ordinary image](/assets/img/obsidian/room/ordinary%20image.png)', body)
+        self.assertNotIn('obsidian-image-', body)
+        self.assertIn('![wide](/assets/img/obsidian/room/wide.png)', body)
+        self.assertEqual(warnings, ['300'])
+        self.assertEqual(set(images), {'ordinary image.png', 'wide.png'})
+
+    def test_image_modifier_cannot_inject_html(self):
+        body, _, _, warnings = publisher.convert(
+            '![[shot.png|left<img src=x onerror=alert(1)>]]', 'room', {}
+        )
+        self.assertNotIn('<img', body)
+        self.assertNotIn('onerror', body)
+        self.assertEqual(warnings, ['left<img src=x onerror=alert(1)>'])
+
+    def test_convert_preserves_code_inline_math_lists_and_tables(self):
+        source = ('```text\n$cost 25\n  indented\n\nend\n```\n'
+                  '`inline` and $2^8$\n\n- item\n\n| a | b |\n|---|---|\n| 1 | 2 |')
+        converted, images, _, _ = publisher.convert(source, 'room', {})
+        self.assertEqual(converted, source)
+        self.assertEqual(images, {})
+        self.assertEqual(publisher.prepare_math(converted), converted.replace('$2^8$', '$$2^8$$'))
+
 
 class WorkflowTests(unittest.TestCase):
     def setUp(self):
