@@ -125,6 +125,24 @@ class MathTests(unittest.TestCase):
         self.assertEqual(unresolved, [])
         self.assertEqual(warnings, [])
 
+    def test_embedded_images_are_separate_markdown_blocks(self):
+        body, _, _, _ = publisher.convert(
+            'Intro\n![[left.png|left]]\nShort explanation.\n## Next heading\n'
+            '![[plain.png]]\nFollowing paragraph.',
+            'room', {}
+        )
+        self.assertRegex(body, r'\n{2,}!\[left\]\(/assets/img/obsidian/room/left\.png\)\{: \.obsidian-image-left \}\n{2,}Short explanation\.')
+        self.assertRegex(body, r'\n{2,}!\[plain\]\(/assets/img/obsidian/room/plain\.png\)\n{2,}Following paragraph\.')
+
+    def test_inline_image_embed_keeps_inline_position(self):
+        body, _, _, _ = publisher.convert(
+            'Text before ![[inline.png]] and after.', 'room', {}
+        )
+        self.assertEqual(
+            body,
+            'Text before ![inline](/assets/img/obsidian/room/inline.png) and after.'
+        )
+
     def test_unmodified_image_conversion_and_unknown_modifier_warning(self):
         body, images, _, warnings = publisher.convert(
             '![[ordinary image.png]]\n![[wide.png|300]]', 'room', {}

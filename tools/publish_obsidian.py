@@ -187,6 +187,7 @@ def extract_body(s):
 
 def convert(source, slug, known_posts):
     body = extract_body(source)
+    original_body = body
     images = {}
     unsupported_image_modifiers = []
     def image_replace(m):
@@ -206,7 +207,18 @@ def convert(source, slug, known_posts):
             image += f'{{: .obsidian-image-{modifier} }}'
         elif modifier:
             unsupported_image_modifiers.append(modifier)
-        return image
+        # A standalone Obsidian embed must become its own Markdown paragraph.
+        # Otherwise Kramdown joins adjacent prose into the same <p> as the
+        # image, allowing text to flow beside a tall screenshot.
+        line_start = original_body.rfind('\n', 0, m.start()) + 1
+        line_end = original_body.find('\n', m.end())
+        if line_end < 0:
+            line_end = len(original_body)
+        standalone = (
+            not original_body[line_start:m.start()].strip()
+            and not original_body[m.end():line_end].strip()
+        )
+        return f'\n\n{image}\n\n' if standalone else image
     body = IMAGE.sub(image_replace, body)
     unresolved = []
     def link_replace(m):

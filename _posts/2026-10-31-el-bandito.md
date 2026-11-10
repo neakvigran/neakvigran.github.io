@@ -8,7 +8,11 @@ toc: true
 comments: false
 ---
 
-![Pasted image 20261108095012](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108095012.png)
+
+
+![Pasted image 20261108095012](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108095012.png){: .obsidian-image-left }
+
+
 # Scenario 
 
 El Bandito, the new identity of the infamous [Jack the Exploiter](https://tryhackme.com/jr/bandit), has plunged into the Web3 domain with a devious token scam. By exploiting the decentralized essence of blockchain, he crafted and circulated fraudulent tokens, deceiving investors and shaking the foundational trust of the decentralized finance DeFi ecosystem.  
@@ -16,14 +20,22 @@ El Bandito, the new identity of the infamous [Jack the Exploiter](https://tryhac
 As we embark on this new challenge, it becomes clear that the stakes are higher than ever. To succeed, we must infiltrate his network, decode his strategies, and anticipate his moves before he can strike again.
 
 The mission has evolved: now, we must capture **El Bandito**. This requires a deep dive into the digital underworld, using cunning and technical skills to outmaneuver him and restore security.
+
+
 ![Pasted image 20261108095047](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108095047.png)
+
+
 We request your help in smuggling all the flags.  
   
 *Note*: Please allow 5 minutes for the **VM** to properly boot up.
 
 # Questions
 
+
+
 ![Pasted image 20261108095115](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108095115.png)
+
+
 
 ---
 
@@ -157,9 +169,17 @@ Nmap done: 1 IP address (1 host up) scanned in 153.31 seconds
 **Ports 22, 80, 631, and 8080** are open. The port 8080 suggests a Java Spring application.
 
 Next, we'll use `gobuster` to scan the directories of the web application 
+
+
 ![Pasted image 20261108102557](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108102557.png)
+
+
 We don't find much on **port 80**.
+
+
 ![Pasted image 20261108103723](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108103723.png)
+
+
 **Port 8080** provides more directories, but most of them are forbidden.
 
 ---
@@ -167,28 +187,52 @@ We don't find much on **port 80**.
 ## Web Enumeration
 
 Let's start enumerating the web application on **port 8080**, since we have more endpoints than on port 80 
+
+
 ![Pasted image 20261108111816](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108111816.png)
+
+
 I found the **burn token** page interesting. Since it receives user input, this might be our attack surface. 
+
+
 ![Pasted image 20261108112005](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108112005.png)
+
+
 View the source, and we can see that the page uses `WebSocket`.
+
+
 ![Pasted image 20261108115107](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108115107.png)
+
+
 
 ---
 
 ## Request Smuggling via WebSocket
 
+
+
 ![Pasted image 20261108115519](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108115519.png)
+
+
 Inspect the requests on `burn.html`, and we find a **WebSocket request**. This gives us a reason to test for **WebSocket request smuggling** in this challenge.
 
 If the proxy and backend disagree about whether the connection has upgraded, **WebSocket request smuggling** may let us bypass the **proxy restrictions**. Since this is Spring application, let's check whether we can reach sensitive Actuator endpoints.
 
+
+
 ![Pasted image 20261108120330](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108120330.png)
+
+
 Send the `/ws` request to Repeater, and we find that `/ws` **returns 404 (Not Found)**.
 From what I have learnt in the [**WebSocket HTTP smuggling room**](https://tryhackme.com/room/wsrequestsmuggling), a malformed upgrade request may trick a vulnerable proxy into treating the connection as a **WebSocket** tunnel while the backend still uses HTTP.
 
 One approach is changing `Sec-WebSocket-Version` to an invalid version number like `777`. The backend may reject the upgrade with `426 Upgrade Required` and keep using HTTP. If a vulnerable proxy starts tunnelling without checking that the backend returned `101 Switching Protocols`, we may be able to send further HTTP requests through that tunnel.
 
+
+
 ![Pasted image 20261108122704](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108122704.png)
+
+
 
 This attempt doesn't bypass the proxy. We can see the page response followed by `400 Bad Request` from nginx, but we don't get the `/env` data. This result alone doesn't prove the proxy is secure, it only shows that this malformed request didn't work.
 
@@ -199,9 +243,17 @@ This attempt doesn't bypass the proxy. We can see the page response followed by 
 The simple malformed request didn't work, so let's try to make the proxy believe a WebSocket connection has been established. We need the backend to return a fake `101 Switching Protocols` response while continuing to process HTTP requests.
 
 Another approach is taking advantage of an **SSRF** vulnerability.
+
+
 ![Pasted image 20261108123949](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108123949.png)
+
+
 On the `service` page, we can see an online status for `http://bandito.websocket.thm` and `http://bandito.public.thm`
+
+
 ![Pasted image 20261108124255](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108124255.png)
+
+
 Let's try intercepting the request and changing the url value to our attack server.
 
 **Create attack server using python script:**
@@ -227,18 +279,34 @@ HTTPServer(("", int(sys.argv[1])), Redirect).serve_forever()
 
 **Start the server:**
 
+
+
 ![Pasted image 20261108125508](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108125508.png)
+
+
 
 Then change the `url` to our attack server on port `5555` and keep the WebSocket upgrade headers. The server returns a fake `101` response, which the status-check endpoint passes back to the proxy.
 
+
+
 ![Pasted image 20261108125800](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108125800.png)
+
+
 Now, we get a `101` response followed by a separate `200` response containing the `/env` data. This shows the proxy is tunnelling our appended HTTP request while the backend still processes HTTP. Since I didn't find anything useful in `/env`, let's try another path. I try `/trace` and find 
+
+
 ![Pasted image 20261108130316](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108130316.png)
+
+
 
 logs showing requests to `/admin-flag` and `/admin-creds`. So, let's request these paths.
 
 `/admin-flag` contains our first flag
+
+
 ![Pasted image 20261108130549](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108130549.png)
+
+
 
 and at `/admin-creds`, we got the admin credentials. We might have to use these later.![Pasted image 20261108130751](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108130751.png)
 
@@ -250,9 +318,17 @@ and at `/admin-creds`, we got the admin credentials. We might have to use these 
 
 Let's inspect another endpoint on port 80. 
 
+
+
 ![Pasted image 20261108131933](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108131933.png)
+
+
 The index page displays `nothing to see`, but let's view the source first.
+
+
 ![Pasted image 20261108132008](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108132008.png)
+
+
 the source reveals `/static/messages.js`. 
 
 ```javascript
@@ -384,19 +460,43 @@ This **JavaScript** code is used to run a simple chat system between **Jack and 
 ## Login
 
 From `gobuster` on port 80, we also found the `/access` endpoint. I open it and find a login page. So, I use the credentials we discovered from `/admin-creds`.
+
+
 ![Pasted image 20261108132716](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108132716.png)
+
+
 and we got access to `/messages`
+
+
 ![Pasted image 20261108132946](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108132946.png)
+
+
 
 ---
 
 ## Inspect Requests 
+
+
 ![Pasted image 20261108133041](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108133041.png)
+
+
+
+
 ![Pasted image 20261108133052](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108133052.png)
+
+
+
+
 ![Pasted image 20261108133106](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108133106.png)
 
+
+
 We can see that the web application uses **HTTP/2**, so let's check for request smuggling. First, I switch the request in Burp from HTTP/2 to HTTP/1.1.
+
+
 ![Pasted image 20261108133928](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108133928.png)
+
+
 The request also works over HTTP/1.1. This only confirms that the front end accepts both versions; it doesn't prove that the proxy downgrades HTTP/2 to HTTP/1.1 on the backend or that request smuggling is possible.
 
 ---
@@ -423,11 +523,19 @@ Content-type: application/x-www-form-urlencoded
 
 data=
 ```
+
+
 ![Pasted image 20261108135948](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108135948.png)
+
+
 **We have to wait for the bot to make a request**
 
 Then open `/getMessages`, and we find the captured bot request stored in the chat. Its `Cookie` header contains the flag:
+
+
 ![Pasted image 20261108140104](/assets/img/obsidian/el-bandito/Pasted%20image%2020261108140104.png)
+
+
 *DONE!!!*
 
 ---
